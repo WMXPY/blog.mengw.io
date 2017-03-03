@@ -1,6 +1,6 @@
 ---
-　　layout: default
-　　title: Vue的组件
+layout: default
+title: Vue的组件
 ---
 
 ### Component.md
