@@ -1,11 +1,11 @@
 public class Main {
 
     public static void main(String[] args) {
-        int[] input = {3,2,4};
-        int[] lists = twoSum(input,6);
-        for (int i = 0; i < lists.length; i++) {
-            System.out.println(lists[i]);
-        }
+//        int[] input = {3,2,4};
+//        int[] lists = twoSum(input,6);
+//        for (int i = 0; i < lists.length; i++) {
+//            System.out.println(lists[i]);
+//        }
     }
     public static int[] twoSum(int[] nums, int target) {
         int nums_length = nums.length;
@@ -19,5 +19,9 @@ public class Main {
         }
         int[] re = {};
         return re;
+    }
+    public static boolean containsNearbyDuplicate(int[] nums, int k) {
+
+    return false;
     }
 }
