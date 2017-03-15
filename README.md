@@ -6,3 +6,4 @@ My Blog
 
 ---
 But the site is still building.
+- Also visit cheatshit gist for my info
