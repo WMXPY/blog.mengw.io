@@ -8,3 +8,5 @@
     1.  Install Bean
     2.  Setting Bean
 -   String
+-   TEST
+-   
