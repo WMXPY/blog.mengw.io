@@ -7,6 +7,3 @@
 -   Spring is doing two things
     1.  Install Bean
     2.  Setting Bean
--   String
--   TEST
--   
