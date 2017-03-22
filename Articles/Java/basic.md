@@ -1,0 +1,25 @@
+# Basic knowladge of Java
+
+-   Points of Object Language
+    -   abstract
+        -   abstract class just make the function and variable but not use it.
+    -   Encapsulation
+        -   Put function and its variable together, only its function can visit its variable.
+    -   Inheritance
+        -   Extend parents function or variable make it can be developed efficient.
+    -   Polymorphism
+        -   some same Variable, function and something have different meaning.
+-   Common Error of Java
+    -   ClassCastException IllegalArgumentException NullPointerException IndexOutOfBoundsException ArrayIndexOutOfBoundsException+
+-   Force Convert of Interface
+    -   (Agg)a.getName();
+-   Interface and abstract class
+-   JDK, JRE, JVM
+    -   Dev kit, runtimg enviorment, and veritual machine.
+-   Types of variable
+    -   Local variable
+        -   destroied after finish this function, only in the function
+    -   instance variables
+        -   in the class, but not in the function
+    -   class variables
+        -   Out of class, but add static
