@@ -1,6 +1,6 @@
 # Basic knowladge of Java
 
--   Points of Object Language
+-   **Interview question** Points of Object Language
     -   abstract
         -   abstract class just make the function and variable but not use it.
     -   Encapsulation
@@ -13,13 +13,18 @@
     -   ClassCastException IllegalArgumentException NullPointerException IndexOutOfBoundsException ArrayIndexOutOfBoundsException+
 -   Force Convert of Interface
     -   (Agg)a.getName();
--   Interface and abstract class
+-   **Interview question** Interface and abstract class
 -   JDK, JRE, JVM
     -   Dev kit, runtimg enviorment, and veritual machine.
--   Types of variable
+-   **Interview question** Types of variable
     -   Local variable
         -   destroied after finish this function, only in the function
     -   instance variables
         -   in the class, but not in the function
     -   class variables
         -   Out of class, but add static
+-   **Interview question** Different between static function and normal one(The instance variables)
+    -   instance
+        -   use New object and call it function, called instance
+    -   static
+        -   No need to new anything, just use its function
