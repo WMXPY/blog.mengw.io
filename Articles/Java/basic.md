@@ -72,3 +72,5 @@
     -   int is data type
     -   interger Encapsulation int class
 -   Extend Exception class (todo)
+-   How to serialization a file
+    -   Serialization is a mechanism by which you can save the state of an object by converting it to a byte stream.
