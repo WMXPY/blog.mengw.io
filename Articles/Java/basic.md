@@ -1,7 +1,7 @@
 # Basic knowladge of Java
 
 -   **Interview question** Points of Object Language
-    -   abstract
+    -   Abstract
         -   abstract class just make the function and variable but not use it.
     -   Encapsulation
         -   Put function and its variable together, only its function can visit its variable.
@@ -9,11 +9,21 @@
         -   Extend parents function or variable make it can be developed efficient.
     -   Polymorphism
         -   some same Variable, function and something have different meaning.
--   Common Error of Java
-    -   ClassCastException IllegalArgumentException NullPointerException IndexOutOfBoundsException ArrayIndexOutOfBoundsException+
+-   Most Common Error of Java (todo)
+    -   ClassCastException
+    -   IllegalArgumentException
+    -   NullPointerException
+    -   IndexOutOfBoundsException
+    -   ArrayIndexOutOfBoundsException+
 -   Force Convert of Interface
     -   (Agg)a.getName();
--   **Interview question** Interface and abstract class
+-   **Interview question** Visit type
+    -   public -> This class, Same package, Child class, Other Package
+    -   protected -> This class, Same package, Child class
+    -   friendly -> This class, Same package
+    -   private -> This class
+-   Base class of every class
+    -   java.lang.Object
 -   JDK, JRE, JVM
     -   Dev kit, runtimg enviorment, and veritual machine.
 -   **Interview question** Types of variable
@@ -23,8 +33,42 @@
         -   in the class, but not in the function
     -   class variables
         -   Out of class, but add static
+-   Different between sleep() and wait()
+    -   sleep(1000)
+        -   sleep 1 sec and wake up again
+        -   extend from Thread class
+    -   wait(1000)
+        -   sleep max 1 sec and wake up or wake up at notify() or notifyAll() called
+        -   extend from Object class
+-   **Interview question** Does Java support multiple inheritance?
+    -   No, but can be implement one and extent one.
+-   How many class in one .java file
+    -   Unlimited but only one public that have same name as the file name of .java file
 -   **Interview question** Different between static function and normal one(The instance variables)
     -   instance
         -   use New object and call it function, called instance
     -   static
         -   No need to new anything, just use its function
+-   Super
+    -   Call the function from parent class use super
+    -   Call the constructor of parnet use super()
+        -   TO call parent's construtor, super() must at the first line of class constructor
+        -   super() or super(parameter list)
+-   **Interview question** Override and Overload
+    -   Override
+        -   to override the function, that recode a function from parent class
+        -   Point of parent and child Polymorphism
+    -   Overload
+        -   Have mutiple function of same name in one class, with different constructor
+    -   Can constructor can be override?
+        -   It can be Overload but not Override
+-   **Interview question** Interface and Abstract 
+    -   Abstract class have constructor, but interface can't
+    -   Abstract class have common variable, but interface can't
+    -   Abstract class have non abstract function, but interface must be all abstract
+    -   Abstract class have differnt visit type, but interface just can be abstract
+    -   A class have make mutiple interface but only extend one abstract class
+-   Int and Integer
+    -   int is data type
+    -   interger Encapsulation int class
+-   Extend Exception class (todo)
