@@ -17,6 +17,8 @@
     -   ArrayIndexOutOfBoundsException+
 -   Force Convert of Interface
     -   (Agg)a.getName();
+-   Transient
+    -   To aviod serialization method protect the function or variable, add transient on it
 -   **Interview question** Visit type
     -   public -> This class, Same package, Child class, Other Package
     -   protected -> This class, Same package, Child class
@@ -62,6 +64,10 @@
         -   Have mutiple function of same name in one class, with different constructor
     -   Can constructor can be override?
         -   It can be Overload but not Override
+-   different in final, finally and finalize
+    -   Final -> type a visit of function, variable or class
+    -   Finally -> method run at last in a try catch function
+    -   Finalize -> A way to collect garbage in GC
 -   **Interview question** Interface and Abstract 
     -   Abstract class have constructor, but interface can't
     -   Abstract class have common variable, but interface can't
@@ -74,3 +80,16 @@
 -   Extend Exception class (todo)
 -   How to serialization a file
     -   Serialization is a mechanism by which you can save the state of an object by converting it to a byte stream.
+-   try and catch
+    -   What will Java do when a return within try, and also annocend a finally
+        -   Do the return, and do the finally
+    -   Is every try must have a catch?
+        -   no, but much have a finally instand of catch.
+        -   Also a try can have both catch and finally 
+-   Both in List, differnt between Arraylist and Vector
+    -   Vector is Thread safe
+    -   They both provide a start size of memeory, when the size keep growing, vector will increse the size of two times, in source code, arraylist is 1.5 time of size, but not in document
+        -   Vector also provide the method to set incrase size every time
+-   **Interview question** synchronized
+    -   synchronize is thread safe
+    -   for example if a function is not synchronized, it cannot be safed called in a same time of two threads
