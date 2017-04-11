@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Vue Guide</title>
+  <meta name="description" content="Vue 01">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/javascript/2017/02/13/Vue-Guide.html">
+  <link rel="alternate" type="application/rss+xml" title="Mengw.io" href="/feed.xml">
+  
+  
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Mengw.io</a>
+
+    <nav class="site-nav">
+      <span class="menu-icon">
+        <svg viewBox="0 0 18 15" width="18px" height="15px">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </span>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Vue Guide</h1>
+    <p class="post-meta"><time datetime="2017-02-13T15:23:08-06:00" itemprop="datePublished">Feb 13, 2017</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <h2 id="vue-01">Vue 01</h2>
+
+<ul>
+  <li>
+    <p>v-if-else:</p>
+
+    <ul>
+      <li>这个就厉害了, v-if,v-else,v-else-if 都可以用,就写在tag的声明里即可</li>
+      <li>达成条件的就渲染,否则不渲染!</li>
+      <li>在llf里面用这个方法可以实现在登录页面里的时间设计.</li>
+    </ul>
+  </li>
+  <li>
+    <p>v-on: 事件处理器</p>
+
+    <ul>
+      <li>v-keyup 比如说v-on:keyup=”txtKeyup($event)” 当然,这需要jquery的选择器支持</li>
+      <li>keyup的方法是用this.srcElement.tagName, id, innergtml来输出, 同时可以用event.key?event.key：”“来打印出按了那个键</li>
+    </ul>
+  </li>
+  <li>
+    <p>匈牙利命名法 btnOK</p>
+  </li>
+</ul>
+
+<pre><code class="language-Vue">Computed: {
+      priceInTax: {
+          get: function(){
+              return this.price*1.08;
+          },
+          set: function(){
+              this.price = value/1.08
+          }
+      }
+
+}
+</code></pre>
+
+<ul>
+  <li>
+    <p>计算属性 总而言之就是和data,method是一样的data类型,在html声明就可以取得计算之后的值,和我们llf里面的update之类的方法其实效果相同!!!! 这个就太棒了!</p>
+
+    <ul>
+      <li>获得priceintax会走get, 赋值给priceintax会走set.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Watch</p>
+  </li>
+</ul>
+
+<pre><code class="language-Vue">Watch: {
+    price: function(newVal,oldVal){
+        console.log(newVal,oldVal);
+        this.priceInTax = Math.round(this.price*1.08);
+        this.princeChinaRMB = Math.round(this.priceInTax/16.75)
+    }
+}
+</code></pre>
+
+<ul>
+  <li>方法来源angular</li>
+</ul>
+
+<h2 id="vue-02">Vue 02</h2>
+
+<ul>
+  <li>
+    <p>表单控件绑定 v-model</p>
+
+    <ul>
+      <li>这个不难，重点在于如果在v-model中多个对象绑定一个array，既可以实现复选框</li>
+    </ul>
+  </li>
+  <li>
+    <p>元素显示 v-show</p>
+
+    <ul>
+      <li>标记是否显示html元素</li>
+      <li>简单例子： v-show=“result” 如果rusult是true即显示否则不显示！</li>
+      <li>重点是在DOM中v-show不显示的元素不会消失！！！
+        <ul>
+          <li>相对来说v-if-else-if， DOM只会渲染应该显示的元素。</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="vue-03--单选框">Vue 03- 单选框</h3>
+
+<ul>
+  <li>这里的radio代表单选框，存在两个radio的input的情况下，选择其中一个就会取消选择另一个。选择其中一个就可以像所绑定的v-model中传递value的数据</li>
+</ul>
+
+<h3 id="下拉框">下拉框</h3>
+
+<ul>
+  <li>下拉框可以在tag中加入mutiple来实现按住ctrl复选。 体验不好</li>
+  <li>之后简单的将DOM用v-model和array绑定即可。</li>
+</ul>
+
+<h3 id="组件">组件</h3>
+
+<p>通过Vue构造器传入的各种选项大多数都可以在组件里用。 data 是一个例外，它必须是函数。 实际上，如果你这么做：</p>
+
+<pre><code class="language-vue">Vue.component('my-component', {
+  template: '&lt;span&gt;&lt;/span&gt;',
+  data: {
+    message: 'hello'
+  }
+})
+</code></pre>
+
+<pre><code class="language-vue">var data = { counter: 0 }
+Vue.component('simple-counter', {
+  template: '&lt;button v-on:click="counter += 1"&gt;&lt;/button&gt;',
+  // 技术上 data 的确是一个函数了，因此 Vue 不会警告，
+  // 但是我们返回给每个组件的实例的却引用了同一个data对象
+  data: function () {
+    return data
+  }
+})
+new Vue({
+  el: '#example-2'
+})
+</code></pre>
+
+<p>router切换时，原来的组件确实已经销毁了，你可以看到ready生命周期函数是每次都触发了的。你这里的问题不在于组件是否销毁，因为setInterval事件本身和组件没有关系。</p>
+
+<p>setInterval相当于该组件申请的一种资源，在使用该组件时获取，在离开该组件时释放。这个过程只能是你手动进行的。所以你应该在离开该组件时，比如route的deactivate或者beforeDestory生命周期函数里手动clearInterval。</p>
+
+<p>其实很多框架里都是这样，比如桌面程序中某个窗口初始化时需要打开数据库连接（我们也可以视为一种资源），当窗口关闭时，程序本身并不知道“打开数据库连接”的反向操作是什么。所以我们需要在窗口销毁的回调方法里手动去释放这个资源，去写断开连接的代码。</p>
+
+  </div>
+
+  
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Mengw.io</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Mengw.io
+            
+            </li>
+            
+            <li><a href="mailto:wm@wmpcxpy.com">wm@wmpcxpy.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/WMXPY"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">WMXPY</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Welcome.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

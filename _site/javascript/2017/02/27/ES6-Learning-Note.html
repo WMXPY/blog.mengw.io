@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Welcome to Jekyll!</title>
-  <meta name="description" content="You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different wa...">
+  <title>ES6 Learning Note</title>
+  <meta name="description" content="WMXPY 的 ES6学习笔记">
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="http://localhost:4000/jekyll/update/2017/04/10/welcome-to-jekyll.html">
+  <link rel="canonical" href="http://localhost:4000/javascript/2017/02/27/ES6-Learning-Note.html">
   <link rel="alternate" type="application/rss+xml" title="Mengw.io" href="/feed.xml">
   
   
@@ -59,25 +59,92 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Welcome to Jekyll!</h1>
-    <p class="post-meta"><time datetime="2017-04-10T10:31:44-05:00" itemprop="datePublished">Apr 10, 2017</time></p>
+    <h1 class="post-title" itemprop="name headline">ES6 Learning Note</h1>
+    <p class="post-meta"><time datetime="2017-02-27T20:15:02-06:00" itemprop="datePublished">Feb 27, 2017</time></p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+    <h1 id="wmxpy-的-es6学习笔记">WMXPY 的 ES6学习笔记</h1>
 
-<p>To add new posts, simply add a file in the <code class="highlighter-rouge">_posts</code> directory that follows the convention <code class="highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+<h3 id="let-和-const">Let 和 Const</h3>
 
-<p>Jekyll also offers powerful support for code snippets:</p>
+<ul>
+  <li>这篇笔记是参考阮老师的 ES6 入门写的,仅供自己学习参考, 有几处代码块, 还有大概的思路如果雷同的话倒是也蛮合理的</li>
+</ul>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+<hr />
 
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
+<h5 id="概览">概览</h5>
 
+<p>和 Var 不同的是, let 作用域仅在它所在的代码块,比如说一个 forloop</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>for(let i=0;i&lt;1;i++){}
+</code></pre>
+</div>
+
+<p>用这种方法可以使代码变量更加合理,比如说在以上的循环中,如果使用 var, 在外部调用 i 也可以返回最后一个 forloop 中 i 的位置.</p>
+
+<hr />
+
+<h5 id="作用域">作用域</h5>
+
+<p>在 for 中,循环语句和内容是两个不同的作用域,比如说以下的代码</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>for (let i = 0; i &lt; 3; i++) {
+  let i = 'abc';
+  console.log(i);
+}
+</code></pre>
+</div>
+
+<p>输出是3次 abc, 这意味着 i 被重新定义了</p>
+
+<hr />
+
+<h5 id="变量提升">变量提升</h5>
+
+<p>let 是不存在变量提升的,声明var 变量的时候,有时(因为我自己测试的时候感觉很迷)会出现变量提升,就是说在开始执行代码的时候,在实际声明变量之前,其就已经存在了但是没有值,声明变量的时候是在给一个 undefined 的变量赋值! 真的迷,但是到时挺好用的</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>// var 的情况
+console.log(foo); // 输出undefined
+var foo = 2;
+
+// let 的情况
+console.log(bar); // 报错ReferenceError
+let bar = 2;
+</code></pre>
+</div>
+
+<p>这是一个变量提升的例子, 在 var 中,明明还没有声明 foo, 但是却有一个叫做 foo 的 undefined 变量莫名其妙的可以调用</p>
+
+<hr />
+
+<h5 id="temporal-dead-zonetdz-迷">temporal dead zone(TDZ) 迷</h5>
+
+<p>暂时性死区</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var tmp = 123;
+
+if (true) {
+  tmp = 'abc'; // ReferenceError
+  let tmp;
+}
+</code></pre>
+</div>
+
+<p>代码说明一切,在实际声明 tmp 之前,tmp 变量都是不可用的,直到声明它</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var tmp = 123;
+
+if (true) {
+  tmp = 'abc'; // good
+}
+</code></pre>
+</div>
+
+<p>如果不在作用域声明 let tmp 就可以正常使用</p>
+
+<hr />
 
   </div>
 
@@ -118,17 +185,11 @@
           
 
           
-          <li>
-            <a href="https://twitter.com/jekyllrb"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
-</span><span class="username">jekyllrb</span></a>
-
-          </li>
-          
         </ul>
       </div>
 
       <div class="footer-col footer-col-3">
-        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+        <p>Welcome.
 </p>
       </div>
     </div>

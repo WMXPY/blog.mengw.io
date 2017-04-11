@@ -22,7 +22,7 @@ url: "http://mengw.io" # the base hostname & protocol for your site, e.g. http:/
 github_username:  WMXPY
 
 # Build settings
-markdown: kramdownW
+markdown: kramdown
 theme: minima
 gems:
   - jekyll-feed

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>DN-02</title>
+  <meta name="description" content="DN_02 (April 3)">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/javascript/2017/04/03/DN-02.html">
+  <link rel="alternate" type="application/rss+xml" title="Mengw.io" href="/feed.xml">
+  
+  
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Mengw.io</a>
+
+    <nav class="site-nav">
+      <span class="menu-icon">
+        <svg viewBox="0 0 18 15" width="18px" height="15px">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </span>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">DN-02</h1>
+    <p class="post-meta"><time datetime="2017-04-03T18:04:34-05:00" itemprop="datePublished">Apr 3, 2017</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <h3 id="dn_02-april-3">DN_02 (April 3)</h3>
+
+<h4 id="dom操作怎样添加移除移动复制创建和查找节点">DOM操作——怎样添加、移除、移动、复制、创建和查找节点。</h4>
+
+<ol>
+  <li>创建新节点
+    <ul>
+      <li>createDocumentFragment()    //创建一个DOM片段</li>
+      <li>createElement()   //创建一个具体的元素</li>
+      <li>createTextNode()   //创建一个文本节点</li>
+    </ul>
+  </li>
+  <li>添加、移除、替换、插入
+    <ul>
+      <li>appendChild()</li>
+      <li>removeChild()</li>
+      <li>replaceChild()</li>
+      <li>insertBefore() //在已有的子节点前插入一个新的子节点</li>
+    </ul>
+  </li>
+  <li>查找
+    <ul>
+      <li>getElementsByTagName()    //通过标签名称</li>
+      <li>getElementsByName()    //通过元素的Name属性的值(IE容错能力较强，会得到一个数组，其中包括id等于name值的)</li>
+      <li>getElementById()    //通过元素Id，唯一性</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="iframe的优缺点">iframe的优缺点？</h4>
+
+<ol>
+  <li>iframe优点：
+    <ul>
+      <li>解决加载缓慢的第三方内容如图标和广告等的加载问题</li>
+      <li>Security sandbox</li>
+      <li>并行加载脚本</li>
+    </ul>
+  </li>
+  <li>iframe的缺点：
+    <ul>
+      <li>iframe会阻塞主页面的Onload事件；</li>
+      <li>即时内容为空，加载也需要时间</li>
+      <li>没有语意</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="你如何对网站的文件和资源进行优化">你如何对网站的文件和资源进行优化？</h4>
+
+<ul>
+  <li>文件合并</li>
+  <li>文件最小化/文件压缩</li>
+  <li>使用 CDN 托管</li>
+  <li>缓存的使用（多个域名来提供缓存）</li>
+  <li>其他</li>
+</ul>
+
+<h4 id="哪些操作会造成内存泄漏">哪些操作会造成内存泄漏？</h4>
+
+<ul>
+  <li>内存泄漏指任何对象在您不再拥有或需要它之后仍然存在。</li>
+  <li>垃圾回收器定期扫描对象，并计算引用了每个对象的其他对象的数量。如果一个对象的引用数量为 0（没有其他对象引用过该对象），或对该对象的惟一引用是循环的，那么该对象的内存即可回收。</li>
+  <li>setTimeout 的第一个参数使用字符串而非函数的话，会引发内存泄漏。</li>
+  <li>闭包、控制台日志、循环（在两个对象彼此引用且彼此保留时，就会产生一个循环）</li>
+</ul>
+
+<h4 id="一个页面从输入-url-到页面加载显示完成这个过程中都发生了什么">一个页面从输入 URL 到页面加载显示完成，这个过程中都发生了什么？</h4>
+
+<ol>
+  <li>当发送一个URL请求时，不管这个URL是Web页面的URL还是Web页面上每个资源的URL，浏览器都会开启一个线程来处理这个请求，同时在远程DNS服务器上启动一个DNS查询。这能使浏览器获得请求对应的IP地址。</li>
+  <li>浏览器与远程Web服务器通过TCP三次握手协商来建立一个TCP/IP连接。该握手包括一个同步报文，一个同步-应答报文和一个应答报文，这三个报文在 浏览器和服务器之间传递。该握手首先由客户端尝试建立起通信，而后服务器应答并接受客户端的请求，最后由客户端发出该请求已经被接受的报文。</li>
+  <li>一旦TCP/IP连接建立，浏览器会通过该连接向远程服务器发送HTTP的GET请求。远程服务器找到资源并使用HTTP响应返回该资源，值为200的HTTP响应状态表示一个正确的响应。</li>
+  <li>此时，Web服务器提供资源服务，客户端开始下载资源。</li>
+</ol>
+
+<h4 id="javascript对象的几种创建方式">javascript对象的几种创建方式</h4>
+
+<ol>
+  <li>工厂模式</li>
+  <li>构造函数模式</li>
+  <li>原型模式</li>
+  <li>混合构造函数和原型模式</li>
+  <li>动态原型模式</li>
+  <li>寄生构造函数模式</li>
+  <li>稳妥构造函数模式</li>
+</ol>
+
+<h4 id="javascript继承的6种方法">javascript继承的6种方法</h4>
+
+<ol>
+  <li>原型链继承</li>
+  <li>借用构造函数继承</li>
+  <li>组合继承(原型+借用构造)</li>
+  <li>原型式继承</li>
+  <li>寄生式继承</li>
+  <li>寄生组合式继承</li>
+</ol>
+
+<h4 id="请解释一下-javascript-的同源策略">请解释一下 JavaScript 的同源策略。</h4>
+
+<ul>
+  <li>这里的同源策略指的是：协议，域名，端口相同，同源策略是一种安全协议。 指一段脚本只能读取来自同一来源的窗口和文档的属性。</li>
+</ul>
+
+<h4 id="javascript无阻塞加载具体方式">Javascript无阻塞加载具体方式</h4>
+
+<ul>
+  <li>将脚本放在底部。<link />还是放在head中，用以保证在js加载前，能加载出正常显示的页面。<script>标签放在&lt;/body&gt;前。</script></li>
+  <li>成组脚本：由于每个<script>标签下载时阻塞页面解析过程，所以限制页面的<script>总数也可以改善性能。适用于内联脚本和外部脚本。</script></script></li>
+  <li>非阻塞脚本：等页面完成加载后，再加载js代码。也就是，在window.onload事件发出后开始下载代码。
+    <ul>
+      <li>defer属性：支持IE4和fierfox3.5更高版本浏览器</li>
+      <li>动态脚本元素：文档对象模型（DOM）允许你使用js动态创建HTML的几乎全部文档内容。代码如下：</li>
+    </ul>
+
+    <script>
+var script=document.createElement("script");
+script.type="text/javascript";
+script.src="file.js";
+document.getElementsByTagName("head")[0].appendChild(script);
+</script>
+  </li>
+</ul>
+
+<h4 id="eval是做什么的">eval是做什么的？</h4>
+
+<ul>
+  <li>它的功能是把对应的字符串解析成JS代码并运行；</li>
+  <li>应该避免使用eval，不安全，非常耗性能（2次，一次解析成js语句，一次执行）。</li>
+</ul>
+
+  </div>
+
+  
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Mengw.io</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Mengw.io
+            
+            </li>
+            
+            <li><a href="mailto:wm@wmpcxpy.com">wm@wmpcxpy.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/WMXPY"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">WMXPY</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Welcome.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
