@@ -6,19 +6,14 @@ layout: default
   <div class="index-wrapper">
     <div class="aside">
       <div class="info-card">
-        <h1>WMXPY</h1>
+        <h1>WMXPY's</h1>
+        <h2>AutoMated Bug Factory</h2>
+        <!-- <h2>我一直以来的Bug编写历程</h2> -->
       </div>
-      <div id="particles-js"></div>
     </div>
     <div class="index-content">
       <ul class="artical-list">
-        {% for post in site.categories.JavaScript %}
-        <li>
-          <a href="{{ post.url }}" class="title">{{ post.title }}</a>
-          <div class="title-desc">{{ post.description }}</div>
-        </li>
-        {% endfor %}
-        {% for post in site.categories.blog %}
+        {% for post in site.posts %}
         <li>
           <a href="{{ post.url }}" class="title">{{ post.title }}</a>
           <div class="title-desc">{{ post.description }}</div>
@@ -26,6 +21,5 @@ layout: default
         {% endfor %}
       </ul>
     </div>
-
   </div>
 </body>

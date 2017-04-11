@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Ubuntu Install Guide"
-date:   2017-03-13 14:05:26 -0500
 categories: Linux
+description: 我大概记的 linux 安装的那些小套路, 主要是这些源太难找了好吧, 而且总会忘了操作其中一步, 我选择复制粘贴!!!
 ---
 
 -   **_ForUbuntu_**

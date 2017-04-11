@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>BeiYuu.com</title>
-    <meta name="author" content="BieYuu" />
+    <title>mengw.io</title>
+    <meta name="author" content="WMXPY" />
     <meta name="renderer" content="webkit">
-    <meta name="description" content="BeiYuu's Blog" />
+    <meta name="description" content="WMXPY's Blog" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="/atom.xml" />
@@ -135,6 +135,15 @@ video {
   *zoom: 1;
 }
 
+.div_right_bottom {
+  float: right;
+  position: fixed;
+  right: 1%;
+  top: 1%;
+  _position: absolute;
+  /* position fixed for IE6 */
+}
+
 audio:not([controls]),
 [hidden] {
   display: none;
@@ -191,10 +200,11 @@ a.external:hover {
   position: fixed;
   top: 0;
   left: 0;
-  width: 25%;
+  width: 35%;
   height: 100%;
   max-width: 500px;
-  background: #59a0b0;
+  background-image: url(https://d233eq3e3p3cv0.cloudfront.net/max/1000/0*cF2i1ZosSP_UTJig.jpeg);
+  background-size: 100% 100%;
 }
 
 @media screen and (max-width: 767px) {
@@ -207,6 +217,10 @@ a.external:hover {
 }
 
 .index-wrapper .info-card {
+  background-color: black;
+  padding: 2%;
+  padding-left: 14%;
+  padding-right: 5%;
   margin-top: 70px;
   position: absolute;
 }
@@ -219,8 +233,11 @@ a.external:hover {
 
 .index-wrapper .info-card h1 {
   font-size: 40px;
-  color: #b0b0b0;
-  margin-bottom: 20px;
+  color: #d7d7d7;
+}
+
+.index-wrapper .info-card h2 {
+  color: #d7d7d7;
 }
 
 .index-wrapper .info-card a {
@@ -228,8 +245,8 @@ a.external:hover {
 }
 
 .index-wrapper .index-content {
-  margin-left: 25%;
-  padding-top: 80px;
+  margin-left: 35%;
+  padding-top: 40px;
   padding-right: 15%;
 }
 
@@ -252,7 +269,8 @@ a.external:hover {
 }
 
 .index-wrapper .artical-list li {
-  margin-bottom: 70px;
+  margin-top: 0;
+  margin-bottom: 32px;
 }
 
 .index-wrapper .title {
@@ -481,7 +499,7 @@ a.external:hover {
 }
 
 .about-wrapper {
-  background: #7e96a9;
+  background: #959595;
   width: 900px;
   margin: 0 auto;
   padding: 30px 60px;
@@ -664,47 +682,56 @@ li.L9 {
   <div class="index-wrapper">
     <div class="aside">
       <div class="info-card">
-        <h1>WMXPY</h1>
+        <h1>WMXPY's</h1>
+        <h2>AutoMated Bug Factory</h2>
+        <!-- <h2>我一直以来的Bug编写历程</h2> -->
       </div>
-      <div id="particles-js"></div>
     </div>
     <div class="index-content">
       <ul class="artical-list">
         
         <li>
-          <a href="/DN-02" class="title">DN-02</a>
-          <div class="title-desc"></div>
+          <a href="/04-11-2017/Basic-of-QA" class="title">Basic of QA</a>
+          <div class="title-desc">QA 的学习历程, 感觉也不是很难呀233</div>
         </li>
         
         <li>
-          <a href="/Reviewmd-Stuff" class="title">Reviewmd's Stuff</a>
-          <div class="title-desc"></div>
+          <a href="/04-03-2017/DN-02" class="title">DN-02</a>
+          <div class="title-desc">Dumb Note 第二篇</div>
         </li>
         
         <li>
-          <a href="/Layer" class="title">Layer-01</a>
-          <div class="title-desc"></div>
+          <a href="/04-02-2017/Reviewmd-Stuff" class="title">Reviewmd's Stuff</a>
+          <div class="title-desc">以下是我写 Review.md 时觉得可能以后有用的东西</div>
         </li>
         
         <li>
-          <a href="/DN-01" class="title">DN-01</a>
-          <div class="title-desc"></div>
+          <a href="/03-21-2017/Layer" class="title">Layer-01</a>
+          <div class="title-desc">还没有完成</div>
         </li>
         
         <li>
-          <a href="/ES6-Learning-Note" class="title">ES6 Learning Note</a>
-          <div class="title-desc"></div>
+          <a href="/03-17-2017/DN-01" class="title">DN-01</a>
+          <div class="title-desc">这个系列一般讲叫 Dumb Note, 就是很辣鸡的意思</div>
         </li>
         
         <li>
-          <a href="/Vue-Guide" class="title">Vue Guide</a>
-          <div class="title-desc">回车和换行在不同系统下面定义不同，时不时会有一些小问题出来，git 经常出现的 No new line at the end of file 也让很多人费解，需要梳理一下</div>
+          <a href="/03-13-2017/Ubuntu-Install-Guide" class="title">Ubuntu Install Guide</a>
+          <div class="title-desc">我大概记的 linux 安装的那些小套路, 主要是这些源太难找了好吧, 而且总会忘了操作其中一步, 我选择复制粘贴!!!</div>
         </li>
         
+        <li>
+          <a href="/02-27-2017/ES6-Learning-Note" class="title">ES6 Learning Note</a>
+          <div class="title-desc">ES6 的学习笔记, 这一篇主要是 let 和 const</div>
+        </li>
+        
+        <li>
+          <a href="/02-13-2017/Vue-Guide" class="title">Vue Guide</a>
+          <div class="title-desc">Vue.js 是很棒的 MVVM 框架(YES!), 这是很棒的学习笔记 (Maybe)</div>
+        </li>
         
       </ul>
     </div>
-
   </div>
 </body>
 

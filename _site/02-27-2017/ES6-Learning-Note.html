@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Ubuntu Install Guide | BeiYuu.com</title>
-    <meta name="author" content="BieYuu" />
+    <title>ES6 Learning Note | mengw.io</title>
+    <meta name="author" content="WMXPY" />
     <meta name="renderer" content="webkit">
-    <meta name="description" content="BeiYuu's Blog" />
+    <meta name="description" content="WMXPY's Blog" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="/atom.xml" />
@@ -135,6 +135,15 @@ video {
   *zoom: 1;
 }
 
+.div_right_bottom {
+  float: right;
+  position: fixed;
+  right: 1%;
+  top: 1%;
+  _position: absolute;
+  /* position fixed for IE6 */
+}
+
 audio:not([controls]),
 [hidden] {
   display: none;
@@ -191,10 +200,11 @@ a.external:hover {
   position: fixed;
   top: 0;
   left: 0;
-  width: 25%;
+  width: 35%;
   height: 100%;
   max-width: 500px;
-  background: #59a0b0;
+  background-image: url(https://d233eq3e3p3cv0.cloudfront.net/max/1000/0*cF2i1ZosSP_UTJig.jpeg);
+  background-size: 100% 100%;
 }
 
 @media screen and (max-width: 767px) {
@@ -207,6 +217,10 @@ a.external:hover {
 }
 
 .index-wrapper .info-card {
+  background-color: black;
+  padding: 2%;
+  padding-left: 14%;
+  padding-right: 5%;
   margin-top: 70px;
   position: absolute;
 }
@@ -219,8 +233,11 @@ a.external:hover {
 
 .index-wrapper .info-card h1 {
   font-size: 40px;
-  color: #b0b0b0;
-  margin-bottom: 20px;
+  color: #d7d7d7;
+}
+
+.index-wrapper .info-card h2 {
+  color: #d7d7d7;
 }
 
 .index-wrapper .info-card a {
@@ -228,8 +245,8 @@ a.external:hover {
 }
 
 .index-wrapper .index-content {
-  margin-left: 25%;
-  padding-top: 80px;
+  margin-left: 35%;
+  padding-top: 40px;
   padding-right: 15%;
 }
 
@@ -252,7 +269,8 @@ a.external:hover {
 }
 
 .index-wrapper .artical-list li {
-  margin-bottom: 70px;
+  margin-top: 0;
+  margin-bottom: 32px;
 }
 
 .index-wrapper .title {
@@ -481,7 +499,7 @@ a.external:hover {
 }
 
 .about-wrapper {
-  background: #7e96a9;
+  background: #959595;
   width: 900px;
   margin: 0 auto;
   padding: 30px 60px;
@@ -662,86 +680,98 @@ li.L9 {
 
   <body class="body-post">
   <div class="post-wrapper">
-    <h1 class="post-title"><a href="/Ubuntu-Install-Guide" title="Ubuntu Install Guide">Ubuntu Install Guide</a></h1>
-    <p class="post-date">2017-03-13</p>
-    <ul>
-  <li><strong><em>ForUbuntu</em></strong></li>
-</ul>
+    <h1 class="post-title"><a href="/02-27-2017/ES6-Learning-Note" title="ES6 Learning Note">ES6 Learning Note</a></h1>
+    <p class="post-date">2017-02-27</p>
+    <h1 id="wmxpy-的-es6学习笔记">WMXPY 的 ES6学习笔记</h1>
 
-<h1 id="chrome">Chrome</h1>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
-sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" &gt;&gt; /etc/apt/sources.list.d/google-chrome.list'
-sudo apt-get update 
-sudo apt-get install google-chrome-stable
-</code></pre>
-</div>
-
-<h1 id="vscode---based-on-ummake">VSCode -&gt; based on ummake</h1>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make
-sudo apt-get update
-sudo apt-get install ubuntu-make
-umake web visual-studio-code
-</code></pre>
-</div>
-
-<h1 id="umake">UMake</h1>
-
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-    sudo apt-get install python-software-properties
-    sudo apt-get install software-properties-common</p>
-
-<h1 id="nodejs">NodeJS</h1>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
-sudo apt-get install -y nodejs
-</code></pre>
-</div>
-
-<h1 id="git">Git</h1>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>apt-get install git
-</code></pre>
-</div>
-
-<p>=======</p>
+<h3 id="let-和-const">Let 和 Const</h3>
 
 <ul>
-  <li>sudo apt-get install python-software-properties</li>
-  <li>sudo apt-get install software-properties-common</li>
+  <li>这篇笔记是参考阮老师的 ES6 入门写的,仅供自己学习参考, 有几处代码块, 还有大概的思路如果雷同的话倒是也蛮合理的</li>
 </ul>
 
-<h1 id="python">Python</h1>
+<hr />
 
-<ul>
-  <li>sudo apt-get install python-pip
-    <blockquote>
-      <blockquote>
-        <blockquote>
-          <blockquote>
-            <blockquote>
-              <blockquote>
-                <blockquote>
-                  <p>origin/master</p>
-                </blockquote>
-              </blockquote>
-            </blockquote>
-          </blockquote>
-        </blockquote>
-      </blockquote>
-    </blockquote>
-  </li>
-</ul>
+<h5 id="概览">概览</h5>
 
-    <div id="disqus_container">
+<p>和 Var 不同的是, let 作用域仅在它所在的代码块,比如说一个 forloop</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>for(let i=0;i&lt;1;i++){}
+</code></pre>
+</div>
+
+<p>用这种方法可以使代码变量更加合理,比如说在以上的循环中,如果使用 var, 在外部调用 i 也可以返回最后一个 forloop 中 i 的位置.</p>
+
+<hr />
+
+<h5 id="作用域">作用域</h5>
+
+<p>在 for 中,循环语句和内容是两个不同的作用域,比如说以下的代码</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>for (let i = 0; i &lt; 3; i++) {
+  let i = 'abc';
+  console.log(i);
+}
+</code></pre>
+</div>
+
+<p>输出是3次 abc, 这意味着 i 被重新定义了</p>
+
+<hr />
+
+<h5 id="变量提升">变量提升</h5>
+
+<p>let 是不存在变量提升的,声明var 变量的时候,有时(因为我自己测试的时候感觉很迷)会出现变量提升,就是说在开始执行代码的时候,在实际声明变量之前,其就已经存在了但是没有值,声明变量的时候是在给一个 undefined 的变量赋值! 真的迷,但是到时挺好用的</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>// var 的情况
+console.log(foo); // 输出undefined
+var foo = 2;
+
+// let 的情况
+console.log(bar); // 报错ReferenceError
+let bar = 2;
+</code></pre>
+</div>
+
+<p>这是一个变量提升的例子, 在 var 中,明明还没有声明 foo, 但是却有一个叫做 foo 的 undefined 变量莫名其妙的可以调用</p>
+
+<hr />
+
+<h5 id="temporal-dead-zonetdz-迷">temporal dead zone(TDZ) 迷</h5>
+
+<p>暂时性死区</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var tmp = 123;
+
+if (true) {
+  tmp = 'abc'; // ReferenceError
+  let tmp;
+}
+</code></pre>
+</div>
+
+<p>代码说明一切,在实际声明 tmp 之前,tmp 变量都是不可用的,直到声明它</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var tmp = 123;
+
+if (true) {
+  tmp = 'abc'; // good
+}
+</code></pre>
+</div>
+
+<p>如果不在作用域声明 let tmp 就可以正常使用</p>
+
+<hr />
+
+    <!--<div id="disqus_container">
   <div class="share-con">
     <script type="text/javascript" charset="utf-8">
       (function(){
         var param = {
-          url: 'http://beiyuu.com/Ubuntu-Install-Guide',
+          url: 'http://beiyuu.com/02-27-2017/ES6-Learning-Note',
           type: '6',
-          title: '《Ubuntu Install Guide》' + '- ',
+          title: '《ES6 Learning Note》' + '- ES6 的学习笔记, 这一篇主要是 let 和 const',
           ralateUid: '1855270953',
           rnd:new Date().valueOf()
         }
@@ -757,23 +787,46 @@ sudo apt-get install -y nodejs
   <a href="#" class="comment" onclick="return false;">点击查看评论</a>
   <div id="disqus_thread"></div>
 </div>
-
+-->
   </div>
-
+<div class="div_right_bottom">Go Back(Maybe)</div>
   <div class="about-wrapper">
-  <iframe width="100%" height="75" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=75&fansRow=2&ptype=1&speed=0&skin=5&isTitle=0&noborder=0&isWeibo=0&isFans=0&uid=1855270953&verifier=375b89d6&dpc=1" style="margin: 30px 0;"></iframe>
-
   <div class="aboutme">
     <h2><a href="/">所有文章</a></h2>
     <ul>
+      
+      <li>
+        <a href="/04-03-2017/DN-02" class="title">DN-02</a>
+      </li>
+      
+      <li>
+        <a href="/04-02-2017/Reviewmd-Stuff" class="title">Reviewmd's Stuff</a>
+      </li>
+      
+      <li>
+        <a href="/03-21-2017/Layer" class="title">Layer-01</a>
+      </li>
+      
+      <li>
+        <a href="/03-17-2017/DN-01" class="title">DN-01</a>
+      </li>
+      
+      <li>
+        <a href="/02-27-2017/ES6-Learning-Note" class="title">ES6 Learning Note</a>
+      </li>
+      
+      <li>
+        <a href="/02-13-2017/Vue-Guide" class="title">Vue Guide</a>
+      </li>
       
     </ul>
   </div>
 </div>
 
-
   <script src="/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+
   <script src="/js/post.js" type="text/javascript"></script>
+
 </body>
 
 </html>

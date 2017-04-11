@@ -124,6 +124,15 @@ video {
   *zoom: 1;
 }
 
+.div_right_bottom {
+  float: right;
+  position: fixed;
+  right: 1%;
+  top: 1%;
+  _position: absolute;
+  /* position fixed for IE6 */
+}
+
 audio:not([controls]),
 [hidden] {
   display: none;
@@ -180,10 +189,11 @@ a.external:hover {
   position: fixed;
   top: 0;
   left: 0;
-  width: 25%;
+  width: 35%;
   height: 100%;
   max-width: 500px;
-  background: #59a0b0;
+  background-image: url(https://d233eq3e3p3cv0.cloudfront.net/max/1000/0*cF2i1ZosSP_UTJig.jpeg);
+  background-size: 100% 100%;
 }
 
 @media screen and (max-width: 767px) {
@@ -196,6 +206,10 @@ a.external:hover {
 }
 
 .index-wrapper .info-card {
+  background-color: black;
+  padding: 2%;
+  padding-left: 14%;
+  padding-right: 5%;
   margin-top: 70px;
   position: absolute;
 }
@@ -208,8 +222,11 @@ a.external:hover {
 
 .index-wrapper .info-card h1 {
   font-size: 40px;
-  color: #b0b0b0;
-  margin-bottom: 20px;
+  color: #d7d7d7;
+}
+
+.index-wrapper .info-card h2 {
+  color: #d7d7d7;
 }
 
 .index-wrapper .info-card a {
@@ -217,8 +234,8 @@ a.external:hover {
 }
 
 .index-wrapper .index-content {
-  margin-left: 25%;
-  padding-top: 80px;
+  margin-left: 35%;
+  padding-top: 40px;
   padding-right: 15%;
 }
 
@@ -241,7 +258,8 @@ a.external:hover {
 }
 
 .index-wrapper .artical-list li {
-  margin-bottom: 70px;
+  margin-top: 0;
+  margin-bottom: 32px;
 }
 
 .index-wrapper .title {
@@ -470,7 +488,7 @@ a.external:hover {
 }
 
 .about-wrapper {
-  background: #7e96a9;
+  background: #959595;
   width: 900px;
   margin: 0 auto;
   padding: 30px 60px;

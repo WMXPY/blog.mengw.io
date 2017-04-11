@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Reviewmd's Stuff"
-date:   2017-04-02 13:56:28 -0500
 categories: JavaScript
+description: 以下是我写 Review.md 时觉得可能以后有用的东西
 ---
 
 ## 写Review.md时了解的东西

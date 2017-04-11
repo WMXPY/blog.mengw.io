@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "ES6 Learning Note"
-date:   2017-02-27 21:15:02 -0500
 categories: JavaScript
+description: ES6 的学习笔记, 这一篇主要是 let 和 const
 ---
 
 # WMXPY 的 ES6学习笔记

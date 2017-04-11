@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>DN-01 | BeiYuu.com</title>
-    <meta name="author" content="BieYuu" />
+    <title>Basic of QA | mengw.io</title>
+    <meta name="author" content="WMXPY" />
     <meta name="renderer" content="webkit">
-    <meta name="description" content="BeiYuu's Blog" />
+    <meta name="description" content="WMXPY's Blog" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="/atom.xml" />
@@ -135,6 +135,15 @@ video {
   *zoom: 1;
 }
 
+.div_right_bottom {
+  float: right;
+  position: fixed;
+  right: 1%;
+  top: 1%;
+  _position: absolute;
+  /* position fixed for IE6 */
+}
+
 audio:not([controls]),
 [hidden] {
   display: none;
@@ -191,10 +200,11 @@ a.external:hover {
   position: fixed;
   top: 0;
   left: 0;
-  width: 25%;
+  width: 35%;
   height: 100%;
   max-width: 500px;
-  background: #59a0b0;
+  background-image: url(https://d233eq3e3p3cv0.cloudfront.net/max/1000/0*cF2i1ZosSP_UTJig.jpeg);
+  background-size: 100% 100%;
 }
 
 @media screen and (max-width: 767px) {
@@ -207,6 +217,10 @@ a.external:hover {
 }
 
 .index-wrapper .info-card {
+  background-color: black;
+  padding: 2%;
+  padding-left: 14%;
+  padding-right: 5%;
   margin-top: 70px;
   position: absolute;
 }
@@ -219,8 +233,11 @@ a.external:hover {
 
 .index-wrapper .info-card h1 {
   font-size: 40px;
-  color: #b0b0b0;
-  margin-bottom: 20px;
+  color: #d7d7d7;
+}
+
+.index-wrapper .info-card h2 {
+  color: #d7d7d7;
 }
 
 .index-wrapper .info-card a {
@@ -228,8 +245,8 @@ a.external:hover {
 }
 
 .index-wrapper .index-content {
-  margin-left: 25%;
-  padding-top: 80px;
+  margin-left: 35%;
+  padding-top: 40px;
   padding-right: 15%;
 }
 
@@ -252,7 +269,8 @@ a.external:hover {
 }
 
 .index-wrapper .artical-list li {
-  margin-bottom: 70px;
+  margin-top: 0;
+  margin-bottom: 32px;
 }
 
 .index-wrapper .title {
@@ -481,7 +499,7 @@ a.external:hover {
 }
 
 .about-wrapper {
-  background: #7e96a9;
+  background: #959595;
   width: 900px;
   margin: 0 auto;
   padding: 30px 60px;
@@ -662,129 +680,34 @@ li.L9 {
 
   <body class="body-post">
   <div class="post-wrapper">
-    <h1 class="post-title"><a href="/DN-01" title="DN-01">DN-01</a></h1>
-    <p class="post-date">2017-03-17</p>
-    <h1 id="dn">DN</h1>
+    <h1 class="post-title"><a href="/04-11-2017/Basic-of-QA" title="Basic of QA">Basic of QA</a></h1>
+    <p class="post-date">2017-04-11</p>
+    <h1 id="basic-of-qa">Basic of QA</h1>
 
-<h3 id="introduction">Introduction</h3>
-
-<p>这个系列大概就是随便写一写平时看到的,了解到的比较奇妙的东西,当然是跟 web 有关的,觉得有意义的就记下来,保不齐以后灵光一闪或者别人搜索到了呢.</p>
-
-<h3 id="dn---01-april-3">DN - 01 (April 3)</h3>
-
-<h4 id="cookie-的弊端">Cookie 的弊端</h4>
+<h3 id="standard">Standard</h3>
 
 <ul>
-  <li>
-    <p>在 IE 中每个域名的 cookie 总数收到限制</p>
-
-    <p>1.IE6或更低版本最多20个cookie
-2.IE7和之后的版本最后可以有50个cookie。
-3.Firefox最多50个cookie
-4.chrome和Safari没有做硬性限制</p>
-  </li>
-  <li>
-    <p>不但如此 IE,Opera 会定时清理不常用的 cookie, 而 firefox 会随机清理 cookie, 相比之下, 几乎支持所有浏览器的 userdata 不会被莫名其妙的清理, 支持128k 的大小.</p>
-  </li>
+  <li>Statement coverage</li>
 </ul>
 
-<h4 id="cookie-的好处">Cookie 的好处</h4>
+<p>Assume we have a source code</p>
 
-<ul>
-  <li>传输采用 ssl 的话十分安全, 不会被拦截, 就算被拦截了, cookie 是的有效时间如果控制得好也没有价值, 而不存档重要信息的 cookie 就变得很好用了</li>
-</ul>
+<div class="highlighter-rouge"><pre class="highlight"><code>PROCEDURE M(VAR A，B，X：REAL)；  
+BEGIN
+IF(A&gt;1) AND (B=0)  THENX:=X/A；
+IF(A=2)OR (X&gt;1)  THENX:=X+1；
+END. 
+</code></pre>
+</div>
 
-<h3 id="dn_02-april-3">DN_02 (April 3)</h3>
-
-<h4 id="css-中-displaynone-和-visibilityhidden-的区别">CSS 中 display:none 和 visibility:hidden 的区别？</h4>
-
-<ul>
-  <li>display:none  隐藏对应的元素，在文档布局中不再给它分配空间，它各边的元素会合拢，就当他从来不存在。</li>
-  <li>visibility:hidden  隐藏对应的元素，但是在文档布局中仍保留原来的空间。</li>
-</ul>
-
-<h4 id="css中-link-和import-的区别是">CSS中 link 和@import 的区别是?</h4>
-
-<ol>
-  <li>link属于HTML标签，而@import是CSS提供的;</li>
-  <li>页面被加载的时，link会同时被加载，而@import引用的CSS会等到页面被加载完再加载;</li>
-  <li>import只在IE5以上才能识别，而link是HTML标签，无兼容问题;</li>
-  <li>link方式的样式的权重 高于@import的权重.</li>
-</ol>
-
-<h4 id="positionabsolute和float属性的异同">position:absolute和float属性的异同</h4>
-
-<ul>
-  <li>共同点：对内联元素设置float和absolute属性，可以让元素脱离文档流，并且可以设置其宽高。</li>
-  <li>不同点：float仍会占据位置，position会覆盖文档流中的其他元素。</li>
-</ul>
-
-<h4 id="css-选择符有哪些哪些属性可以继承优先级算法如何计算-css3新增伪类有那些">CSS 选择符有哪些？哪些属性可以继承？优先级算法如何计算？ CSS3新增伪类有那些？</h4>
-
-<ol>
-  <li>id选择器（ # myid）</li>
-  <li>类选择器（.myclassname）</li>
-  <li>标签选择器（div, h1, p）</li>
-  <li>相邻选择器（h1 + p）</li>
-  <li>子选择器（ul &gt; li）</li>
-  <li>后代选择器（li a）</li>
-  <li>通配符选择器（ * ）</li>
-  <li>属性选择器（a[rel = “external”]）</li>
-  <li>伪类选择器（a: hover, li:nth-child）</li>
-</ol>
-
-<h4 id="css3新增伪类举例">CSS3新增伪类举例：</h4>
-
-<ul>
-  <li>p:first-of-type 选择属于其父元素的首个 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。</li>
-  <li>p:last-of-type  选择属于其父元素的最后 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。</li>
-  <li>p:only-of-type  选择属于其父元素唯一的 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。</li>
-  <li>p:only-child    选择属于其父元素的唯一子元素的每个 &lt;p&gt; 元素。</li>
-  <li>p:nth-child(2)  选择属于其父元素的第二个子元素的每个 &lt;p&gt; 元素。</li>
-  <li>:enabled  :disabled 控制表单控件的禁用状态。</li>
-  <li>:checked        单选框或复选框被选中。</li>
-</ul>
-
-<h4 id="xml和json的区别">XML和JSON的区别？</h4>
-
-<ol>
-  <li>数据体积方面: JSON相对于XML来讲，数据的体积小，传递的速度更快些。</li>
-  <li>数据交互方面: JSON与JavaScript的交互更加方便，更容易解析处理，更好的数据交互。</li>
-  <li>数据描述方面: JSON对数据的描述性比XML较差。</li>
-  <li>传输速度方面: JSON的速度要远远快于XML。</li>
-</ol>
-
-<h4 id="你知道多少种doctype文档类型">你知道多少种Doctype文档类型？</h4>
-
-<ul>
-  <li>该标签可声明三种 DTD 类型，分别表示严格版本、过渡版本以及基于框架的 HTML 文档。</li>
-  <li>HTML 4.01 规定了三种文档类型：Strict、Transitional 以及 Frameset。</li>
-  <li>XHTML 1.0 规定了三种 XML 文档类型：Strict、Transitional 以及 Frameset。</li>
-  <li>Standards （标准）模式（也就是严格呈现模式）用于呈现遵循最新标准的网页，而 Quirks</li>
-  <li>包容）模式（也就是松散呈现模式或者兼容模式）用于呈现为传统浏览器而设计的网页。</li>
-</ul>
-
-<h4 id="html与xhtml二者有什么区别">HTML与XHTML——二者有什么区别</h4>
-
-<ol>
-  <li>所有的标记都必须要有一个相应的结束标记</li>
-  <li>所有标签的元素和属性的名字都必须使用小写</li>
-  <li>所有的XML标记都必须合理嵌套</li>
-  <li>所有的属性必须用引号”“括起来</li>
-  <li>把所有&lt;和&lt;特殊符号用编码表示</li>
-  <li>给所有属性赋一个值</li>
-  <li>不要在注释内容中使“–”</li>
-  <li>图片必须有说明文字</li>
-</ol>
-
-    <div id="disqus_container">
+    <!--<div id="disqus_container">
   <div class="share-con">
     <script type="text/javascript" charset="utf-8">
       (function(){
         var param = {
-          url: 'http://beiyuu.com/DN-01',
+          url: 'http://beiyuu.com/04-11-2017/Basic-of-QA',
           type: '6',
-          title: '《DN-01》' + '- ',
+          title: '《Basic of QA》' + '- QA 的学习历程, 感觉也不是很难呀233',
           ralateUid: '1855270953',
           rnd:new Date().valueOf()
         }
@@ -800,23 +723,46 @@ li.L9 {
   <a href="#" class="comment" onclick="return false;">点击查看评论</a>
   <div id="disqus_thread"></div>
 </div>
-
+-->
   </div>
-
+<div class="div_right_bottom">Go Back(Maybe)</div>
   <div class="about-wrapper">
-  <iframe width="100%" height="75" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=75&fansRow=2&ptype=1&speed=0&skin=5&isTitle=0&noborder=0&isWeibo=0&isFans=0&uid=1855270953&verifier=375b89d6&dpc=1" style="margin: 30px 0;"></iframe>
-
   <div class="aboutme">
     <h2><a href="/">所有文章</a></h2>
     <ul>
+      
+      <li>
+        <a href="/04-03-2017/DN-02" class="title">DN-02</a>
+      </li>
+      
+      <li>
+        <a href="/04-02-2017/Reviewmd-Stuff" class="title">Reviewmd's Stuff</a>
+      </li>
+      
+      <li>
+        <a href="/03-21-2017/Layer" class="title">Layer-01</a>
+      </li>
+      
+      <li>
+        <a href="/03-17-2017/DN-01" class="title">DN-01</a>
+      </li>
+      
+      <li>
+        <a href="/02-27-2017/ES6-Learning-Note" class="title">ES6 Learning Note</a>
+      </li>
+      
+      <li>
+        <a href="/02-13-2017/Vue-Guide" class="title">Vue Guide</a>
+      </li>
       
     </ul>
   </div>
 </div>
 
-
   <script src="/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+
   <script src="/js/post.js" type="text/javascript"></script>
+
 </body>
 
 </html>

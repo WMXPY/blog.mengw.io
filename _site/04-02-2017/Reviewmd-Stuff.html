@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Basic of QA | BeiYuu.com</title>
-    <meta name="author" content="BieYuu" />
+    <title>Reviewmd's Stuff | mengw.io</title>
+    <meta name="author" content="WMXPY" />
     <meta name="renderer" content="webkit">
-    <meta name="description" content="BeiYuu's Blog" />
+    <meta name="description" content="WMXPY's Blog" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="/atom.xml" />
@@ -135,6 +135,15 @@ video {
   *zoom: 1;
 }
 
+.div_right_bottom {
+  float: right;
+  position: fixed;
+  right: 1%;
+  top: 1%;
+  _position: absolute;
+  /* position fixed for IE6 */
+}
+
 audio:not([controls]),
 [hidden] {
   display: none;
@@ -191,10 +200,11 @@ a.external:hover {
   position: fixed;
   top: 0;
   left: 0;
-  width: 25%;
+  width: 35%;
   height: 100%;
   max-width: 500px;
-  background: #59a0b0;
+  background-image: url(https://d233eq3e3p3cv0.cloudfront.net/max/1000/0*cF2i1ZosSP_UTJig.jpeg);
+  background-size: 100% 100%;
 }
 
 @media screen and (max-width: 767px) {
@@ -207,6 +217,10 @@ a.external:hover {
 }
 
 .index-wrapper .info-card {
+  background-color: black;
+  padding: 2%;
+  padding-left: 14%;
+  padding-right: 5%;
   margin-top: 70px;
   position: absolute;
 }
@@ -219,8 +233,11 @@ a.external:hover {
 
 .index-wrapper .info-card h1 {
   font-size: 40px;
-  color: #b0b0b0;
-  margin-bottom: 20px;
+  color: #d7d7d7;
+}
+
+.index-wrapper .info-card h2 {
+  color: #d7d7d7;
 }
 
 .index-wrapper .info-card a {
@@ -228,8 +245,8 @@ a.external:hover {
 }
 
 .index-wrapper .index-content {
-  margin-left: 25%;
-  padding-top: 80px;
+  margin-left: 35%;
+  padding-top: 40px;
   padding-right: 15%;
 }
 
@@ -252,7 +269,8 @@ a.external:hover {
 }
 
 .index-wrapper .artical-list li {
-  margin-bottom: 70px;
+  margin-top: 0;
+  margin-bottom: 32px;
 }
 
 .index-wrapper .title {
@@ -481,7 +499,7 @@ a.external:hover {
 }
 
 .about-wrapper {
-  background: #7e96a9;
+  background: #959595;
   width: 900px;
   margin: 0 auto;
   padding: 30px 60px;
@@ -662,34 +680,55 @@ li.L9 {
 
   <body class="body-post">
   <div class="post-wrapper">
-    <h1 class="post-title"><a href="/Basic-of-QA" title="Basic of QA">Basic of QA</a></h1>
-    <p class="post-date">2017-04-11</p>
-    <h1 id="basic-of-qa">Basic of QA</h1>
-
-<h3 id="standard">Standard</h3>
+    <h1 class="post-title"><a href="/04-02-2017/Reviewmd-Stuff" title="Reviewmd's Stuff">Reviewmd's Stuff</a></h1>
+    <p class="post-date">2017-04-02</p>
+    <h2 id="写reviewmd时了解的东西">写Review.md时了解的东西</h2>
 
 <ul>
-  <li>Statement coverage</li>
+  <li>传递方法
+    <ul>
+      <li>在很多时候直接调用方法是不行的，因为javascript的延迟激活，比如setinterval之类的，再比如在Review.md的读取文件，ajax，加载完成之后之类的。</li>
+      <li>传递方法 -&gt; 传递一个方法在当地调用，这个时候this的位置就改变了
+        <ul>
+          <li>this的位置，variable.function()这类的调用方法只是js的语法糖，实际对于object调用方法的function只有call，而call的构建是*.call(this,con1,con2)这样this的位置实际是自己控制的，而当使用语法糖的时候this的位置及就是当前的object，如果并没有这样的object那么this指代window。</li>
+          <li>传递方法的时候this的位置改变了，我们无从考证的话就尽量避免使用this调用</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Github RAW文件，可以在github存一些静态文件当作cdn使用，也可以放在上面让别人贡献简单可以当时好使的cdn</li>
+  <li>getURLVar， 这个方法我写在这个目录下面，可以在网址后面带上变量href时传递变量。这个值不能当时修改</li>
+  <li>另一个在那的方法可以通过正则表达式将传递到php的时候避免&amp;和+还有?转为id，这样可以避免弄没了那些符号，因为在带过去的时候会自动把些符号当成分隔符吧，不知道
+    <ul>
+      <li>这个可以完善一下</li>
+    </ul>
+  </li>
+  <li>Safari中,使用 let 生命 Vue 对象会导致不知道什么情况的报错
+    <ul>
+      <li>在 Vue 对象声明时使用 var 即可</li>
+      <li>!!!!!!!OMG, 我知道了,使用 var 不会报错是因为变量提升!!!!!!!</li>
+      <li>!!</li>
+    </ul>
+  </li>
+  <li>很多固定的使用一次的东西放在互通 class 中,可以减少用户的下载次数, 同样的使用 cdn 的库也可以节约我们的服务器</li>
+  <li>Vue 的组件可以使用隐藏buttonclick 的方式和外部变量互通,调用方法
+    <ul>
+      <li>Vue 组件中的 data 必须是一个方法,但是可以是一个 return 对象的方法</li>
+    </ul>
+  </li>
+  <li>使用\n 分割文件可以达成已行为单位读文件的结果</li>
+  <li>未来打算把热点按钮也放在 github 上,这样就可以实时更新了</li>
+  <li>这些说不定以后还可以展开</li>
 </ul>
 
-<p>Assume we have a source code</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>PROCEDURE M(VAR A，B，X：REAL)；  
-BEGIN
-IF(A&gt;1) AND (B=0)  THENX:=X/A；
-IF(A=2)OR (X&gt;1)  THENX:=X+1；
-END. 
-</code></pre>
-</div>
-
-    <div id="disqus_container">
+    <!--<div id="disqus_container">
   <div class="share-con">
     <script type="text/javascript" charset="utf-8">
       (function(){
         var param = {
-          url: 'http://beiyuu.com/Basic-of-QA',
+          url: 'http://beiyuu.com/04-02-2017/Reviewmd-Stuff',
           type: '6',
-          title: '《Basic of QA》' + '- ',
+          title: '《Reviewmd's Stuff》' + '- 以下是我写 Review.md 时觉得可能以后有用的东西',
           ralateUid: '1855270953',
           rnd:new Date().valueOf()
         }
@@ -705,23 +744,46 @@ END.
   <a href="#" class="comment" onclick="return false;">点击查看评论</a>
   <div id="disqus_thread"></div>
 </div>
-
+-->
   </div>
-
+<div class="div_right_bottom">Go Back(Maybe)</div>
   <div class="about-wrapper">
-  <iframe width="100%" height="75" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=75&fansRow=2&ptype=1&speed=0&skin=5&isTitle=0&noborder=0&isWeibo=0&isFans=0&uid=1855270953&verifier=375b89d6&dpc=1" style="margin: 30px 0;"></iframe>
-
   <div class="aboutme">
     <h2><a href="/">所有文章</a></h2>
     <ul>
+      
+      <li>
+        <a href="/04-03-2017/DN-02" class="title">DN-02</a>
+      </li>
+      
+      <li>
+        <a href="/04-02-2017/Reviewmd-Stuff" class="title">Reviewmd's Stuff</a>
+      </li>
+      
+      <li>
+        <a href="/03-21-2017/Layer" class="title">Layer-01</a>
+      </li>
+      
+      <li>
+        <a href="/03-17-2017/DN-01" class="title">DN-01</a>
+      </li>
+      
+      <li>
+        <a href="/02-27-2017/ES6-Learning-Note" class="title">ES6 Learning Note</a>
+      </li>
+      
+      <li>
+        <a href="/02-13-2017/Vue-Guide" class="title">Vue Guide</a>
+      </li>
       
     </ul>
   </div>
 </div>
 
-
   <script src="/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+
   <script src="/js/post.js" type="text/javascript"></script>
+
 </body>
 
 </html>

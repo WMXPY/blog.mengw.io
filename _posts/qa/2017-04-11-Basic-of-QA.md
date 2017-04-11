@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Basic of QA"
-date:   2017-04-11 10:31:44 -0500
 categories: QA
+description: QA 的学习历程, 感觉也不是很难呀233
 ---
 
 # Basic of QA
