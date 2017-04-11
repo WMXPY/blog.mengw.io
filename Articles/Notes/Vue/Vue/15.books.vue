@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+<body>
+<div id="app">
+    <table class="table table-bordered">
+        <tr>
+            <td>序列号</td>
+            <td>名称</td>
+            <td>价格</td>
+            <td>数量</td>
+            <td>小计</td>
+            <td>操作</td>
+        </tr>
+        <tr v-for="phone in phones">
+            <td>{{$index+1}}</td>
+            <td>{{phone.name}}</td>
+            <td>{{phone.price}}</td>
+            <td><input type="text" v-model="phone.count"></td>
+            <td>{{phone.price*phone.count}}</td>
+            <td><button class="btn btn-primary" @click="delete(phone)">删除</button></td>
+        </tr>
+        <tr>
+            <td colspan="6">总价格{{total}}</td>
+        </tr>
+    </table>
+
+    <div class="container">
+        <div class="form-group">
+            <label class="control-label">手机名</label>
+            <input type="text" v-model="list.name" class="form-control">
+        </div>
+        <div class="form-group">
+            <label class="control-label">价格</label>
+            <input type="text" v-model="list.price" class="form-control">
+        </div>
+        <div class="form-group">
+            <label class="control-label">数量</label>
+            <input type="text" v-model="list.count" class="form-control">
+        </div>
+        <button class="btn btn-block" v-on:click="appendInfo">添加</button>
+    </div>
+
+
+
+</div>
+<script src="vue.js"></script>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            phones:[
+                {name:'三星',price:4000,count:1},
+                {name:'nokia',price:200,count:1},
+                {name:'华为',price:2000,count:1},
+                {name:'小米',price:3000,count:1},
+            ],
+            //尽量赋予初始值
+            list:{
+                name:'',
+                price:'',
+                count:''
+            }
+        },
+        methods:{
+            delete: function (phone) {
+                //$remove()删除 filter
+                this.phones.$remove(phone)
+            },
+            appendInfo: function () {
+                this.phones.push({name:this.list.name,price:this.list.price,count:this.list.count});
+            },
+           /* total: function () {
+                var sum = 0;
+                this.phones.forEach(function (item) {
+                    sum += item.price*item.count;
+                });
+                return sum;
+            }*/
+        },
+        computed:{
+            total: function () {
+                var sum = 0;
+                this.phones.forEach(function (item) {
+                    sum += item.price*item.count;
+                });
+                return sum;
+            }
+        }
+    });
+
+    /*  var arr = [1,2,3];
+    arr = arr.filter(function (item) {
+        return item!=1;
+    })
+    console.log(arr);*/
+
+
+
+</script>
+</body>
+</html>

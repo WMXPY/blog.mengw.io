@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <!--<table>
+        <tr is="parent"></tr>
+    </table>-->
+    //给parent 模板传递了一个msg变量
+    <!--message = who ar you-->
+    <!--:message="'1'"-->
+    <!--//这里是原本界面的data -->
+    全局下的<input type="text" v-model="data">
+    <!--//默认是单向数据流-->
+    <parent :message.sync="data"></parent>
+    <template id="parent"><br>
+        parent<input type="text" v-model="message">
+        <div>parent {{message}} {{message2}}</div>
+        <div>parent</div>
+        <ch></ch>
+    </template>
+    <template id="child">
+        <div>child</div>
+        <div>child</div>
+    </template>
+</div>
+<script src="vue.js"></script>
+<script>
+    //我们想传递数据  先从属性 传递到props  在从props取出来绑定到组件里
+    //:message="1" 是绑定的数字1
+    //message="1" 绑定的字符串1 只能传递字符串1
+
+    //组件的嵌套
+    //先创建自组件，子组件创建后插到父组件里
+
+    //vuex
+    Vue.component('parent',{
+        template:'#parent',
+        props:{ //对属性进行验证
+            'message':{
+                type:[String], //只能传递字符串类型的
+                default: function () {
+                    return 100 //默认值可以不符合type类型
+                },
+                twoWay:true, //要求必须是双向的
+                validator: function (v) {//不写的话没有校验器
+                    //v就代表传进来的值 校验v的值是否是你的预期
+                    return true
+                    //v==='who are you6000'
+                },
+                coerce: function (v) {
+                    console.log(v);
+                    //传进来的值 强制进行改变 在验证之前
+                    return v;//之后开始检测type是否符合
+                }
+            },
+            'message2':{
+                default: function () {
+                    return 200
+                },
+                coerce: function (v) {
+                    console.log(v);
+                    //传进来的值 强制进行改变 在验证之前
+                    return 2000;//之后开始检测type是否符合
+                }
+            }
+        }, //属性
+        components:{
+            ch:{
+                template:'#child'
+            }
+        }
+    });
+    //组件和数据交互
+
+
+
+
+    /*var child = Vue.extend({
+        template:'<div>child</div>'
+    });
+    //只能在父组件里使用
+    var parent = Vue.extend({
+        template:'<div>parent</div><ch></ch>',
+        components:{
+            ch:child
+        }
+    });
+    //只注册了父亲组件
+    Vue.component('parent',parent);*/
+
+
+    /*Vue.component('com',{
+      template:'<div>hello</div>'
+    });*/
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            data:'who are you'
+        }
+    });
+</script>
+</body>
+</html>
