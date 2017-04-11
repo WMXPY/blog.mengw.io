@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "ES6 Learning Note"
+date:   2017-02-27 21:15:02 -0500
+categories: JavaScript
+---
+
 # WMXPY 的 ES6学习笔记
 
 ### Let 和 Const

@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "Ubuntu Install Guide"
+date:   2017-03-13 14:05:26 -0500
+categories: Linux
+---
+
 -   **_ForUbuntu_**
 
 # Chrome
@@ -16,7 +23,7 @@
 
 # UMake
 
-<<<<<<< HEAD
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
     sudo apt-get install python-software-properties
     sudo apt-get install software-properties-common 
 
@@ -28,10 +35,13 @@
 # Git
 
     apt-get install git
+
 =======
+
 -   sudo apt-get install python-software-properties
 -   sudo apt-get install software-properties-common 
 
 # Python
-- sudo apt-get install python-pip
->>>>>>> origin/master
+
+-   sudo apt-get install python-pip
+    > > > > > > > origin/master
