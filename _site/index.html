@@ -1,187 +1,711 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
   <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <title>BeiYuu.com</title>
+    <meta name="author" content="BieYuu" />
+    <meta name="renderer" content="webkit">
+    <meta name="description" content="BeiYuu's Blog" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="/atom.xml" />
+    <style>html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
 
-  <title>Mengw.io</title>
-  <meta name="description" content="Welcome.">
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
 
-  <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="http://localhost:4000/">
-  <link rel="alternate" type="application/rss+xml" title="Mengw.io" href="/feed.xml">
-  
-  
-</head>
+ol,
+ul {
+  list-style: none;
+}
 
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+a img {
+  border: none;
+}
+
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+main {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  display: block;
+}
+
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+audio:not([controls]),
+[hidden] {
+  display: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font-family: Helvetica, Tahoma, Arial, 'Hiragino Sans GB', '\51AC\9752\9ED1\4F53', 'Microsoft YaHei', '\5FAE\8F6F\96C5\9ED1', STXihei, '\534E\6587\7EC6\9ED1', SimSun, '\5B8B\4F53', Heiti, '\9ED1\4F53', sans-serif;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+a {
+  color: #4a75b5;
+  text-decoration: none;
+  outline: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a.external {
+  padding-right: 13px;
+  background: url("/images/icons.gif") no-repeat right 1px;
+}
+
+a.external:hover {
+  background-position: right -15px;
+}
+
+.index-wrapper .aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 100%;
+  max-width: 500px;
+  background: #59a0b0;
+}
+
+@media screen and (max-width: 767px) {
+  .index-wrapper .aside {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    max-width: none;
+  }
+}
+
+.index-wrapper .info-card {
+  margin-top: 70px;
+  position: absolute;
+}
+
+@media screen and (max-width: 767px) {
+  .index-wrapper .info-card {
+    margin-top: 70px;
+  }
+}
+
+.index-wrapper .info-card h1 {
+  font-size: 40px;
+  color: #b0b0b0;
+  margin-bottom: 20px;
+}
+
+.index-wrapper .info-card a {
+  margin: 0 15px;
+}
+
+.index-wrapper .index-content {
+  margin-left: 25%;
+  padding-top: 80px;
+  padding-right: 15%;
+}
+
+@media screen and (max-width: 767px) {
+  .index-wrapper .index-content {
+    margin-left: 0;
+    padding-right: 0;
+  }
+}
+
+.index-wrapper .artical-list {
+  width: 75%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+  .index-wrapper .artical-list {
+    width: 85%;
+  }
+}
+
+.index-wrapper .artical-list li {
+  margin-bottom: 70px;
+}
+
+.index-wrapper .title {
+  display: block;
+  font-size: 22px;
+  margin-bottom: 15px;
+  word-break: break-all;
+  font-weight: bold;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #eee;
+  color: #444;
+}
+
+@media screen and (max-width: 767px) {
+  .index-wrapper .title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+.index-wrapper .title:hover {
+  color: #e50053;
+  text-decoration: none;
+}
+
+.index-wrapper .title-desc {
+  color: #999;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.body-post {
+  background: #f5f5f5;
+}
+
+@media screen and (max-width: 767px) {
+  .body-post {
+    background: #fff;
+  }
+}
+
+.post-wrapper {
+  width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 80px 60px;
+}
+
+@media screen and (max-width: 767px) {
+  .post-wrapper {
+    width: 85%;
+    margin: 100px auto 50px;
+    padding: 0;
+  }
+}
+
+.post-wrapper .post-title,
+.post-wrapper .post-title a {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #000;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+@media screen and (max-width: 767px) {
+  .post-wrapper .post-title,
+  .post-wrapper .post-title a {
+    font-size: 24px;
+  }
+}
+
+.post-wrapper .post-title:hover,
+.post-wrapper .post-title a:hover {
+  text-decoration: none;
+}
+
+.post-wrapper .post-date {
+  text-align: center;
+  color: #999;
+  margin-bottom: 60px;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 767px) {
+  .post-wrapper .post-date {
+    margin-bottom: 40px;
+  }
+}
+
+.post-wrapper h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+@media $mobiel {
+  .post-wrapper h2 {
+    font-size: 20px;
+  }
+}
+
+.post-wrapper h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+@media screen and (max-width: 767px) {
+  .post-wrapper h3 {
+    font-size: 16px;
+  }
+}
+
+.post-wrapper h4,
+.post-wrapper h5,
+.post-wrapper h6 {
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.post-wrapper p {
+  margin-bottom: 40px;
+  line-height: 1.8em;
+}
+
+.post-wrapper code {
+  background: #eee;
+  border: 1px solid #ccc;
+  padding: 0 5px;
+  font-family: "Courier";
+  line-height: 14px;
+  font-size: 14px;
+  word-wrap: break-word;
+}
+
+.post-wrapper pre {
+  background: #f7f3f7;
+  padding: 20px 30px 15px;
+  overflow: auto;
+  margin-bottom: 40px;
+  font-size: 14px;
+  border: 1px solid #eee;
+  color: #b9bdb6;
+  margin-top: -20px;
+}
+
+.post-wrapper pre code {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  word-wrap: normal;
+}
+
+@media screen and (max-width: 767px) {
+  .post-wrapper pre code {
+    line-height: 1em;
+    font-size: 12px;
+  }
+}
+
+.post-wrapper h4+pre,
+.post-wrapper h3+pre {
+  margin-top: 20px;
+}
+
+.post-wrapper ul {
+  margin-bottom: 25px;
+  margin-left: 25px;
+}
+
+.post-wrapper ul li {
+  margin-bottom: 5px;
+  list-style: disc;
+  line-height: 1.8em;
+}
+
+.post-wrapper p+ul {
+  margin-top: -20px;
+}
+
+.post-wrapper ol {
+  margin-bottom: 25px;
+  margin-left: 25px;
+}
+
+.post-wrapper ol li {
+  margin-bottom: 5px;
+  list-style: decimal;
+  line-height: 1.1em;
+}
+
+@media screen and (max-width: 767px) {
+  .post-wrapper ol li {
+    margin-bottom: 0;
+    line-height: 1em;
+  }
+}
+
+.post-wrapper blockquote {
+  margin-left: 25px;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.post-wrapper img {
+  max-width: 670px;
+  display: block;
+  margin: 10px auto;
+}
+
+@media screen and (max-width: 767px) {
+  .post-wrapper img {
+    max-width: 90%;
+  }
+}
+
+.post-wrapper table {
+  margin: 0 auto;
+}
+
+.about-wrapper {
+  background: #7e96a9;
+  width: 900px;
+  margin: 0 auto;
+  padding: 30px 60px;
+}
+
+@media screen and (max-width: 767px) {
+  .about-wrapper {
+    width: 100%;
+    padding: 0 7.5% 30px;
+  }
+}
+
+.about-wrapper .aboutme {
+  zoom: 1;
+}
+
+.about-wrapper .aboutme:before,
+.about-wrapper .aboutme:after {
+  content: "";
+  display: table;
+}
+
+.about-wrapper .aboutme:after {
+  clear: both;
+}
+
+.about-wrapper .aboutme h2 {
+  margin-bottom: 20px;
+}
+
+.about-wrapper .aboutme h2 a {
+  font-size: 18px;
+}
+
+.about-wrapper .aboutme li {
+  line-height: 1.4;
+  margin-bottom: 10px;
+  float: left;
+  width: 50%;
+}
+
+@media screen and (max-width: 767px) {
+  .about-wrapper .aboutme li {
+    float: none;
+    width: 80%;
+  }
+}
+
+.about-wrapper .aboutme a {
+  color: #fff;
+  font-size: 14px;
+}
+
+#particles-js {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  -webkit-background-size: 20%;
+  -moz-background-size: 20%;
+  background-size: 20%;
+  background-position: 50% 50%;
+  background: #38658c;
+  background: -webkit-radial-gradient(top left, #5d3571, #38658c);
+  background: -moz-radial-gradient(top left, #5d3571, #38658c);
+  background: -o-radial-gradient(top left, #5d3571, #38658c);
+  background: -ms-radial-gradient(top left, #5d3571, #38658c);
+  background: radial-gradient(to bottom right, #5d3571, #38658c);
+}
+
+#disqus_container {
+  font-size: 12px;
+}
+
+#disqus_container .share-con {
+  float: right;
+  margin-bottom: 20px;
+}
+
+#disqus_container a.comment {
+  font-size: 14px;
+}
+
+.prettyprint {
+  background: #f7f3f7;
+  border: 0 !important;
+}
+
+.pln {
+  color: #1b181b;
+}
+
+ol.linenums {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #5a7b8c;
+}
+
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L4,
+li.L5,
+li.L6,
+li.L7,
+li.L8,
+li.L9 {
+  padding-left: 0.4em;
+  background-color: #f7f3f7;
+  list-style-type: decimal;
+}
+
+@media screen {
+  .str {
+    color: #918b3b;
+  }
+  .kwd {
+    color: #7b59c0;
+  }
+  .com {
+    color: #5a7b8c;
+  }
+  .typ {
+    color: #516aec;
+  }
+  .lit {
+    color: #a65926;
+  }
+  .pun {
+    color: #1b181b;
+  }
+  .opn {
+    color: #1b181b;
+  }
+  .clo {
+    color: #1b181b;
+  }
+  .tag {
+    color: #ca402b;
+  }
+  .atn {
+    color: #a65926;
+  }
+  .atv {
+    color: #159393;
+  }
+  .dec {
+    color: #a65926;
+  }
+  .var {
+    color: #ca402b;
+  }
+  .fun {
+    color: #516aec;
+  }
+}
+
+.wiki h2 {
+  cursor: pointer;
+}
+
+.wiki ul {
+  margin-left: 30px;
+  margin-bottom: 20px;
+  list-style: disc;
+}
+
+.wiki ul li {
+  margin-bottom: 5px;
+}
+
+.wiki ul ul {
+  list-style: circle;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}</style>
+  </head>
 
   <body>
-
-    <header class="site-header" role="banner">
-
-  <div class="wrapper">
-
-    <a class="site-title" href="/">Mengw.io</a>
-
-    <nav class="site-nav">
-      <span class="menu-icon">
-        <svg viewBox="0 0 18 15" width="18px" height="15px">
-          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-        </svg>
-      </span>
-
-      <div class="trigger">
-        
-          
-          <a class="page-link" href="/about/">About</a>
-          
-        
-          
-        
-          
-        
-          
-        
+  <div class="index-wrapper">
+    <div class="aside">
+      <div class="info-card">
+        <h1>WMXPY</h1>
       </div>
-    </nav>
-
-  </div>
-
-</header>
-
-
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-  
-  
-
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Apr 11, 2017</span>
-
-        <h2>
-          <a class="post-link" href="/qa/2017/04/11/Basic-of-QA.html">Basic of QA</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Apr 3, 2017</span>
-
-        <h2>
-          <a class="post-link" href="/javascript/2017/04/03/DN-02.html">DN-02</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Apr 2, 2017</span>
-
-        <h2>
-          <a class="post-link" href="/javascript/2017/04/02/Reviewmd-Stuff.html">Reviewmd&#39;s Stuff</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 21, 2017</span>
-
-        <h2>
-          <a class="post-link" href="/javascript/2017/03/21/Layer.html">Layer-01</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 17, 2017</span>
-
-        <h2>
-          <a class="post-link" href="/javascript/2017/03/17/DN-01.html">DN-01</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 13, 2017</span>
-
-        <h2>
-          <a class="post-link" href="/linux/2017/03/13/Ubuntu-Install-Guide.html">Ubuntu Install Guide</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 27, 2017</span>
-
-        <h2>
-          <a class="post-link" href="/javascript/2017/02/27/ES6-Learning-Note.html">ES6 Learning Note</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 13, 2017</span>
-
-        <h2>
-          <a class="post-link" href="/javascript/2017/02/13/Vue-Guide.html">Vue Guide</a>
-        </h2>
-      </li>
-    
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
-
-</div>
-
-      </div>
-    </main>
-
-    <footer class="site-footer">
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">Mengw.io</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>
-            
-              Mengw.io
-            
-            </li>
-            
-            <li><a href="mailto:wm@wmpcxpy.com">wm@wmpcxpy.com</a></li>
-            
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          
-          <li>
-            <a href="https://github.com/WMXPY"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
-</span><span class="username">WMXPY</span></a>
-
-          </li>
-          
-
-          
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>Welcome.
-</p>
-      </div>
+      <div id="particles-js"></div>
+    </div>
+    <div class="index-content">
+      <ul class="artical-list">
+        
+        <li>
+          <a href="/DN-02" class="title">DN-02</a>
+          <div class="title-desc"></div>
+        </li>
+        
+        <li>
+          <a href="/Reviewmd-Stuff" class="title">Reviewmd's Stuff</a>
+          <div class="title-desc"></div>
+        </li>
+        
+        <li>
+          <a href="/Layer" class="title">Layer-01</a>
+          <div class="title-desc"></div>
+        </li>
+        
+        <li>
+          <a href="/DN-01" class="title">DN-01</a>
+          <div class="title-desc"></div>
+        </li>
+        
+        <li>
+          <a href="/ES6-Learning-Note" class="title">ES6 Learning Note</a>
+          <div class="title-desc"></div>
+        </li>
+        
+        <li>
+          <a href="/Vue-Guide" class="title">Vue Guide</a>
+          <div class="title-desc">回车和换行在不同系统下面定义不同，时不时会有一些小问题出来，git 经常出现的 No new line at the end of file 也让很多人费解，需要梳理一下</div>
+        </li>
+        
+        
+      </ul>
     </div>
 
   </div>
-
-</footer>
-
-
-  </body>
+</body>
 
 </html>
