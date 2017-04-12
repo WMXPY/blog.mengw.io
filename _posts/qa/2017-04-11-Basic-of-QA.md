@@ -2,7 +2,7 @@
 layout: post
 title:  "Basic of QA"
 categories: QA
-description: QA 的学习历程, 感觉也不是很难呀233
+description: QA 的学习历程, 感觉也不是很难呀233, 怕不是没写完
 ---
 
 # Basic of QA
