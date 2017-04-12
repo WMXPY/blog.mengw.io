@@ -360,11 +360,12 @@ a.external:hover {
   padding-bottom: 10px;
 }
 
-@media $mobiel {
+
+/*@media $mobile {
   .post-wrapper h2 {
     font-size: 20px;
   }
-}
+}*/
 
 .post-wrapper h3 {
   font-size: 18px;
