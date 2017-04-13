@@ -253,7 +253,7 @@ a.external:hover {
 
 @media screen and (max-width: 767px) {
   .index-wrapper .artical-list {
-    width: 85%;
+    width: 75%;
   }
 }
 
@@ -311,7 +311,7 @@ a.external:hover {
 
 @media screen and (max-width: 767px) {
   .post-wrapper {
-    width: 85%;
+    width: 75%;
     margin: 100px auto 50px;
     padding: 0;
   }
