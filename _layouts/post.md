@@ -9,7 +9,7 @@ layout: default
     {{ content }}
     <!--{% include disqus.html %}-->
   </div>
-<div class="div_right_bottom">Go Back(Maybe)</div>
+<div class="div_right_bottom"><a href="../">Go Back</a></div>
   {% include about.html %}
 
   <script src="/js/jquery-1.7.1.min.js" type="text/javascript"></script>
