@@ -3,3 +3,4 @@
 .idea
 *.scssc
 _site
+.sass-cache
