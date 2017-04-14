@@ -9,6 +9,8 @@ description: 我大概记的 linux 安装的那些小套路, 主要是这些源�
 
 # Chrome
 
+在乌班图中安装Chrome
+
 ```bash
 wget -q -O - <https://dl-ssl.google.com/linux/linux_signing_key.pub> | sudo apt-key add - 
 sudo sh -c 'echo "deb [arch=amd64] <http://dl.google.com/linux/chrome/deb/> stable main" >> /etc/apt/sources.list.d/google-chrome.list'
@@ -16,7 +18,18 @@ sudo apt-get update
 sudo apt-get install google-chrome-stable
 ```
 
+# UMake
+
+在乌班图中安装Umake
+
+```bash
+sudo apt-get install python-software-properties
+sudo apt-get install software-properties-common 
+```
+
 # VSCode -> based on ummake
+
+在乌班图中安装VSC
 
 ```bash
 sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make
@@ -25,14 +38,9 @@ sudo apt-get install ubuntu-make
 umake web visual-studio-code
 ```
 
-# UMake
-
-```bash
-sudo apt-get install python-software-properties
-sudo apt-get install software-properties-common 
-```
-
 # NodeJS
+
+在乌班图中安装Node
 
 ```bash
 curl -sL <https://deb.nodesource.com/setup_6.x> | sudo -E bash -
@@ -41,6 +49,8 @@ sudo apt-get install -y nodejs
 
 # Git
 
+在乌班图中安装Git
+
 ```bash
 apt-get install git
 sudo apt-get install python-software-properties
@@ -48,6 +58,8 @@ sudo apt-get install software-properties-common
 ```
 
 # Python
+
+在乌班图中安装python
 
 ```bash
 sudo apt-get install python-pip
