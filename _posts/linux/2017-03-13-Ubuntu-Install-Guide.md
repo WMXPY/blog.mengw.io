@@ -23,7 +23,6 @@ description: 我大概记的 linux 安装的那些小套路, 主要是这些源�
 
 # UMake
 
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
     sudo apt-get install python-software-properties
     sudo apt-get install software-properties-common 
 
@@ -36,12 +35,9 @@ description: 我大概记的 linux 安装的那些小套路, 主要是这些源�
 
     apt-get install git
 
-=======
-
 -   sudo apt-get install python-software-properties
 -   sudo apt-get install software-properties-common 
 
 # Python
 
 -   sudo apt-get install python-pip
-    > > > > > > > origin/master
