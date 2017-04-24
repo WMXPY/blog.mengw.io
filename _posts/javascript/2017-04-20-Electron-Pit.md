@@ -13,11 +13,22 @@ description: UpgradeE 的坑
 -   调整icon的时候不能用系统推荐的NativeImage对象，也不能直接用路径，需要用Path对象建立。
 -   Menu里如果没有复制粘贴功能就会有的时候迷之失去复制粘贴的功能。
 -   Mac端中，Menu的第一个母菜单会被强制命名。
+-   打包的时候, windows 的 icon 文件要求至少256\*256大小, 而且不能硬转换, 简单的方法是用 windows 的画图.
+-   Mac 只能打包 dmg,win 只能打包 msi 和 exe
 
 ## Node 的坑
 
--   
+-   Typescript 中如果想使用 require 这类的node 方法,或者库里面的方法,直接调用编译时报错, 解决方案如下, 有事没事 declare 一下, 贼爽!
+
+```typescript
+declare function require(name: string);
+declare var Vue: any;
+```
+
+-   箭头函数有时可以用 this, 有时不可以, 其实我到现在都不知道
+-   typescript 不能用 object.object 的方法直接对一个不存在的key 赋值, 但是可以用object[object] 强行用 string 给值
 
 ## API 的坑
 
--   
+-   lol 的 api 有的时候会错误返回404
+-   当前游戏的 api 有时时间是错误的, 返回之后先检查时间然后再使用, 如果时间不对的话就用当前的游戏时间
