@@ -53,6 +53,11 @@ declare var Vue: any;
 -   箭头函数有时可以用 this, 有时不可以, 其实我到现在都不知道。
 -   typescript 不能用 object.object 的方法直接对一个不存在的key 赋值, 但是可以用object[object] 强行用 string 给值。
 
+## Vue 的坑
+
+-   Webpack 很好理解, 但是脱裤子放屁, 我搞了一篇文章, 可以看一看
+-   在组建中执行回调函数必须要用括号函数, 否则 this 的位置会很差
+
 ## API 的坑
 
 -   lol 的 api 有的时候会错误返回404
