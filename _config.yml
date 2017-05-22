@@ -3,12 +3,7 @@ permalink: /:categories/:title
 title: mengw.io
 url: http://mengw.io
 feed: /atom.xml
-github_username:  WMXPY
-lookatthis:
-    - name: 1
-      github: 2
-    - name: 1
-      github: 3    
+github_username:  WMXPY 
 author_info: <a href="http://mengw.io/">WMXPY</a>
 markdown: kramdown
 kramdown:

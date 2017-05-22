@@ -7,7 +7,6 @@ layout: default
     <h1 class="post-title"><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h1>
     <p class="post-date">{{ page.date|date:"%Y-%m-%d" }}</p>
     {{ content }}
-    <!--{% include disqus.html %}-->
   </div>
 <div class="div_right_bottom"><a href="../">Go Back</a></div>
   {% include about.html %}
