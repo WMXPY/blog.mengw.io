@@ -4,6 +4,11 @@ title: mengw.io
 url: http://mengw.io
 feed: /atom.xml
 github_username:  WMXPY
+lookatthis:
+    - name: 1
+      github: 2
+    - name: 1
+      github: 3    
 author_info: <a href="http://mengw.io/">WMXPY</a>
 markdown: kramdown
 kramdown:
