@@ -21,3 +21,90 @@ assertContains('PHP', array('PHP', 'Java', 'Ruby'));   # SUCCESSFUL
 ```
 
 这些方法名自然不必多说了, 其中任何方法都可以在后面放置一个额外传入变量来指定输出.
+
+## 简单测试
+
+这里举例一个测试用户, 活动之间关系的测试代码
+
+```php
+class User
+{
+    public $id;
+    public $name;
+    public $email;
+    
+    public function __construct($id, $name, $email)
+    {
+        $this->id = $id;
+        $this->name = $name;
+        $this->email = $email;
+    }
+}
+class Event
+{
+    public $id;
+    public $name;
+    public $start_date;
+    public $end_date;
+    public $deadline;
+    public $attendee_limit;
+    public $attendees = array();
+    
+    public function __construct($id, $name, $start_date, $end_date, $deadline, $attendee_limit)
+    {
+        $this->id = $id;
+        $this->name = $name;
+        $this->start_date = $start_date;
+        $this->end_date = $end_date;
+        $this->deadline = $deadline;
+        $this->attendee_limit = $attendee_limit;
+    }
+    
+    public function reserve($user)
+    {
+        $this->attendees[$user->id] = $user;
+    }
+    
+    public function getAttendeeNumber()
+    {
+        return sizeof($this->attendees);
+    }
+}
+```
+
+我们用以下的代码进行测试
+
+```php
+require_once('../src/phpunitdemo/UserDemo.php');
+require_once('../src/phpunitdemo/EventDemo.php');
+
+class EventTest extends PHPUnit_Framework_TestCase
+{
+    public function testReserve()
+    {
+        
+        $eventId = 1;
+        $eventName = '活動1';
+        $eventStartDate = '2014-12-24 18:00:00';
+        $eventEndDate = '2014-12-24 20:00:00';
+        $eventDeadline = '2014-12-23 23:59:59';
+        $eventAttendeeLimit = 10;
+        $event = new Event($eventId,
+        $eventName, $eventStartDate, $eventEndDate,
+        $eventDeadline, $eventAttendeeLimit);
+        
+        $userId = 1;
+        $userName = 'User1';
+        $userEmail = '
+        user1@test.org ';
+        $user = new User($userId, $userName, $userEmail);
+        $event->reserve($user);
+        
+        $expectedNumber = 1;
+        $this->assertEquals($expectedNumber, $event->getAttendeeNumber());
+        $this->assertContains($user, $event->attendees);
+    }
+}
+```
+
+最后输出结果就不言而喻了.
