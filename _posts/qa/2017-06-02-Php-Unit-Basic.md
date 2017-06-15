@@ -19,7 +19,7 @@ assertEquals('orz', 'oxz', 'The string is not equal with orz');   #UNSUCCESSFUL
 assertCount(1, array('Monday'));   # SUCCESSFUL
 assertContains('PHP', array('PHP', 'Java', 'Ruby'));   # SUCCESSFUL
 ```
-
+需要知道的是
 这些方法名自然不必多说了, 其中任何方法都可以在后面放置一个额外传入变量来指定输出.
 
 ## 简单测试
