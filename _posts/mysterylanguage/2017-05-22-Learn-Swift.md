@@ -29,3 +29,4 @@ applica(f: {(str: String)->(String) in
     // printed abc
 }, str: "abc")
 ```
+回填函数在移动端牵扯到线程的问题
