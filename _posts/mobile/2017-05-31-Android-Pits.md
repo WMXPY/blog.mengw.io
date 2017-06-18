@@ -22,7 +22,8 @@ description: 安卓开发中踩到, 并爬!上!来!的坑...
 
 -   Gson
 
-看起来复杂其实不是!
+看起来复杂其实不是!  
+Gson 需要一个对象来帮助 Gson 来理解需要怼的 Json. 同样也需要将一个对象转换成 Json.
 
 ### Android Studio
 
