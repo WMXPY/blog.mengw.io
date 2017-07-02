@@ -6,6 +6,36 @@ description: 我大概记的 linux 安装的那些小套路, 主要是这些源�
 ---
 
 -   **_ForUbuntu_**
+# Steam
+
+Since most of these answers are outdated... Here is modern way to install the nvidia drivers for Ubuntu (for 14.04 and newer):
+
+Add the graphics-drivers ppa
+```
+sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt-get update
+```
+Install the recommended driver
+```
+sudo ubuntu-drivers autoinstall
+```
+Restart your system
+```
+sudo reboot
+```
+To select a different driver, or if the above doesn't work:
+
+Add the graphics-drivers ppa
+sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt-get update
+Purge any existing nvidia related packages you have installed
+sudo apt-get purge nvidia*
+Check which drivers are available for your system
+ubuntu-drivers devices
+Install the recommended driver
+sudo apt-get install nvidia-361
+Restart your system
+sudo reboot
 
 # Chrome
 
