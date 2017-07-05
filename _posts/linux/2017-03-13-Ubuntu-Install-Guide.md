@@ -230,16 +230,17 @@ Linux清理硬盘空间
 
 我的输出结果
 
-441.0M texlive-latex-extra-doc
-230.1M valgrind-dbg
-200.6M chromium-browser
-171.4M google-chrome-stable
-153.4M linux-image-extra-3.19.0-39-generic
-153.4M linux-image-extra-3.19.0-37-generic
-151.5M maltego
-144.8M wine1.7-amd64
-140.6M metasploit-framework
-137.4M wine1.7-i386
+    441.0M texlive-latex-extra-doc
+    230.1M valgrind-dbg
+    200.6M chromium-browser
+    171.4M google-chrome-stable
+    153.4M linux-image-extra-3.19.0-39-generic
+    153.4M linux-image-extra-3.19.0-37-generic
+    151.5M maltego
+    144.8M wine1.7-amd64
+    140.6M metasploit-framework
+    137.4M wine1.7-i386
+
 接下来你就可以删除你不用的软件包了．上面的命令默认只会显示前10个结果，你可指定结果的个数，比如20个
 
     dpigs -H --lines=20
