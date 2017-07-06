@@ -7,6 +7,17 @@ description: 我大概记的 linux 安装的那些小套路, 主要是这些源�
 
 -   **_ForUbuntu_**
 
+# Theme
+
+```bash
+sudo add-apt-repository ppa:noobslab/themes
+sudo apt-get update
+sudo apt-get install flatabulous-theme
+sudo add-apt-repository ppa:noobslab/icons
+sudo apt-get update
+sudo apt-get install ultra-flat-icons
+```
+
 # Steam
 
 Since most of these answers are outdated... Here is modern way to install the nvidia drivers for Ubuntu (for 14.04 and newer):
