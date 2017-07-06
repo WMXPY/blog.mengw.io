@@ -52,8 +52,8 @@ Restart your system
 在乌班图中安装Chrome
 
 ```bash
-wget -q -O - <https://dl-ssl.google.com/linux/linux_signing_key.pub> | sudo apt-key add - 
-sudo sh -c 'echo "deb [arch=amd64] <http://dl.google.com/linux/chrome/deb/> stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
+sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
 sudo apt-get update 
 sudo apt-get install google-chrome-stable
 ```
@@ -83,7 +83,7 @@ umake web visual-studio-code
 在乌班图中安装Node
 
 ```bash
-curl -sL <https://deb.nodesource.com/setup_6.x> | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
