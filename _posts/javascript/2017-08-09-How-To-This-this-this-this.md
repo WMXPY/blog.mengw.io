@@ -5,7 +5,7 @@ categories: JavaScript
 description: 这么多 this 怎么一路追溯下去呢
 ---
 
-# 问题
+### 问题
 
 这是一个我在写caperjs重构的时候遇到的问题  
 情况是这样的
@@ -28,7 +28,7 @@ description: 这么多 this 怎么一路追溯下去呢
 
 这样问题就来了 this.this 在 js 中看起来和 swift 中可以用的 self.self 差不多, 但是实际上 this.this 作用是 this['this'] 这样就很不可理喻了, 因为显然在 c 中是没有 'this' 这样一个元素的.
 
-# 解决
+### 解决
 
 方法很简单, 将 c 写为一个函数, 然后在 c 中用一个变量获取到 this, 然后在子方法中使用这个变量就可以了.
 
