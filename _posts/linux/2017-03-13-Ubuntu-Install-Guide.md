@@ -96,6 +96,25 @@ sudo apt-get update
 sudo apt-get install ubuntu-make
 umake web visual-studio-code
 ```
+
+# VSCode -> based on apt
+
+Visual Studio Code enabled official Linux repositories on February 2017 (v1.10)
+
+```bash
+sudo add-apt-repository -y "deb https://packages.microsoft.com/repos/vscode stable main"
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EB3E94ADBE1229CF
+sudo apt update
+sudo apt -y install code
+```
+
+You can upgrade / dist-upgrade as usual
+
+```bash
+sudo apt -y upgrade
+sudo apt -y dist-upgrade
+```
+
 # Font
 
 ```bash
