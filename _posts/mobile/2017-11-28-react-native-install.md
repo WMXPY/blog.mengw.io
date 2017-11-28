@@ -5,6 +5,8 @@ categories: React Native
 description: 安装RN的步骤和问题解决
 ---
 
+本指南归纳了基本的React Native环境安装方法和常见问题
+
 ## 基础库
 
 ### windows
