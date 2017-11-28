@@ -176,3 +176,13 @@ ipconfig
 -   输入我们之前获得的ip地址和端口号 (端口号一般是8081)
 -   返回，或者摇晃设备 (打开开发者页面)
 -   点击`Reload JS`
+
+## 补充：这种init的工程如何直接放置在github上
+
+```bash
+echo "anything" >> README.md
+git init
+git add .
+git remote add origin https://github.com/somewhere.git
+git push -u origin master
+```
