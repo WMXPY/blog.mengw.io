@@ -49,3 +49,22 @@ sudo yarn config set disturl https://npm.taobao.org/dist --global
 
 ## 用Android Studio安装安卓SDK
 
+### 安装时需要确保安装的组件
+
+> SDK 和棉花糖的API 23是默认安装的
+
+- Performance (Index HAXM)
+- Android Virtual Device
+
+### 安装后需要追加的组件
+
+事实上在Android Studio编译运行时，所依赖的组件会自动安装，但是我们用RN最好手动将需要的组件安装好
+
+- SDK platforms
+    - Android 6.0 (Marshmallow)
+        - Google APIS (在大多数情况下默认安装)
+        - Android SDK Platform 23
+        - Intel x86 Atom System Image
+        - Intel x86 Atom_64 System Image
+        - Google APIs Intel x86 Atom_64 System Image
+- 
