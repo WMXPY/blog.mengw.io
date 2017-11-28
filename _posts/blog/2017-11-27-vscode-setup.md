@@ -60,3 +60,40 @@ Extensions Added:
   vue-snippets v0.1.5
   wordcount v0.1.0
 --------------------
+
+```json
+{
+    "workbench.activityBar.visible": true,
+    "workbench.statusBar.visible": true,
+    "editor.fontFamily": "'Fira Code', Consolas,Microsoft YaHei, Monaco,'Courier New',monospace",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 15,
+    "sync.gist": "***",
+    "sync.lastUpload": "2017-11-28T18:51:35.800Z",
+    "sync.autoDownload": false,
+    "sync.autoUpload": false,
+    "sync.lastDownload": "2017-06-30T16:15:12.625Z",
+    "sync.forceDownload": true,
+    "sync.anonymousGist": false,
+    "editor.formatOnSave": true,
+    "editor.wordWrap": "on",
+    "markdown-pdf.type": "html",
+    "java.errors.incompleteClasspath.severity": "ignore",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Monokai",
+    "git.enableSmartCommit": true,
+    "sync.host": "",
+    "sync.pathPrefix": "",
+    "sync.quietSync": false,
+    "sync.askGistName": false,
+    "files.associations": {
+        "*.vue": "html"
+    },
+    "C_Cpp.intelliSenseEngineFallback": "Enabled",
+    "C_Cpp.errorSquiggles": "Disabled",
+    "editor.minimap.renderCharacters": false,
+    "git.confirmSync": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "vsicons.dontShowNewVersionMessage": true
+}
+```
