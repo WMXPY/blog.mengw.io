@@ -5,6 +5,8 @@ categories: MySQL
 description:  奇妙的混合 App
 ---
 
+# 混合app
+
 这段时间在做 app.  
 混合 app 就是说在页面中使用 webview 一类的组件来在原生 app 中显示网页, 安卓和 ios 都支持. 这其中的优势就很多了, 更新啊, 排版啊, 代码量啊都简单很多. 尤其是 js 相比 java 或者 objc, swift 一路灵活了许多. 在请求中收到奇妙的 json 也可以轻松解开, 而 Gson 虽然强大但是细思恐极, 无法变通.  
 缺点还是有一些的但是其实还好.

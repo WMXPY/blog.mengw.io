@@ -107,4 +107,4 @@ class EventTest extends PHPUnit_Framework_TestCase
 }
 ```
 
-最后输出结果就不言而喻了.
+这样我们就可以通过多个测试来逐个测试class。

@@ -50,7 +50,54 @@ declare function require(name: string);
 declare var Vue: any;
 ```
 
--   箭头函数有时可以用 this, 有时不可以, 其实我到现在都不知道。
+-   箭头函数有时可以用 this, 有时不可以, 其实我到现在都不知道。（2017-12-27 修改）
+
+原来的我实在是太傻吊了
+
+`this` 的使用方法其实是 `Function` 对象在创建的时候自动调用了 `Function.call(<this's position>)`，其实在写 `function X` 的时候我们自动将 `this` 指向当前的运行环境，比如说某一个class或者整个全局。在使用箭头函数的时候，`this` 的位置和当前的运行环境相同，比如。
+
+```js
+function a() {
+  this.d = 1;
+  function b(){
+    this.f = 2;
+    function c(){
+      this.g = 3;
+    }
+  }
+}
+```
+
+比如说在当前情况下，函数 `c` 的 `this` 状况就是 `b` 的位置。也就是说其实这段代码可以改写成：
+
+```js
+function a() {
+  this.d = 1;
+  function b(){
+    this.f = 2;
+    function c(){
+      b.g = 3;
+    }
+  }
+}
+```
+
+与这个不同的是如果 `c` 是一个箭头函数：
+
+```js
+function a() {
+  this.d = 1;
+  function b(){
+    this.f = 2;
+    let c = ()=>{
+      this.g = 3;
+    }
+  }
+}
+```
+
+函数 `c` 的 `this` 和 `b` 的 `this` 指向的位置是一样的，那么其实我们的 `this.g = 3;` 改变的是函数 `a` 的 `g` 键值。
+
 -   typescript 不能用 object.object 的方法直接对一个不存在的key 赋值, 但是可以用object[object] 强行用 string 给值。
 
 ## Vue 的坑

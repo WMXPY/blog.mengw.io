@@ -18,3 +18,4 @@ Assume we have a source code
     IF(A>1) AND (B=0)  THENX:=X/A；
     IF(A=2)OR (X>1)  THENX:=X+1；
     END. 
+
