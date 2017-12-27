@@ -22,6 +22,7 @@ layout: default
           <a href="{{ post.url }}" class="title">{{ post.title }}</a>
           <div class="title-desc">{{ post.description }}</div>
         {% endfor %}
+        </li>
       </ul>
     </div>
   </div>
