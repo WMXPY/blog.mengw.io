@@ -7,7 +7,7 @@ layout: default
     <div class="aside">
       <div class="info-card">
         <h1>WMXPY's</h1>
-        <h2>AutoMated Bug Factory</h2>
+        <h2>Automated Bug Factory</h2>
         <!-- <h2>我一直以来的Bug编写历程</h2> -->
       </div>
     </div>
@@ -21,8 +21,8 @@ layout: default
         <li>
           <a href="{{ post.url }}" class="title">{{ post.title }}</a>
           <div class="title-desc">{{ post.description }}</div>
-        {% endfor %}
         </li>
+        {% endfor %}
       </ul>
     </div>
   </div>
