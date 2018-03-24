@@ -7,7 +7,7 @@ description: 我大概记的 linux 安装的那些小套路, 主要是这些源�
 
 -   **_ForUbuntu_**
 
-# Increate swap file for low memory mechine
+## Increate swap file for low memory mechine
 
 ```bash
 sudo fallocate -l 1G /swapfile
@@ -23,7 +23,7 @@ sudo sysctl vm.vfs_cache_pressure=50
 echo 'vm.vfs_cache_pressure=50' | sudo tee -a /etc/sysctl.conf
 ```
 
-# Theme
+## Theme
 
 ```bash
 sudo add-apt-repository ppa:noobslab/themes
@@ -34,13 +34,13 @@ sudo apt-get update
 sudo apt-get install ultra-flat-icons
 ```
 
-# digitalocean
+## digitalocean
 
 ```bash
 curl -sSL https://agent.digitalocean.com/install.sh | sh
 ```
 
-# Steam
+## Steam
 
 Since most of these answers are outdated... Here is modern way to install the nvidia drivers for Ubuntu (for 14.04 and newer):
 
@@ -80,7 +80,7 @@ Restart your system
 
     sudo reboot
 
-# Chrome
+## Chrome
 
 在乌班图中安装Chrome
 
@@ -90,7 +90,7 @@ sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable
 sudo apt-get update 
 sudo apt-get install google-chrome-stable
 ```
-# Ubuntu Tweak
+## Ubuntu Tweak
 
 ```bash
 wget -q -O - http://archive.getdeb.net/getdeb-archive.key | sudo apt-key add -
@@ -99,7 +99,7 @@ sudo apt-get update
 sudo apt-get install ubuntu-tweak
 ```
 
-# UMake
+## UMake
 
 在乌班图中安装Umake
 
@@ -108,7 +108,7 @@ sudo apt-get install python-software-properties
 sudo apt-get install software-properties-common 
 ```
 
-# VSCode -> based on ummake
+## VSCode -> based on ummake
 
 在乌班图中安装VSC
 
@@ -119,7 +119,7 @@ sudo apt-get install ubuntu-make
 umake web visual-studio-code
 ```
 
-# VSCode -> based on apt
+## VSCode -> based on apt
 
 Visual Studio Code enabled official Linux repositories on February 2017 (v1.10)
 
@@ -137,7 +137,7 @@ sudo apt -y upgrade
 sudo apt -y dist-upgrade
 ```
 
-# Font
+## Font
 
 ```bash
 sudo mkdir -p /usr/share/fonts/consolas
@@ -147,16 +147,16 @@ cd /usr/share/fonts/consolas
 sudo mkfontscale && sudo mkfontdir && sudo fc-cache -fv
 ```
 
-# NodeJS
+## NodeJS
 
 在乌班图中安装Node
 
 ```bash
-curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
-# Git
+## Git
 
 在乌班图中安装Git
 
@@ -166,7 +166,7 @@ sudo apt-get install python-software-properties
 sudo apt-get install software-properties-common 
 ```
 
-# Python
+## Python
 
 在乌班图中安装python
 
@@ -174,7 +174,7 @@ sudo apt-get install software-properties-common
 sudo apt-get install python-pip
 ```
 
-# Clean
+## Clean
 
 1.  删除残余的配置文件
 
@@ -336,7 +336,7 @@ Linux清理硬盘空间
 
 ubuntu tweak清理缓存
 
-# 日期格式设置
+## 日期格式设置
 
 查看区域设置
 
