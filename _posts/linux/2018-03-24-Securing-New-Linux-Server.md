@@ -188,7 +188,7 @@ AllowUsers joshua # ==> 添加这行
 
 我们要做如下改动
 
-1.  将端口号改为 > 1024, &lt;= 65535 的其中一个
+1.  将端口号改为 > 1024, &lt;= 65535 的其中一个，我习惯于改为 35245
 2.  关闭 PermitRootLogin
 3.  关闭 PermitEmptyPasswords
 4.  关闭 PasswordAuthentication
@@ -228,7 +228,7 @@ Port [your port number]
 
 设置不禁止密码登陆和上方的方法区别不大，参考以上的 ssh_config 文件，并且只修改如下的字段
 
-1. 将端口号改为 > 1024, &lt;= 65535 的其中一个
+1. 将端口号改为 > 1024, &lt;= 65535 的其中一个，我习惯于改为 35245
 2. 关闭 PermitRootLogin
 3. 添加 AllowUsers joshua
 
