@@ -329,3 +329,18 @@ Linux清理硬盘空间
 打开ubuntu tweak后，选择Janitor标签．在这里你可以清理应用程序的缓存，缩略图缓存，apt缓存，旧内核，没有用的软件包配置文件，以及孤儿软件包．
 
 ubuntu tweak清理缓存
+
+# 日期格式设置
+
+查看区域设置
+
+```bash
+locale
+```
+
+设置区域
+
+```bash
+sudo locale-gen en_US en_US.UTF-8 en_CA.UTF-8
+sudo dpkg-reconfigure locales
+```

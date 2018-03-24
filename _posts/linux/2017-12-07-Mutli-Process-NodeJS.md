@@ -38,3 +38,5 @@ for (int i = 0; i < numCPUs; i++) {
     }
 }
 ```
+
+这个设置已经被用在GHOTI-CLI中了
