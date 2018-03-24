@@ -34,6 +34,12 @@ sudo apt-get update
 sudo apt-get install ultra-flat-icons
 ```
 
+# digitalocean
+
+```bash
+curl -sSL https://agent.digitalocean.com/install.sh | sh
+```
+
 # Steam
 
 Since most of these answers are outdated... Here is modern way to install the nvidia drivers for Ubuntu (for 14.04 and newer):
