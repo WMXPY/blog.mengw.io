@@ -9,7 +9,7 @@ description:  JavaScript 中的闭包和私有方法
 
 ## JavaScipt 中的私有
 
-讲道理 JavaScript 是一门面向对象的语言, 那么对象一定是需要这些东西的. 别的语言自然有这样的方法, 比如 C++ 的 public: 和 private: ,java 中的 private, protectd, fridenly 变量都是很好的例子, 对于 javascript 来说,我简单的研究了一下怎么搞这个. 但着这之前, 我也不知道 java 里 private 和普通的变量有啥区别, 所以我应该先研究一下我们为啥要这么做.
+讲道理 JavaScript 是一门面向对象的语言, 那么对象一定是需要这些东西的. 别的语言自然有这样的方法, 比如 C++ 的 public: 和 private: ,java 中的 private, protectd, friendly 变量都是很好的例子, 对于 javascript 来说,我简单的研究了一下怎么搞这个. 但着这之前, 我也不知道 java 里 private 和普通的变量有啥区别, 所以我应该先研究一下我们为啥要这么做.
 
 ## 为啥要这么做
 
