@@ -40,7 +40,7 @@ NodeJS receives, processes and returns requests using event registration system,
 
 ### Ecosystem
 
-NodeJS has the world's largest package management system - npm (nodejs package manager), 
+NodeJS has the world's largest package management system - npm (nodejs package manager),  
 
 ### C++ component
 
