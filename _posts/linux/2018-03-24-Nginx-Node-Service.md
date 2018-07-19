@@ -7,13 +7,13 @@ description: 在 Linux 用 Nginx 反向代理 NodeJS 服务
 
 ## 概览
 
-这篇文章简单介绍如何使用 Ngnix 反向代理在其他端口运行的 NodeJS 服务，包括简单的安装工作。
+这篇文章简单介绍如何使用 Nginx 反向代理在其他端口运行的 NodeJS 服务，包括简单的安装工作。
 
 ## 安装
 
 你需要以下的软件
 
-1. Ngnix
+1. Nginx
 2. NodeJS
 3. Forever
 
@@ -24,7 +24,7 @@ curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
-### Ngnix
+### Nginx
 
 ```bash
 sudo apt-get install -y nginx
@@ -38,13 +38,13 @@ sudo npm install -g forever
 
 ## 配置
 
-首先我们需要配置整体的 Ngnix 设置，用以下的命令进入 `/etc/ngnix` 目录，查看 `ngnix.conf` 配置文件
+首先我们需要配置整体的 Nginx 设置，用以下的命令进入 `/etc/nginx` 目录，查看 `nginx.conf` 配置文件
 
 ### 总体配置
 
 ```bash
-cd /etc/ngnix
-cat ngnix.conf
+cd /etc/nginx
+cat nginx.conf
 ```
 
 这个文件的内容应该如下所示
@@ -174,7 +174,7 @@ server {
 }
 ```
 
-保存之后 ngnix 不会自动加载新的配置文件，用以下的命令检查文件的内容是否合法，并重新启动服务区。
+保存之后 nginx 不会自动加载新的配置文件，用以下的命令检查文件的内容是否合法，并重新启动服务区。
 
 ```bash
 sudo nginx -t
