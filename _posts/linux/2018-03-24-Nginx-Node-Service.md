@@ -49,6 +49,9 @@ cat nginx.conf
 
 这个文件的内容应该如下所示
 
+> 2018-07-19 更新  
+> 将 `client_max_body_size` 更改并且取消注释即可提高上传文件的上限
+
 ```py
 user www-data;
 worker_processes auto;
@@ -64,7 +67,7 @@ http {
 	##
 	# Basic Settings
 	##
-
+	
 	sendfile on;
 	tcp_nopush on;
 	tcp_nodelay on;
@@ -98,6 +101,12 @@ http {
 
 	gzip on;
 	gzip_disable "msie6";
+
+	##
+	# Max POST upload size limit
+	##
+
+	# client_max_body_size 20m;
 
 	# gzip_vary on;
 	# gzip_proxied any;
