@@ -1,22 +1,36 @@
 {
     "editor.formatOnSave": false,
     "cSpell.words": [
+        "ANTLR",
         "Atthis",
+        "Backend",
         "Markus",
         "Meng",
         "Nginx",
+        "SFUI",
+        "Segoe",
+        "Theming",
         "UIDPLUS",
         "Workiva",
         "Xarmain",
+        "adog",
+        "caperjs",
+        "crossorigin",
+        "hljs",
         "instanceof",
         "keepalive",
+        "keyup",
+        "livescript",
+        "maxmin",
         "mengw",
         "mipha",
         "msie",
         "nodelay",
         "nopush",
+        "npmjs",
         "proxied",
         "sendfile",
-        "stopall"
+        "stopall",
+        "wmpcxpy"
     ]
 }
