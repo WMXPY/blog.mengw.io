@@ -34,8 +34,8 @@
 		}
 
 		h2 {
-			font-size: 30px;
-			margin-bottom: 12px;
+			font-size: 32px;
+			margin-bottom: 10px;
 			padding-top: 19px;
 			font-weight: normal;
 		}
@@ -60,108 +60,120 @@
 			margin-bottom: 8px;
 		}
 	</style>
+
+	<style>
+		.title-left{
+			flex: 1;
+		}
+
+		.title-right {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+		}
+	</style>
 </head>
 
 <body>
 	<div if="root">
-		<div>
-			<div style="float:left;">
+		<div style="display: flex">
+			<div class="title-left">
 				<h2>Meng Wang</h2>
 			</div>
-			<div style="float:right;">
-				wm@mengw.io&nbsp;<i class="fa fa-envelope-square fa-fw" aria-hidden="true"></i>
-			</div><br>
-			<div style="float:right;">
-				(515)-777-9343&nbsp;<i class="fa fa-phone-square fa-fw" aria-hidden="true"></i>
-			</div><br>
-			<div style="float:right;">
-				https://mengw.io/&nbsp;<i class="fa fa-rss-square fa-fw" aria-hidden="true"></i>
-			</div><br>
-			<div style="float:right;">
-				https://github.com/wmxpy/&nbsp;<i class="fa fa-github-square fa-fw" aria-hidden="true"></i>
+			<div class="title-right">
+				<div>
+					wm@mengw.io&nbsp;<i class="fa fa-envelope-square fa-fw" aria-hidden="true"></i>
+				</div>
+				<div>
+					(515)-777-9343&nbsp;<i class="fa fa-phone-square fa-fw" aria-hidden="true"></i>
+				</div>
+				<div>
+					https://mengw.io/&nbsp;<i class="fa fa-rss-square fa-fw" aria-hidden="true"></i>
+				</div>
+				<div>
+					https://github.com/wmxpy/&nbsp;<i class="fa fa-github-square fa-fw" aria-hidden="true"></i>
+				</div>
 			</div>
 		</div>
-		<div style="float:right;">
-			<hr>
-			<!-- <h3>Summary</h3>
+		<hr>
+		<!-- <h3>Summary</h3>
 			<p>Creative full-stack software engineer with 1+ years of experience to build responsive web applications, mobile apps, server-side services.</p> -->
-			<h3>Education</h3>
-			<div style="padding-left:12px">
-				<div style="display: flex">
-					<div style="flex: 1;font-size: 16px"><strong>Iowa State University</strong></div>
-					<div>August 2014 - May 2018</div>
-				</div>
-				<ul>
-					<li>Bachelor of Science in Computer Science</li>
-				</ul>
+		<h3>Education</h3>
+		<div style="padding-left:12px">
+			<div style="display: flex">
+				<div style="flex: 1;font-size: 16px"><strong>Iowa State University</strong></div>
+				<div>Aug 2014 - May 2018</div>
 			</div>
-			<h3>Experience</h3>
-			<div style="padding-left:12px">
-				<div style="display: flex">
-					<div style="flex: 1;font-size: 16px"><strong>Source Allies</strong></div>
-					<div>August 2018 - Present</div>
-				</div>
-				<ul>
-					<li>Consultant, Full-stack Software Engineer</li>
-					<li>Build single-page applications with JavaScript on React framework with domain-driven design</li>
-					<li>Develop functional and structure feature with Java on SpringBoot framework</li>
-					<li>Implement unit test and e2e test for front-end, unit test and Integration test for back-end</li>
-					<li>Technology Stack: JavaScript, HTML, CSS, AWS, React, Redux, ElasticSearch, Java, and SpringBoot</li>
-				</ul>
-				<div style="display: flex">
-					<div style="flex: 1;font-size: 16px"><strong>Workiva</strong></div>
-					<div>June 2018 - August 2018</div>
-				</div>
-				<ul>
-					<li>Full-stack Software Engineer, Internship</li>
-					<li>Developed WDesk a single-page application with Dart and JavaScript on React framework</li>
-					<li>Maintained a server-side software with Go language on a custom-built framework</li>
-					<li>Technology Stack: Dart, HTML, CSS, React, Redux, JavaScript, NodeJS, and GoLang</li>
-				</ul>
-				<div style="display: flex">
-					<div style="flex: 1;font-size: 16px"><strong>Performance Livestock Analytics</strong></div>
-					<div>May 2017 - July 2017</div>
-				</div>
-				<ul>
-					<li>Software Engineer, Internship</li>
-					<li>Created database monitoring and edit web application for troubleshooting usage</li>
-					<li>Implemented unit tests and e2e tests for PHP single-page applications with NodeJS and Selenium</li>
-					<li>Technology Stack: JavaScript, CSS, jQuery, MySQL, VueJS, NodeJS, Selenium, and PHP</li>
-				</ul>
+			<ul>
+				<li>Bachelor of Science in Computer Science</li>
+			</ul>
+		</div>
+		<h3>Experience</h3>
+		<div style="padding-left:12px">
+			<div style="display: flex">
+				<div style="flex: 1;font-size: 16px"><strong>Source Allies</strong></div>
+				<div>Aug 2018 - Current</div>
 			</div>
+			<ul>
+				<li>Consultant, Full-stack Software Engineer</li>
+				<li>Build single-page applications with JavaScript on React framework with domain-driven design</li>
+				<li>Develop functional and structure feature with Java on SpringBoot framework</li>
+				<li>Implement unit test and e2e test for front-end, unit test and Integration test for back-end</li>
+				<li>Technology Stack: JavaScript, HTML, CSS, AWS, React, Redux, ElasticSearch, Java, and SpringBoot</li>
+			</ul>
+			<div style="display: flex">
+				<div style="flex: 1;font-size: 16px"><strong>Workiva</strong></div>
+				<div>Jun 2018 - Aug 2018</div>
+			</div>
+			<ul>
+				<li>Full-stack Software Engineer, Internship</li>
+				<li>Developed WDesk a single-page application with Dart and JavaScript on React framework</li>
+				<li>Maintained a server-side software with Go language on a custom-built framework</li>
+				<li>Technology Stack: Dart, HTML, CSS, React, Redux, JavaScript, NodeJS, and GoLang</li>
+			</ul>
+			<div style="display: flex">
+				<div style="flex: 1;font-size: 16px"><strong>Performance Livestock Analytics</strong></div>
+				<div>May 2017 - Jul 2017</div>
+			</div>
+			<ul>
+				<li>Software Engineer, Internship</li>
+				<li>Created database monitoring and edit web application for troubleshooting usage</li>
+				<li>Implemented unit tests and e2e tests for PHP single-page applications with NodeJS and Selenium</li>
+				<li>Technology Stack: JavaScript, CSS, jQuery, MySQL, VueJS, NodeJS, Selenium, and PHP</li>
+			</ul>
+		</div>
 
-			<h3>Open Source Projects</h3>
-			<div style="padding-left:12px">
-				<div style="display: flex">
-					<div style="flex: 1;font-size: 16px"><strong>Markus</strong></div>
-					<div>A server-side picture management service software</div>
-				</div>
-				<ul>
-					<li>Created full-featured picture storage and management service with NodeJS</li>
-					<li>Implemented a custom-built route management structure based on Express</li>
-					<li>Supported a local construction company store their images, errorless ran for months</li>
-					<li>Technology Stack: TypeScript, NodeJS, NodeGYP, Express, MongoDB, React, libvips</li>
-				</ul>
-				<div style="display: flex">
-					<div style="flex: 1;font-size: 16px"><strong>Ghoti-CLI</strong></div>
-					<div>A project quick starter and structural simplification tool</div>
-				</div>
-				<ul>
-					<li>Created a boilerplate management software for web developers</li>
-					<li>Implemented internet package downloading feature and package dependency management system</li>
-					<li>Developed base on functional programming pattern with LiveScript</li>
-				</ul>
+		<h3>Open Source Projects</h3>
+		<div style="padding-left:12px">
+			<div style="display: flex">
+				<div style="flex: 1;font-size: 16px"><strong>Markus</strong></div>
+				<div>A server-side image storage service</div>
 			</div>
-			<h3>Programming Skills</h3>
-			<div style="padding-left:12px">
-				<ul>
-					<li><strong>Web Development</strong>: CSS, HTML, JavaScript, TypeScript, LiveScript, React, VueJS, and Dart</li>
-					<li><strong>Server Development</strong>: Linux, AWS, NodeJS, NodeGYP, Bash, C, Docker, Python, Golang, and PHP</li>
-					<li><strong>Mobile Development</strong>: Kotlin, Java, Objective-C, Swift, React-Native, Flutter, and Xarmain</li>
-					<li><strong>Test Development</strong>: Mocha, Jest, Karma, Puppeteer, Chai, Selenium, and PhantomJS</li>
-					<li><strong>Cooperate</strong>: Strong experienced with Agile development, Jenkins, TravisCI, Git and Github</li>
-				</ul>
+			<ul>
+				<li>Created full-featured picture storage and management service with NodeJS</li>
+				<li>Implemented a custom-built route management structure based on Express</li>
+				<li>Supported a local construction company store their images, errorless ran for months</li>
+				<li>Technology Stack: TypeScript, NodeJS, NodeGYP, Express, MongoDB, React, libvips</li>
+			</ul>
+			<div style="display: flex">
+				<div style="flex: 1;font-size: 16px"><strong>Ghoti-CLI</strong></div>
+				<div>A boilerplate generate and management command line tool</div>
 			</div>
+			<ul>
+				<li>Created a boilerplate management software for web developers</li>
+				<li>Implemented internet package downloading feature and package dependency management system</li>
+				<li>Developed base on functional programming pattern with LiveScript</li>
+			</ul>
+		</div>
+		<h3>Programming Skills</h3>
+		<div style="padding-left:12px">
+			<ul>
+				<li><strong>Web Development</strong>: CSS, HTML, JavaScript, TypeScript, LiveScript, React, VueJS, and Dart</li>
+				<li><strong>Server Development</strong>: Linux, AWS, NodeJS, NodeGYP, Bash, C, Docker, Python, Golang, and PHP</li>
+				<li><strong>Mobile Development</strong>: Kotlin, Java, Objective-C, Swift, React-Native, Flutter, and Xarmain</li>
+				<li><strong>Test Development</strong>: Mocha, Jest, Karma, Puppeteer, Chai, Selenium, and PhantomJS</li>
+				<li><strong>Cooperate</strong>: Strong experienced with Agile development, Jenkins, TravisCI, Git, and Github</li>
+			</ul>
 		</div>
 	</div>
 </body>
