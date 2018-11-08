@@ -20,6 +20,7 @@
         "instanceof",
         "keepalive",
         "keyup",
+        "libvips",
         "livescript",
         "maxmin",
         "mengw",
@@ -29,6 +30,7 @@
         "nopush",
         "npmjs",
         "proxied",
+        "runned",
         "sendfile",
         "stopall",
         "wmpcxpy"
