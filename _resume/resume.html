@@ -6,7 +6,6 @@
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" crossorigin="anonymous">
 
 	<style>
-		
 		/* Copyright (c) Microsoft Corporation. All rights reserved.
 		Licensed under the MIT License. See License.txt in the project root for license information. */
 
@@ -23,7 +22,7 @@
 			border: 0;
 			height: 2px;
 			border-bottom: 2px solid;
-			margin-bottom: 12px;
+			margin-bottom: 14px;
 		}
 
 		h1 {
@@ -37,7 +36,7 @@
 		h2 {
 			font-size: 30px;
 			margin-bottom: 12px;
-			padding-top: 18px;
+			padding-top: 19px;
 			font-weight: normal;
 		}
 
@@ -45,14 +44,24 @@
 			margin: 0px;
 			font-weight: bold;
 			color: #3B3B3B;
+			font-size: 20px;
+			padding-bottom: 10px;
+		}
+
+		p {
+			padding-left: 20px;
+			padding-right: 15px;
+			margin-top: 6px;
+			margin-bottom: 6px;
 		}
 
 		ul {
-			margin-top: 6px;
+			margin-top: 8px;
 			margin-bottom: 8px;
 		}
 	</style>
 </head>
+
 <body>
 	<div if="root">
 		<div>
@@ -74,66 +83,87 @@
 		</div>
 		<div style="float:right;">
 			<hr>
+			<!-- <h3>Summary</h3>
+			<p>Creative full-stack software engineer with 1+ years of experience to build responsive web applications, mobile apps, server-side services.</p> -->
 			<h3>Education</h3>
-			<ul>
-				<li>August 2014 - May 2018 &gt; <strong>Iowa State University</strong>
-				<li>Major: Computer Science</li>
-			</ul>
+			<div style="padding-left:12px">
+				<div style="display: flex">
+					<div style="flex: 1;font-size: 16px"><strong>Iowa State University</strong></div>
+					<div>August 2014 - May 2018</div>
+				</div>
+				<ul>
+					<li>Bachelor of Science in Computer Science</li>
+				</ul>
+			</div>
 			<h3>Experience</h3>
-			<ul>
-				<li>August 2018 - Present &gt; <strong>Source Allies</strong>
-					<ul>
-						<li>Consultant, Full-Stack Software Engineer</li>
-						<li>Build single-page applications with JavaScript on React framework with domain-driven design</li>
-						<li>Develop functional and structure feature with Java on SpringBoot framework</li>
-						<li>Implement unit test and e2e test for front-end, unit test and Integration test for back-end</li>
-						<li>Technology Stack: JavaScript, HTML, CSS, AWS, React, Redux, ElasticSearch, Java, and SpringBoot</li>
-					</ul>
-				</li>
-				<li>May 2018 - August 2018 &gt; <strong>Workiva</strong>
-					<ul>
-						<li>Full-Stack Software Engineer, Internship</li>
-						<li>Developed WDesk a single-page application with Dart and JavaScript on React framework</li>
-						<li>Maintained a server-side software with Go language on a custom-built framework</li>
-						<li>Technology Stack: Dart, HTML, CSS, React, Redux, JavaScript, NodeJS, and GoLang</li>
-					</ul>
-				</li>
-				<li>May 2017 - August 2017 &gt; <strong>Performance Livestock Analytics</strong>
-					<ul>
-						<li>Software Engineer, Internship</li>
-						<li>Created database monitoring and edit web application for troubleshooting usage</li>
-						<li>Implemented unit tests and e2e tests for PHP single-page applications with NodeJS and Selenium</li>
-						<li>Technology Stack: JavaScript, CSS, jQuery, MySQL, VueJS, NodeJS, Selenium, and PHP</li>
-					</ul>
-				</li>
-			</ul>
+			<div style="padding-left:12px">
+				<div style="display: flex">
+					<div style="flex: 1;font-size: 16px"><strong>Source Allies</strong></div>
+					<div>August 2018 - Present</div>
+				</div>
+				<ul>
+					<li>Consultant, Full-stack Software Engineer</li>
+					<li>Build single-page applications with JavaScript on React framework with domain-driven design</li>
+					<li>Develop functional and structure feature with Java on SpringBoot framework</li>
+					<li>Implement unit test and e2e test for front-end, unit test and Integration test for back-end</li>
+					<li>Technology Stack: JavaScript, HTML, CSS, AWS, React, Redux, ElasticSearch, Java, and SpringBoot</li>
+				</ul>
+				<div style="display: flex">
+					<div style="flex: 1;font-size: 16px"><strong>Workiva</strong></div>
+					<div>June 2018 - August 2018</div>
+				</div>
+				<ul>
+					<li>Full-stack Software Engineer, Internship</li>
+					<li>Developed WDesk a single-page application with Dart and JavaScript on React framework</li>
+					<li>Maintained a server-side software with Go language on a custom-built framework</li>
+					<li>Technology Stack: Dart, HTML, CSS, React, Redux, JavaScript, NodeJS, and GoLang</li>
+				</ul>
+				<div style="display: flex">
+					<div style="flex: 1;font-size: 16px"><strong>Performance Livestock Analytics</strong></div>
+					<div>May 2017 - July 2017</div>
+				</div>
+				<ul>
+					<li>Software Engineer, Internship</li>
+					<li>Created database monitoring and edit web application for troubleshooting usage</li>
+					<li>Implemented unit tests and e2e tests for PHP single-page applications with NodeJS and Selenium</li>
+					<li>Technology Stack: JavaScript, CSS, jQuery, MySQL, VueJS, NodeJS, Selenium, and PHP</li>
+				</ul>
+			</div>
+
 			<h3>Open Source Projects</h3>
-			<ul>
-				<li><strong><em>Markus</em></strong> &gt; A server-side picture management service software
-					<ul>
-						<li>Created full-featured picture storage and management service with NodeJS</li>
-						<li>Implemented a custom-built route management structure based on Express</li>
-						<li>Supported a local construction company store their images, errorless ran for months</li>
-						<li>Technology Stack: TypeScript, NodeJS, NodeGYP, Express, MongoDB, React, libvips</li>
-					</ul>
-				</li>
-				<li><strong><em>Ghoti-CLI</em></strong> &gt; A project quick starter and structural simplification tool
-					<ul>
-						<li>Created a boilerplate management software for web developers</li>
-						<li>Implemented internet package downloading feature and package dependency management system</li>
-						<li>Developed base on functional programming pattern with LiveScript</li>
-					</ul>
-				</li>
-			</ul>
+			<div style="padding-left:12px">
+				<div style="display: flex">
+					<div style="flex: 1;font-size: 16px"><strong>Markus</strong></div>
+					<div>A server-side picture management service software</div>
+				</div>
+				<ul>
+					<li>Created full-featured picture storage and management service with NodeJS</li>
+					<li>Implemented a custom-built route management structure based on Express</li>
+					<li>Supported a local construction company store their images, errorless ran for months</li>
+					<li>Technology Stack: TypeScript, NodeJS, NodeGYP, Express, MongoDB, React, libvips</li>
+				</ul>
+				<div style="display: flex">
+					<div style="flex: 1;font-size: 16px"><strong>Ghoti-CLI</strong></div>
+					<div>A project quick starter and structural simplification tool</div>
+				</div>
+				<ul>
+					<li>Created a boilerplate management software for web developers</li>
+					<li>Implemented internet package downloading feature and package dependency management system</li>
+					<li>Developed base on functional programming pattern with LiveScript</li>
+				</ul>
+			</div>
 			<h3>Programming Skills</h3>
-			<ul>
-				<li><strong>Web Development</strong>: CSS, HTML, JavaScript, TypeScript, LiveScript, React, VueJS, and Dart</li>
-				<li><strong>Server Development</strong>: Linux, AWS, NodeJS, NodeGYP, Bash, C, Docker, Python, Golang, and PHP</li>
-				<li><strong>Mobile Development</strong>: Kotlin, Java, Objective-C, Swift, React-Native, Flutter, and Xarmain</li>
-				<li><strong>Test Development</strong>: Mocha, Jest, Karma, Puppeteer, Chai, Selenium, and PhantomJS</li>
-				<li><strong>Cooperate</strong>: Strong experienced with Agile development, Jenkins, TravisCI, Git and Github</li>
-			</ul>
+			<div style="padding-left:12px">
+				<ul>
+					<li><strong>Web Development</strong>: CSS, HTML, JavaScript, TypeScript, LiveScript, React, VueJS, and Dart</li>
+					<li><strong>Server Development</strong>: Linux, AWS, NodeJS, NodeGYP, Bash, C, Docker, Python, Golang, and PHP</li>
+					<li><strong>Mobile Development</strong>: Kotlin, Java, Objective-C, Swift, React-Native, Flutter, and Xarmain</li>
+					<li><strong>Test Development</strong>: Mocha, Jest, Karma, Puppeteer, Chai, Selenium, and PhantomJS</li>
+					<li><strong>Cooperate</strong>: Strong experienced with Agile development, Jenkins, TravisCI, Git and Github</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </body>
+
 </html>
