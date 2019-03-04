@@ -247,18 +247,18 @@ a.external:hover {
   }
 }
 
-.index-wrapper .artical-list {
+.index-wrapper .article-list {
   width: 75%;
   margin: 0 auto;
 }
 
 @media screen and (max-width: 767px) {
-  .index-wrapper .artical-list {
+  .index-wrapper .article-list {
     width: 75%;
   }
 }
 
-.index-wrapper .artical-list li {
+.index-wrapper .article-list li {
   margin-top: 0;
   margin-bottom: 32px;
 }

@@ -12,7 +12,7 @@ layout: default
       </div>
     </div>
     <div class="index-content">
-      <ul class="artical-list">
+      <ul class="article-list">
         {% for post in site.posts %}
         <li>
           <a href="{{ post.url }}" class="title">{{ post.title }}</a>
