@@ -26,7 +26,7 @@ const swap = <T>(arr: T[], left: number, right: number): void => {
   return;
 };
 
-const quickSort = <T>(arr: T[], left: number = 0, right: number = arr.length - 1) => {
+const quickSort = <T>(arr: T[], left: number = 0, right: number = arr.length - 1): void => {
 
   if (left > right) {
     return;
@@ -62,7 +62,7 @@ const quickSort = <T>(arr: T[], left: number = 0, right: number = arr.length - 1
   quickSort(arr, left, lp - 1);
   quickSort(arr, lp + 1, right);
 
-  return arr;
+  return;
 };
 ```
 
