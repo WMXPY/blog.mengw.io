@@ -52,7 +52,7 @@ cat nginx.conf
 > 2018-07-19 更新  
 > 将 `client_max_body_size` 更改并且取消注释即可提高上传文件的上限
 
-```py
+```conf
 user www-data;
 worker_processes auto;
 pid /run/nginx.pid;
@@ -73,7 +73,7 @@ http {
 	tcp_nodelay on;
 	keepalive_timeout 65;
 	types_hash_max_size 2048;
-	# server_tokens off;
+	server_tokens off; # 2019-03-05 更新，设置这个为off可以增加安全性，因为设置之后nginx不会暴露其版本号
 
 	# server_names_hash_bucket_size 64;
 	# server_name_in_redirect off;
