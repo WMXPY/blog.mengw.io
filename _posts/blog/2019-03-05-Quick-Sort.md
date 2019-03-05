@@ -16,40 +16,41 @@ description: 快速排序
 为了能说明基准数和开始点的问题，这里给一个`ts`的原地快速排序实现：
 
 ```ts
-const swap = <T>(arr: T[],left: number: 0,right: number = arr.length - 1): void => {
+const swap = <T>(arr: T[], left: number, right: number): void => {
 
-    const temp: T = arr[left];
+  const temp: T = arr[left];
 
-    arr[left] = arr[right];
-    arr[right] = temp;
-    return;
+  arr[left] = arr[right];
+  arr[right] = temp;
+
+  return;
 };
 
-const quickSort = <T>(arr: T[],left: number: 0,right: number = arr.length - 1) => {
+const quickSort = <T>(arr: T[], left: number = 0, right: number = arr.length - 1) => {
 
-  if(left > right){
+  if (left > right) {
     return;
   }
 
-  let lp = left; // 左游标
-  let rp = right; // 右游标
+  let lp: number = left; // 左游标
+  let rp: number = right; // 右游标
 
   const pivot: T = arr[left]; // 基准数选择最左侧的数
 
-  while(lp != rp) {
+  while (lp != rp) {
 
     // 在游标不越过彼此的情况下，从右向左，寻找下一个比基准数小的数
-    while(lp < rp && arr[rp] >= pivot) {
-        rp--;
+    while (lp < rp && arr[rp] >= pivot) {
+      rp--;
     }
     // 在游标不越过彼此的情况下，从左向右，寻找下一个比基准数大的数
-    while(lp < rp && arr[lp] <= pivot) {
-        lp++;
+    while (lp < rp && arr[lp] <= pivot) {
+      lp++;
     }
 
     // 在游标不越过彼此的情况下，交换两个数，使比基准数小的右侧数放置于油表左侧
-    if(lp < rp) {
-        swap(arr, lp, rp)
+    if (lp < rp) {
+      swap(arr, lp, rp)
     }
   }
 
@@ -67,7 +68,12 @@ const quickSort = <T>(arr: T[],left: number: 0,right: number = arr.length - 1) =
 
 ## 基准数和开始点
 
-举一个例子 `4 1 7 9 10 5 2`
+举一个很简单的例子 `9 10 5 7`
 
-1. 选择最左侧的基准数`4`
-2. 左游标处于`4`的位置，从右向左寻找
+1. 选择最左侧的基准数`9`
+2. 从右向左寻找最近的比`9`小的数，`7`
+3. 从左向右寻找最近的比`9`大的数，`10`，交换可得`9 7 5 10`
+4. 从右向左寻找最近的比`9`小的数，`5`
+5. 从左向右寻找最近的比`9`大的数，在`5`的位置遇到右侧的游标，交换基准数和游标位置可得`5 7 9 10`，完成
+
+在这个例子中，我们可以发现，在第四步的时候如果从左侧开始遍历，游标的位置会被安排在`10`的位置，这样交换游标和基准数的时候就无法达成我们想要的目的。
