@@ -1,7 +1,7 @@
 permalink: /:categories/:title
-
 title: mengw.io
-url: http://mengw.io
+description: WMXPY's Automated Bug Factory
+url: https://mengw.io
 feed: /atom.xml
 github_username:  WMXPY 
 author_info: <a href="http://mengw.io/">WMXPY</a>
@@ -9,3 +9,13 @@ markdown: kramdown
 kramdown:
     input: GFM
     hard_wrap: false
+author:
+  name: WMXPY
+exclude:
+  - CNAME
+  - LICENSE
+  - _notes
+  - _storage
+  - .github
+  - .vscode
+  - docs
