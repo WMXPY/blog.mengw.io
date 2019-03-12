@@ -70,13 +70,13 @@ sudo yarn config set registry https://registry.npm.taobao.org --global
 sudo yarn config set disturl https://npm.taobao.org/dist --global
 ```
 
-### 开启Grandle Deamon
+### 开启 Grandle Deamon
 
 ```bash
 (if not exist "%USERPROFILE%/.gradle" mkdir "%USERPROFILE%/.gradle") && (echo org.gradle.daemon=true >> "%USERPROFILE%/.gradle/gradle.properties")
 ```
 
-## 用Android Studio安装安卓SDK
+## 用 Android Studio 安装安卓 SDK
 
 ### 安装时需要确保安装的组件
 
@@ -168,7 +168,7 @@ ipconfig
 
 获得ip和端口号之后，执行以下步骤
 
--   将设备连接到和调试机同wifi环境下
+-   将设备连接到和调试机同 wifi 环境下
 -   运行应用 (打开应用或者`react-native run-android`都可以)
 -   摇晃设备 (打开开发者页面)
 -   进入`Dev Settings`
@@ -177,7 +177,7 @@ ipconfig
 -   返回，或者摇晃设备 (打开开发者页面)
 -   点击`Reload JS`
 
-## 补充：这种init的工程如何直接放置在github上
+## 补充：这种 init 的工程如何直接放置在 github 上
 
 ```bash
 echo "anything" >> README.md
