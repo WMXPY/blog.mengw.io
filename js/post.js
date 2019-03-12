@@ -1,5 +1,5 @@
 $(function () {
-    $('pre').addClass('prettyprint linenums'); //添加Google code Hight需要的class
+    $('pre').addClass('prettyprint linenums');
     $('.entry a').each(function (index, element) {
         var href = $(this).attr('href');
         if (href) {
