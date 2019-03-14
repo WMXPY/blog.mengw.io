@@ -11,7 +11,7 @@ layout: default
 <div class="div_right_bottom"><a href="../">Go Back</a></div>
   {% include about.html %}
 
-  <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
   <script src="/js/post.js" type="text/javascript"></script>
 
 </body>

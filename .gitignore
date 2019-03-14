@@ -1,6 +1,11 @@
+# Java
 *.class
 *.xml
 .idea
-*.scssc
+
+# Build
 _site
+
+# Cache
+*.scssc
 .sass-cache
