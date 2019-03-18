@@ -75,6 +75,7 @@
         "runned",
         "sendfile",
         "stopall",
+        "unshift",
         "uroot",
         "useradd",
         "usermod",
