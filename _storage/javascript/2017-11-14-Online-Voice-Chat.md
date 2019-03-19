@@ -14,7 +14,7 @@ config = {
     inputSampleRate: context.sampleRate,//输入采样率,取决于平台
     inputSampleBits: 16,//输入采样数位 8, 16
     outputSampleRate: 44100 / 6,//输出采样率
-    oututSampleBits: 8,//输出采样数位 8, 16
+    outputSampleBits: 8,//输出采样数位 8, 16
     channelCount: 2,//声道数
     cycle: 500,//更新周期,单位ms
     volume: _config.volume || 1 //音量
@@ -29,14 +29,14 @@ bufferLength = 0;//音频数据缓冲区长度
 //通过音频流创建输入音频对象
 audioInput =　context.createMediaStreamSource(stream);//stream即getUserMedia成功后得到的流
 //设置录音机录音处理事件，每次缓存（上一步中）满了执行回调函数，
-recorder.onaudioprocess = function(e) {
-    var inputbuffer = e.inputBuffer,
-        channelCount = inputbuffer.numberOfChannels,
-        length = inputbuffer.length;
+recorder.onAudioProcess = function(e) {
+    var inputBuffer = e.inputBuffer,
+        channelCount = inputBuffer.numberOfChannels,
+        length = inputBuffer.length;
     channel = new Float32Array(channelCount * length);
     for (var i = 0; i < length; i++) {
         for (var j = 0; j < channelCount; j++) {
-            channel[i * channelCount + j] = inputbuffer.getChannelData(j)[i];
+            channel[i * channelCount + j] = inputBuffer.getChannelData(j)[i];
         }
     }
     buffer.push(channel);//缓存数据存入音频缓冲区
