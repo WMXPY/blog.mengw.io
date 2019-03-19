@@ -1,11 +1,9 @@
 ---
 layout: post
-title:  "HashMap, HTTP, BST - From 2019-03-16 Interview"
+title:  "Version of Http Protocol"
 categories: blog
-description: 面试之前请你再看一遍二叉搜索树
+description: 面试之前请你再看一遍 HTTP 的版本！
 ---
-
-## HashMap 的 Hash 冲突了
 
 ## 二叉搜索树
 
