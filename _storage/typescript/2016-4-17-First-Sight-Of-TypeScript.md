@@ -2,7 +2,7 @@
 layout: post
 title: "First Signt of Type Script"
 categories: TypeScript
-description:  第一次用 ts
+description: 第一次用 ts
 ---
 
 我打算用 ts 重构我的主 E.  

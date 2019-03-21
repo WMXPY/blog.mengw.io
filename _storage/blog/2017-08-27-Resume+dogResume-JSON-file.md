@@ -2,7 +2,7 @@
 layout: post
 title: "dogResume resume"
 categories: blog
-description:  我的dogReume版本简历
+description: 我的dogReume版本简历
 ---
 
 这就是导出的字符串内容

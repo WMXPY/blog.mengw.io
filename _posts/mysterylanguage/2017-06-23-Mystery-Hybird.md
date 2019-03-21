@@ -2,7 +2,7 @@
 layout: post
 title: "Mystery Hybird"
 categories: MySQL
-description:  奇妙的混合 App
+description: 奇妙的混合 App
 ---
 
 # 混合app

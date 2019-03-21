@@ -2,7 +2,7 @@
 layout: post
 title: "Closure and Private"
 categories: JavaScript
-description:  JavaScript 中的闭包和私有方法
+description: JavaScript 中的闭包和私有方法
 ---
 
 # 闭包与私有
