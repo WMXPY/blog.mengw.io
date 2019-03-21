@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "CPT Process"
+title: "CPT Process"
 categories: blog
-description:  记录一下 cpt 申请到完事的流程
+description: 记录一下 cpt 申请到完事的流程
 ---
 
 ## CPT PROCESS

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "First Signt of Type Script"
+title: "First Signt of Type Script"
 categories: TypeScript
 description:  第一次用 ts
 ---

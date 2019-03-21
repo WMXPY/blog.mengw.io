@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "VSCode Setup"
+title: "VSCode Setup"
 categories: blog
 description: vscode 的配置备份
 ---

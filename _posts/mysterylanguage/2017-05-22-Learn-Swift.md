@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Learning Swift"
+title: "Learning Swift"
 categories: Swift
 description: Swift 真的太迷了， 迷你懂吗，迷
 ---

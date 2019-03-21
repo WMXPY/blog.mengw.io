@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Nginx Node Service"
+title: "Nginx Node Service"
 categories: Linux
 description: 在 Linux 用 Nginx 反向代理 NodeJS 服务
 ---

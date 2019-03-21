@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Resume"
+title: "Resume"
 categories: blog
 description: 我的简历，这玩意是在不断更新的！ 就感觉很棒很厉害！
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Dynamic Programming"
+title: "Dynamic Programming"
 categories: blog
 description: 什么是动态规划
 ---

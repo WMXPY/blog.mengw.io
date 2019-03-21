@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Basic of Php Unit"
+title: "Basic of Php Unit"
 categories: QA
 description: PhpUnit 的简单用法
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Mipha.io"
+title: "Mipha.io"
 categories: blog
 description: 重定向过来总得有个说辞
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Java Interview"
+title: "Java Interview"
 categories: Quote
 description: 转载
 ---

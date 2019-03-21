@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Why Pick JavaScript For Your Next Project"
+title: "Why Pick JavaScript For Your Next Project"
 categories: JavaScript
 description: :D
 ---

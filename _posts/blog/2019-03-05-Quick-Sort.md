@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Quick Sort"
+title: "Quick Sort"
 categories: blog
 description: 快速排序
 ---

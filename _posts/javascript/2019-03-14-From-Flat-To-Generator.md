@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "From Flat To Generator"
+title: "From Flat To Generator"
 categories: JavaScript
 description: 从百草园（数组拉平）到三味书屋（迭代器）
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Atthis Pits"
+title: "Atthis Pits"
 categories: JavaScript
 description: 写 Atthis 遇到的坑
 ---

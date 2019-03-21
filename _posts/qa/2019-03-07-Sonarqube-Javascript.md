@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Sonarqube Javascript"
+title: "Sonarqube Javascript"
 categories: QA
 description: 将 JS 项目放到 Sonarqube 上
 ---

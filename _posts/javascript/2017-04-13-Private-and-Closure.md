@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Closure and Private"
+title: "Closure and Private"
 categories: JavaScript
 description:  JavaScript 中的闭包和私有方法
 ---

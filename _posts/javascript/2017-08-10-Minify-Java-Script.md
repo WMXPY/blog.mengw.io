@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Minify Java Script"
+title: "Minify Java Script"
 categories: JavaScript
 description: 减小 js 的体积
 ---

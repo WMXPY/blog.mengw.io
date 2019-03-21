@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Multi-Process NodeJS"
+title: "Multi-Process NodeJS"
 categories: Linux
 description: 多进程 Node 服务器
 ---

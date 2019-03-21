@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Bought A Domain"
+title: "Bought A Domain"
 categories: blog
 description:  买了个域名
 ---

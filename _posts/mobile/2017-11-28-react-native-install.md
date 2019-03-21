@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "React Native Install"
+title: "React Native Install"
 categories: React Native
 description: 安装RN的步骤和问题解决
 ---

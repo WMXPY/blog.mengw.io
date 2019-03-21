@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "dogResume resume"
+title: "dogResume resume"
 categories: blog
 description:  我的dogReume版本简历
 ---

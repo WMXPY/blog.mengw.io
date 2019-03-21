@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Electron Pit"
+title: "Electron Pit"
 categories: JavaScript
 description: UpgradeE 的坑
 ---

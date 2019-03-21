@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Online Voice Chat"
+title: "Online Voice Chat"
 categories: JavaScript
 description: 在线即时语音聊天
 ---

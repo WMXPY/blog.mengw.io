@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Kotlin Iterator"
+title: "Kotlin Iterator"
 categories: Quote
 description: 转载
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Install C++ Py based npm package"
+title: "Install C++ Py based npm package"
 categories: JavaScript
 description: 在 Windows 上安装基于 msvs 的 ... 包
 ---

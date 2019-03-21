@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to this.this.this.this"
+title: "How to this.this.this.this"
 categories: JavaScript
 description: 这么多 this 怎么一路追溯下去呢
 ---

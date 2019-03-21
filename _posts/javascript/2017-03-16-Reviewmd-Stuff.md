@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ReviewMd's Stuff"
+title: "ReviewMd's Stuff"
 categories: JavaScript
 description: 以下是我写 Review.md 时觉得可能以后有用的东西
 ---

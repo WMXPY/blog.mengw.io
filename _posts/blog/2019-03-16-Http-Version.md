@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Version of Http Protocol"
+title: "Version of Http Protocol"
 categories: blog
 description: 面试之前请你再看一遍 HTTP 的版本！
 ---

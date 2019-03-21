@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Decent AWS Web Architecture"
+title: "Decent AWS Web Architecture"
 categories: Linux
 description: 正儿八经的云服务 Web 架构
 ---

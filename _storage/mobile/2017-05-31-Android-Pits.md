@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Andriod Pits"
+title: "Andriod Pits"
 categories: Andriod
 description: 安卓开发中踩到, 并爬!上!来!的坑...
 ---

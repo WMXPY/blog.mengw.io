@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Seleium and Node"
+title: "Seleium and Node"
 categories: MySQL
 description:  Node 测试环境
 ---

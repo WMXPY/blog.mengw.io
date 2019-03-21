@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Gender by Name"
+title: "Gender by Name"
 categories: JavaScript
 description: 凭借名字计算性别的概率!
 ---

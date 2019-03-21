@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Binary Search Tree"
+title: "Binary Search Tree"
 categories: blog
 description: 面试之前请你再看一遍二叉搜索树！
 ---

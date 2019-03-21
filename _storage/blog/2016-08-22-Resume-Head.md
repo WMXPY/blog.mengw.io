@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Resume Header"
+title: "Resume Header"
 categories: blog
 description: 简历的html文件的头部
 ---

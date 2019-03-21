@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ES6 Learning Note"
+title: "ES6 Learning Note"
 categories: JavaScript
 description: ES6 的学习笔记, 这一篇主要是 let 和 const
 ---

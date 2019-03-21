@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Ubuntu Install Guide"
+title: "Ubuntu Install Guide"
 categories: Linux
 description: 我大概记的 linux 安装的那些小套路, 主要是这些源太难找了好吧, 而且总会忘了操作其中一步, 我选择复制粘贴!!!
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Hashmap.size >= Large"
+title: "Hashmap.size >= Large"
 categories: blog
 description: 面试之前请你再看一遍哈希表结构！
 ---

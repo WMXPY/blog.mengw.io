@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Nginx Optimize"
+title: "Nginx Optimize"
 categories: Linux
 description: 通过简单的配置优化 Nginx
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Grid Layout Introduction"
+title: "Grid Layout Introduction"
 categories: JavaScript
 description: Grid布局的简单介绍
 ---

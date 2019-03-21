@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Securing New Linux Server"
+title: "Securing New Linux Server"
 categories: Linux
 description: 保护新的 Linux 服务器
 ---

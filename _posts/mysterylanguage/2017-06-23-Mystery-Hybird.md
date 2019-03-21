@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Mystery Hybird"
+title: "Mystery Hybird"
 categories: MySQL
 description:  奇妙的混合 App
 ---

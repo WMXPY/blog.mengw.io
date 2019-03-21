@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Good to know"
+title: "Good to know"
 categories: blog
 description: 我收集的好文章
 ---

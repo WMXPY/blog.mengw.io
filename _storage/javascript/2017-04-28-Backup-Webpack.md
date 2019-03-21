@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  " Webpack Backup"
+title: " Webpack Backup"
 categories: JavaScript
 description: 一篇极好的文章
 ---
