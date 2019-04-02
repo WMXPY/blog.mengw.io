@@ -188,7 +188,7 @@ Internationalization 是一个 I18n 库，可以在字符串的含义上处理�
 yarn add @sudoo/log
 ```
 
-Log 是一个日至库，你可以管理日志的级别，方便测试和打印日志，在服务器运行时保存有效的信息。
+Log 是一个控制台打印库，你可以管理日志的级别，方便测试和打印日志，在服务器运行时保存有效的信息。在控制台打印的时候 Log 可以用彩色的字符帮助你找到需要的信息，在文件中打印的时候 Log 可以在保留信息的前提下将体积缩减到最小。
 
 ### [Sudoo-Extract](https://github.com/SudoDotDog/Sudoo-Extract)
 
