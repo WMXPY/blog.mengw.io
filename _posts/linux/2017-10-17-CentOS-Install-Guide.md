@@ -14,7 +14,7 @@ yum -y install nodejs
 
 # Git
 
-在CentOS中安装Git
+在 CentOS 中安装 Git
 
 ```bash
 yum install git

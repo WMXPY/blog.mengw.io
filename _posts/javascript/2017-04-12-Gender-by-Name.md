@@ -12,20 +12,20 @@ description: 凭借名字计算性别的概率!
 ![](https://wikimedia.org/api/rest_v1/media/math/render/svg/71d8066a406fb22ce08eec25dd04870779345cd3)  
 这个玩意, 每一个变量的意思如下
 
--   P(A\|B)是已知B发生后A的条件概率，也由于得自B的取值而被称作A的后验概率。
--   P(B\|A)是已知A发生后B的条件概率，也由于得自A的取值而被称作B的后验概率。
--   P(A)是A的先验概率（或边缘概率）。之所以称为"先验"是因为它不考虑任何B方面的因素。
--   P(B)是B的先验概率或边缘概率。
+-   `P(A|B)` 是已知 B 发生后 A 的条件概率，也由于得自 B 的取值而被称作 A 的后验概率。
+-   `P(B|A)` 是已知 A 发生后 B 的条件概率，也由于得自 A 的取值而被称作 B 的后验概率。
+-   `P(A)` 是 A 的先验概率（或边缘概率）。之所以称为"先验"是因为它不考虑任何 B 方面的因素。
+-   `P(B)` 是 B 的先验概率或边缘概率。
 
 然后以下是在 python 里面的实现
 
 ```python
-def prob_for_gender(self, firstname, gender=0):
-        p = 1. * self.female_total / self.total \
-            if gender == 0 \
+def prob_for_gender(self, firstName, gender=0):
+        p = 1. * self.female_total / self.total
+            if gender == 0
             else 1. * self.male_total / self.total
 
-        for char in firstname:
+        for char in firstName:
             p *= self.freq.get(char, (0, 0))[gender]
 
         return p

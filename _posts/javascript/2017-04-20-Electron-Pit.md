@@ -9,16 +9,16 @@ description: UpgradeE 的坑
 
 ## Electron 的坑
 
--   用remote调用主进程的全局变量的时候不能传递自己建的对象， 如果强行传递的话会失去私有变量量的限制，然而所有prototype的方法都会丢失。
--   调整icon的时候不能用系统推荐的NativeImage对象，也不能直接用路径，需要用Path对象建立。
--   Menu里如果没有复制粘贴功能就会有的时候迷之失去复制粘贴的功能。
--   Mac端中，Menu的第一个母菜单会被强制命名。
--   打包的时候, windows 的 icon 文件要求至少256\*256大小, 而且不能硬转换, 简单的方法是用 windows 的画图.
+-   用 `remote` 调用主进程的全局变量的时候不能传递自己建的对象， 如果强行传递的话会失去私有变量量的限制，然而所有 `prototype` 的方法都会丢失。
+-   调整 `icon` 的时候不能用系统推荐的 `NativeImage` 对象，也不能直接用路径，需要用Path对象建立。
+-   Menu 里如果没有复制粘贴功能就会有的时候迷之失去复制粘贴的功能。
+-   Mac 端中，Menu 的第一个母菜单会被强制命名。
+-   打包的时候, windows 的 icon 文件要求至少 `256*256` 大小, 而且不能硬转换, 简单的方法是用 windows 的画图.
 -   Mac 只能打包 dmg,win 只能打包 msi 和 exe.
 -   Electron 关闭时不会自动关闭其Node进程，可以将打开的pid保存下来日后手动关闭。
 
 ```javascript
-var platform = process.platform;
+const platform = process.platform;
 function killTask() {
   try {
     if (platform === 'win32') {
@@ -35,10 +35,8 @@ function killTask() {
   } catch (e) {
     showInfo('pid not found');
   }
-  domLog.innerHTML = "";
-  showInfo("服务已停止!");
   clearInterval(timerId);
-  }
+}
 ```
 
 ## Node 的坑
@@ -54,7 +52,7 @@ declare var Vue: any;
 
 原来的我实在是太傻吊了
 
-`this` 的使用方法其实是 `Function` 对象在创建的时候自动调用了 `Function.call(<this's position>)`，其实在写 `function X` 的时候我们自动将 `this` 指向当前的运行环境，比如说某一个class或者整个全局。在使用箭头函数的时候，`this` 的位置和当前的运行环境相同，比如。
+`this` 的使用方法其实是 `Function` 对象在创建的时候自动调用了 `Function.call(<this position>)`，其实在写 `function X` 的时候我们自动将 `this` 指向当前的运行环境，比如说某一个class或者整个全局。在使用箭头函数的时候，`this` 的位置和当前的运行环境相同，比如。
 
 ```js
 function a() {
