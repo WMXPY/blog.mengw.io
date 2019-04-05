@@ -92,6 +92,7 @@
         "runned",
         "sendfile",
         "stopall",
+        "sudoers",
         "taskkill",
         "unshift",
         "uroot",
