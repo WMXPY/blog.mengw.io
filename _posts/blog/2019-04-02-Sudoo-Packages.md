@@ -26,6 +26,8 @@ yarn add @sudoo/bark
 
 Bark 是一个基础包，支持按需加载，包括基于 Dijkstra 算法的贼好用的字符串距离，奇技淫巧的快速结构方法，还有一些统计学函数。
 
+---
+
 ### [Brontosaurus](https://github.com/SudoDotDog/Brontosaurus)
 
 [![Build Status](https://travis-ci.com/SudoDotDog/Brontosaurus.svg?branch=master)](https://travis-ci.com/SudoDotDog/Brontosaurus)
@@ -35,6 +37,23 @@ open https://github.com/SudoDotDog/Brontosaurus
 ```
 
 Brontosaurus 是一个整体，包含数个子项目，用于第三方登陆，接入 JWT 标准。
+
+---
+
+### [Pack](https://github.com/SudoDotDog/Pack)
+
+[![Build Status](https://travis-ci.com/SudoDotDog/Pack.svg?branch=master)](https://travis-ci.com/SudoDotDog/Pack)
+[![codecov](https://codecov.io/gh/SudoDotDog/Pack/branch/master/graph/badge.svg)](https://codecov.io/gh/SudoDotDog/Pack)
+[![npm version](https://badge.fury.io/js/%40sudoo%2Fpack.svg)](https://badge.fury.io/js/%40sudoo%2Fpack)
+[![downloads](https://img.shields.io/npm/dm/@sudoo/pack.svg)](https://www.npmjs.com/package/@sudoo/pack)
+
+```
+yarn add @sudoo/pack --dev
+```
+
+Pack 用于将源码打包发布，解决打包项目结构过于复杂的问题。
+
+---
 
 ### [Neon](https://github.com/SudoDotDog/Neon)
 
@@ -49,6 +68,8 @@ yarn add @sudoo/neon
 
 Neon 是一个看起来很朴素的 UI 库，支持自定义主题，包含 Smart Form 这种只要输出类型就可以输出好用的 UI 的智能组件。克隆项目执行 `make` 可以打开 storybook 看效果。
 
+---
+
 ### [Sudoo-Express](https://github.com/SudoDotDog/Sudoo-Express)
 
 [![Build Status](https://travis-ci.com/SudoDotDog/Sudoo-Express.svg?branch=master)](https://travis-ci.com/SudoDotDog/Sudoo-Express)
@@ -61,6 +82,8 @@ yarn add @sudoo/express
 ```
 
 Express 是一个 Express 类化的 Wrap 库，很好用，让你的代码更容易管理，支持包括自动跨域设置等帮助函数。
+
+---
 
 ### [Sudoo-Redux](https://github.com/SudoDotDog/Sudoo-Redux)
 
@@ -75,6 +98,8 @@ yarn add @sudoo/redux
 
 Redux 是 Redux 和 TypeScript 的最佳实践（我觉得是）。
 
+---
+
 ### [Sudoo-Fetch](https://github.com/SudoDotDog/Sudoo-Fetch)
 
 [![Build Status](https://travis-ci.com/SudoDotDog/Sudoo-Fetch.svg?branch=master)](https://travis-ci.com/SudoDotDog/Sudoo-Fetch)
@@ -87,6 +112,8 @@ yarn add @sudoo/fetch
 ```
 
 Fetch 是支持链调用，重复信息复用，语意化的前端 Fetch 库，解决了 Fetch 的一些问题，很好用。
+
+---
 
 ### [IO](https://github.com/SudoDotDog/IO)
 
@@ -101,6 +128,8 @@ yarn add @sudoo/io
 
 IO 是 NodeJS 的文件系统交互库，简直解决了顽疾。
 
+---
+
 ### [Coco](https://github.com/SudoDotDog/Coco)
 
 [![Build Status](https://travis-ci.com/SudoDotDog/Coco.svg?branch=master)](https://travis-ci.com/SudoDotDog/Coco)
@@ -113,6 +142,8 @@ yarn add @sudoo/coco
 ```
 
 Coco 是一个控制台信息读取库，我觉得比市面上任何其他的同类库都好用，如果你要做 CLI 的话可以试试看。
+
+---
 
 ### [Connor](https://github.com/SudoDotDog/Connor)
 
@@ -127,6 +158,8 @@ yarn add connor
 
 Connor 是一个错误信息处理库，包含错误码注册等功能，前后端都可以使用，如果你用 async await 的语法，throw 关键字肯定是少不了的，这个库能帮你很好的处理错误信息。
 
+---
+
 ### [Sudoo-Mock](https://github.com/SudoDotDog/Sudoo-Mock)
 
 [![Build Status](https://travis-ci.com/SudoDotDog/Sudoo-Mock.svg?branch=master)](https://travis-ci.com/SudoDotDog/Sudoo-Mock)
@@ -140,6 +173,8 @@ yarn add @sudoo/mock --dev
 
 Mock 是一个测试库，可以覆盖恢复任何函数，还支持函数模拟，测试起来非常方便。
 
+---
+
 ### [Sudoo-Triforce](https://github.com/SudoDotDog/Sudoo-Triforce)
 
 [![npm version](https://badge.fury.io/js/%40sudoo%2Ftriforce.svg)](https://www.npmjs.com/package/@sudoo/triforce)
@@ -150,6 +185,8 @@ yarn add @sudoo/triforce --dev
 ```
 
 Triforce 包含了一切 TS 开发需要的 devDependency，帮助你保证使用组件的版本是最新，无坑，可用的。
+
+---
 
 ### [Marked](https://github.com/SudoDotDog/Marked)
 
@@ -164,6 +201,8 @@ yarn add @sudoo/marked
 
 Marked 是一个可以运行 JS 代码的沙盒，支持 Node 和浏览器，你可以自定义自己的 JS 运行器，并安全的运行用户上传的代码。
 
+---
+
 ### [Sudoo-Internationalization](https://github.com/SudoDotDog/Sudoo-Internationalization)
 
 [![Build Status](https://travis-ci.com/SudoDotDog/Sudoo-Internationalization.svg?branch=master)](https://travis-ci.com/SudoDotDog/Sudoo-Internationalization)
@@ -176,6 +215,8 @@ yarn add @sudoo/internationalization
 ```
 
 Internationalization 是一个 I18n 库，可以在字符串的含义上处理好自动翻译功能。
+
+---
 
 ### [Sudoo-Log](https://github.com/SudoDotDog/Sudoo-Log)
 
@@ -190,6 +231,8 @@ yarn add @sudoo/log
 
 Log 是一个控制台打印库，你可以管理日志的级别，方便测试和打印日志，在服务器运行时保存有效的信息。在控制台打印的时候 Log 可以用彩色的字符帮助你找到需要的信息，在文件中打印的时候 Log 可以在保留信息的前提下将体积缩减到最小。
 
+---
+
 ### [Sudoo-Extract](https://github.com/SudoDotDog/Sudoo-Extract)
 
 [![Build Status](https://travis-ci.com/SudoDotDog/Sudoo-Extract.svg?branch=master)](https://travis-ci.com/SudoDotDog/Sudoo-Extract)
@@ -202,6 +245,8 @@ yarn add @sudoo/extract
 ```
 
 Extract 是克服运行时类型错误的好帮手，你可以安全的使用运行时类型，并自定义如果出错的错误，配合 Connor 和 TypeScript 更佳。
+
+---
 
 ### [Sudoo-Tslint](https://github.com/SudoDotDog/Sudoo-Tslint)
 
