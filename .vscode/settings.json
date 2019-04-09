@@ -91,6 +91,7 @@
         "rlimit",
         "runned",
         "sendfile",
+        "stackless",
         "stopall",
         "sudoers",
         "taskkill",
