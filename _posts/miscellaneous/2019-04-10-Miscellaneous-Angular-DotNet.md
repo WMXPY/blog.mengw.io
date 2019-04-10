@@ -73,7 +73,17 @@ class Program
 
 ### JavaScript 的 GC 是怎么运作的
 
-从 Root 查找标记删除。这个以后具体写。
+可触及的 (Reachability) JS 的垃圾清理是自上而下单向运行的，所有不能被 Root 访问到的对象都是可以被清理的对象，这相比引用计数 (Reference Count) 的方法有很多优势，比如说可以处理相互引用的对象，比如说能在不访问孤岛就能整体剔除 (Unreachable island) 但是缺点是必须从头开始。
+
+优化：
+
+- 分代收集 (Generational Collection)，把对象分为老生代和新生代，如果一个对象是老生代，清理不会太频繁。
+- 增量收集，其实就是分片。在运行时的间隔运行。
+- 闲时收集，也就是在不忙的时候运行。
+
+扩展：有什么优化方法是 JS 没有用到但是 c# 用到的？
+
+- 并行回收。
 
 ### CS 的 GC 是怎么运作的
 
@@ -114,6 +124,35 @@ let x = { a: 1, b: 2, c: 3, d: 4 };
  
 getProperty(x, "a"); // OK
 getProperty(x, "m"); // Error
+```
+
+### 如何声明 on 函数的根据 event 结果不同的函数
+
+.d.ts 的情况下可以进行 overload
+
+```ts
+on(event: "close", listener: () => void): this;
+on(event: "data", listener: (chunk: any) => void): this;
+on(event: "end", listener: () => void): this;
+on(event: "readable", listener: () => void): this;
+on(event: "error", listener: (err: Error) => void): this;
+on(event: string | symbol, listener: (...args: any[]) => void): this;
+```
+
+> 这个例子来自 `@types/node` 的 `stream` 实现
+
+正常时可以用 `extend`, `keyof`, `A[T]` 这样的技术来处理。
+
+```ts
+type list = {
+    close: () => void;
+    data: (chunk: any) => void; 
+    // rest of them...
+}
+
+const on = <T extends keyof list>(event: T, listener: list[T]) => {
+    // do something...
+};
 ```
 
 ## Angular2
