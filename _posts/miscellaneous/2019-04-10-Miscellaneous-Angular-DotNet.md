@@ -69,6 +69,37 @@ class Program
     }
 ```
 
+## .Net
+
+
+
+## TypeScript
+
+### 如何编写 OverLoad 函数的类型文件
+
+就和 Java 的重写方法一样，直接声明多个一样的函数，带有不同的变量。
+
+### 如何写自我循环的 TypeScript Nested 类型
+
+用外部的泛型声明好，就是用T来代替本身。然后实现泛型。
+
+扩展：自我循环的类型为什么不能编写
+
+TypeScript 的编译器会先编译每一个类型然后再处理调用，无限循环的类型是不能直接写的。但是如果泛型已经先编译好，就可以实现了。
+
+### 如何声明下面的函数来检测出错误
+
+```ts
+const func = (obj, key) => {
+    return obj[key].toString();
+}
+ 
+let x = { a: 1, b: 2, c: 3, d: 4 };
+ 
+getProperty(x, "a"); // OK
+getProperty(x, "m"); // Error
+```
+
 ## Angular2
 
 ### Angular 应用的生命周期都有什么
@@ -89,21 +120,47 @@ class Program
 
 扩展：一个组件的生命周期调用顺序是什么？
 
-ngOnChanges > ngOnInit > ngDoCheck > ngAfterContentInit > ngAfterContentChecked > ngAfterViewInit > ngAfterViewChecked > ngOnDestroy
+`ngOnChanges` > `ngOnInit` > `ngDoCheck` > `ngAfterContentInit` > `ngAfterContentChecked` > `ngAfterViewInit` > `ngAfterViewChecked` > `ngOnDestroy`
 
 ### Angular 的依赖注入怎么使用
 
-把服务标记为 @Injectable()
-把组件标记为 @Component
+- 把服务标记为 @Injectable()
+- 把组件标记为 @Component
 
 扩展：依赖注入有什么好处
 
 依赖注入的本质是控制反转 (Inversion of control, IoC) 原则。使用依赖注入之后应用的接口会实现松耦合，在接口不变的前提下，我们可以任意替换组件的具体实现。
 
-### 什么是藏检查
+扩展：注册 Provider 的时候 UseClass 和 UseExisting 有什么区别
+
+UseExisting 会使用单一实例。
+
+### Angular 是怎么更新子组件的
+
+自上而下更新，当其中一个组件发生变化的时候所有的子组件都会被依次检查，这是 Default 模式的检查。
 
 扩展：Angular 的默认更新模式是什么
+
+Default
+
 扩展：还有什么更新模式，如果切换更新模式
+
+OnPush 区别是当 OnPush 的输入没有变化的时候，所有子组件的检查都会被跳过。
+
+`changeDetection: ChangeDetectionStrategy.OnPush`
+
 扩展：如何 `detach` 组件，如何回到检查队列中
+
+```ts
+constructor(private ref: ChangeDetectorRef) {
+    ref. ...
+}
+```
+
 扩展：用这样的模式如何实现频繁变化需要手动触发更新的组件。
 
+```ts
+ref.detach();
+...do
+ref.reattach();
+```
