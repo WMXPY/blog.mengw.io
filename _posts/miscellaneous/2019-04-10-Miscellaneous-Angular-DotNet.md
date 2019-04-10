@@ -21,8 +21,8 @@ class Program
     {
         static void Main(string[] args)
         {
-            Thread t1 = new Thread(new ThreadStart(TestMethod));
-            Thread t2 = new Thread(new ParameterizedThreadStart(TestMethod));
+            Thread t1 = new Thread(new ThreadStart(WithOut));
+            Thread t2 = new Thread(new ParameterizedThreadStart(With));
             t1.IsBackground = true;
             t2.IsBackground = true;
             t1.Start();
@@ -30,12 +30,12 @@ class Program
             Console.ReadKey();
         }
 
-        public static void TestMethod()
+        public static void WithOut()
         {
             // Run
         }
 
-        public static void TestMethod(object data)
+        public static void With(object data)
         {
             // Run with arg
             string str = data as string; // Hello
@@ -45,5 +45,5 @@ class Program
 
 ### 什么是线程池
 
-因为线程开启结束需要额外的开销，线程池可以简化这一步骤，一个被维护的线程池会在后台运行，对刚加入的任务进行排队。
+因为线程开启结束需要额外的开销，线程池可以简化这一步骤，一个被维护的线程池会在后台运行，对刚加入的任务进行排队。通过这种方式
 
