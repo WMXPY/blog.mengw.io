@@ -19,3 +19,62 @@ description: 谁还不是个生成器了？
 函数的递归操作无论如何都需要运行在栈上，但是它可以被隐藏在协程上下文 `this` 的依赖结构中。有栈协程用寄存器 (Register) 来索引局部的变量，访问上下文数据，也就是局部变量的时候可以通过变量名直接获得栈寄存器的位置和目标变量的偏移量。无栈协程通常来说就是所谓的 `this` 上下文，区别在于无栈协程的上下文变量是储存在一个索引的类中，而访问成员变量是从中获得成员变量已经索引好的地址。
 
 无论是以上任何一种上下文通信方法，栈的生命周期都大于函数的生命周期，在函数返回之后模拟的寄存器会被销毁，而 `this` 甚至不需要销毁，它在承担朴素的函数上下文的同时也提供了对协程上下文的索引功能。
+
+## 无限循环
+
+试想一下，如果你想要一个生成器（本来就可以无限循环的）无限循环，你应该怎么做呢？
+
+```ts
+function* infiniteNumber(): IterableIterator<number> {
+    let index: number = 0;
+    while (1) {
+        yield index++;
+    }
+}
+const iterator: IterableIterator<number> = infiniteNumber();
+while(1) {
+    if (iterator.next().done) {
+        break;
+    }
+}
+```
+
+虽然我们写了 `break` 的逻辑，但是显然，这永远都不会被执行，因为无论你执行几次 `next` 函数，永远都有返回值。
+
+反而言之，我们可以用这种方法把一个生成器的内容全部取出。
+
+## 能递归的时候当然要递归
+
+`spawn` 函数用于递归的方式实现自动执行器，以在协程中执行 `Promise`。
+
+```ts
+const spawn = (genF) {
+  return new Promise(function(resolve, reject) {
+    const gen = genF();
+    function step(nextF) {
+      let next;
+      try {
+        next = nextF();
+      } catch(e) {
+        return reject(e);
+      }
+      if(next.done) {
+        return resolve(next.value);
+      }
+      Promise.resolve(next.value).then(function(v) {
+        step(function() { return gen.next(v); });
+      }, function(e) {
+        step(function() { return gen.throw(e); });
+      });
+    }
+    step(function() { return gen.next(undefined); });
+  });
+}
+```
+
+> 阮一峰
+
+## Async Await 的实现
+
+在用字哦发那个执行器实现了 `async` 之后， `await` 就比较简单了，等待 Promise 结束就可以了，这也就是 await 只能在 async 中使用的原因。
+
