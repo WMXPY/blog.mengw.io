@@ -7,7 +7,7 @@ description: 我大概记的 linux 安装的那些小套路, 主要是这些源�
 
 -   **_ForUbuntu_**
 
-## Increate swap file for low memory mechine
+## Increase swap file for low memory machine
 
 ```bash
 sudo fallocate -l 1G /swapfile
@@ -34,7 +34,7 @@ sudo apt-get update
 sudo apt-get install ultra-flat-icons
 ```
 
-## digitalocean
+## digital ocean
 
 ```bash
 curl -sSL https://agent.digitalocean.com/install.sh | sh
@@ -275,11 +275,12 @@ Linux清理硬盘空间
 
 5.  清理日志文件
 
-日志文件会变得越来越大，我们可以用ncdu工具来查看大日志文件．
+日志文件会变得越来越大，我们可以用 `ncdu` 工具来查看大日志文件．
 
-    sudo apt-get install ncdu
-
-    sudo ncdu /var/log
+```sh
+sudo apt-get install ncdu
+sudo ncdu /var/log
+```
 
 Linux清理硬盘空间
 
