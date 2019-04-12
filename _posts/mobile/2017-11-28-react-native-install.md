@@ -87,7 +87,7 @@ sudo yarn config set disturl https://npm.taobao.org/dist --global
 
 ### 安装后需要追加的组件
 
-事实上在`Android Studio`编译运行时，所依赖的组件会自动安装，但是我们用RN最好手动将需要的组件安装好
+事实上在 `Android Studio` 编译运行时，所依赖的组件会自动安装，但是我们用RN最好手动将需要的组件安装好
 
 -   SDK Platforms
     -   Android 6.0 (Marshmallow)
@@ -101,13 +101,13 @@ sudo yarn config set disturl https://npm.taobao.org/dist --global
         -   Android SDK Build-Tools 23.0.1
         -   Android Support Repository
 
-> 默认会安装`Build-Tools 23.0.3`等，如果不使用`React-Native`之外的其他版本可以卸载  
-> 注意！！！ 几乎一定会有安装失败的包，观察错误信息重新安装即可
+> 默认会安装 `Build-Tools 23.0.3` 等，如果不使用 `React-Native` 之外的其他版本可以卸载  
+> 注意！！！ 几乎一定会有安装失败的包，观察错误信息重新安装即可。重复多次这个步骤直到所有的依赖项都安装完成。
 
 ## windows 环境变量 (其他系统可以忽略)
 
--   将Android SDK的路径 (安装Android Studio时选择的) 指向`ANDROID_HOME`变量
--   将Android SDK/Tools的路径 (安装Android Studio时选择的) 添加到`PATH`变量
+-   将Android SDK的路径 (安装Android Studio时选择的) 指向 `ANDROID_HOME` 变量
+-   将Android SDK/Tools的路径 (安装Android Studio时选择的) 添加到 `PATH` 变量
 
 ## 安装模拟器
 
