@@ -52,39 +52,55 @@ Since most of these answers are outdated... Here is modern way to install the nv
 
 Add the graphics-drivers ppa
 
-    sudo add-apt-repository ppa:graphics-drivers/ppa
-    sudo apt-get update
+```sh
+sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt-get update
+```
 
 Install the recommended driver
 
-    sudo ubuntu-drivers autoinstall
+```sh
+sudo ubuntu-drivers autoinstall
+```
 
 Restart your system
 
-    sudo reboot
+```sh
+sudo reboot
+```
 
 To select a different driver, or if the above doesn't work:
 
 Add the graphics-drivers ppa
 
-    sudo add-apt-repository ppa:graphics-drivers/ppa
-    sudo apt-get update
+```sh
+sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt-get update
+```
 
 Purge any existing nvidia related packages you have installed
 
-    sudo apt-get purge nvidia\*
+```sh
+sudo apt-get purge nvidia\*
+```
 
 Check which drivers are available for your system
 
-    ubuntu-drivers devices
+```sh
+ubuntu-drivers devices
+```
 
 Install the recommended driver
 
-    sudo apt-get install nvidia-361
+```sh
+sudo apt-get install nvidia-361
+```
 
 Restart your system
 
-    sudo reboot
+```sh
+sudo reboot
+```
 
 ## Chrome
 
@@ -107,14 +123,14 @@ sudo apt-get install ubuntu-tweak
 
 ## UMake
 
-在乌班图中安装Umake
+在乌班图中安装 `Umake`
 
 ```bash
 sudo apt-get install python-software-properties
 sudo apt-get install software-properties-common 
 ```
 
-## VSCode -> based on ummake
+## VSCode -> based on Umake
 
 在乌班图中安装VSC
 
@@ -186,67 +202,94 @@ sudo apt-get install python-pip
 
 通常Debian/Ubuntu删除软件包可以用两条命令
 
-    sudo apt-get remove <package-name>
+```sh
+sudo apt-get remove <package-name>
 
-    sudo apt-get purge <package-name>
+sudo apt-get purge <package-name>
+```
 
 remove将会删除软件包，但会保留配置文件．purge会将软件包以及配置文件都删除．
 
 找出系统上哪些软件包留下了残余的配置文件
 
-    dpkg --list | grep "^rc"
+```sh
+dpkg --list | grep "^rc"
+```
 
 Debian/Ubuntu删除残余配置文件
 
 其中第一栏的rc表示软件包已经删除（Remove），但配置文件（Config-file）还在. 现在提取这些软件包的名称．
 
-    dpkg --list | grep "^rc" | cut -d " " -f 3
+```sh
+dpkg --list | grep "^rc" | cut -d " " -f 3
+```
 
 Debian/Ubuntu删除残余配置文件
 
 删除这些软件包
 
-    dpkg --list | grep "^rc" | cut -d " " -f 3 | xargs sudo dpkg --purge
-    (Reading database ... 64538 files and directories currently installed.)
-    Removing libapt-inst1.4:amd64 (0.8.16~exp12ubuntu10.11) ...
-    Purging configuration files for libapt-inst1.4:amd64 (0.8.16~exp12ubuntu10.11) ...
-    Removing libbind9-80 (1:9.8.1.dfsg.P1-4ubuntu0.6) ...
-    Purging configuration files for libbind9-80 (1:9.8.1.dfsg.P1-4ubuntu0.6) ...
+```sh
+dpkg --list | grep "^rc" | cut -d " " -f 3 | xargs sudo dpkg --purge
+```
+
+你可能能看到这样的输出结果
+
+```
+(Reading database ... 64538 files and directories currently installed.)
+Removing libapt-inst1.4:amd64 (0.8.16~exp12ubuntu10.11) ...
+Purging configuration files for libapt-inst1.4:amd64 (0.8.16~exp12ubuntu10.11) ...
+Removing libbind9-80 (1:9.8.1.dfsg.P1-4ubuntu0.6) ...
+Purging configuration files for libbind9-80 (1:9.8.1.dfsg.P1-4ubuntu0.6) ...
+```
 
 如果你只想删除某个软件包的配置文件，那么可以使用下面的命令
 
-    sudo dpkg --purge <package-name>
+```sh
+sudo dpkg --purge <package-name>
+```
 
 2.  删除没有用的deb软件安装包
 
 通常我们用sudo apt-get install 命令安装软件包后，apt-get下载的deb安装包会保留在系统上．所以如果你经常安装软件，那么这些deb安装包会占据大量的空间．这些安装包在/var/cache/apt/archives目录下。在软件安装完成后，这些deb安装包就没什么用了。对于硬盘容量有限的服务器来说apt-get clean命令可以腾出很多空间。你可以输入下面的命令来查看/var/chace/apt/archives目录下deb安装包的总大小
 
-    du -sh /var/cache/apt/archives
+```sh
+du -sh /var/cache/apt/archives
+```
 
 要删除这些deb包，只需要运行下面两个命令就行了．
 
-    sudo apt-get clean
-    sudo apt-get autoclean
+```sh
+sudo apt-get clean
+sudo apt-get autoclean
+```
 
 3.  删除孤儿软件包
 
 有时候，你用apt-get安装一个软件包时会自动安装其他的依赖．当你删除掉这个软件包时，这些依赖也就没有用处了．这些没有用的依赖包叫做孤儿软件包，可以用下面的命令删除
 
-    sudo apt-get autoremove
+```sh
+sudo apt-get autoremove
+```
 
-不过apt-get autoremove只会删除经apt-get自动安装的依赖包，而你自己手动安装的依赖包则不会被删除，这时我们可以用deborphan来彻底删除．
+不过apt-get autoremove 只会删除经 apt-get 自动安装的依赖包，而你自己手动安装的依赖包则不会被删除，这时我们可以用 deborphan 来彻底删除．
 
-    sudo apt-get install deborphan
+```sh
+sudo apt-get install deborphan
+```
 
 列出孤儿软件包
 
-    deborphan
+```sh
+deborphan
+```
 
 Linux清理硬盘空间
 
 将它们删除
 
-    deborphan | xargs sudo apt-get purge -y
+```sh
+deborphan | xargs sudo apt-get purge -y
+```
 
 4.  删除过时的软件包
 
@@ -286,7 +329,9 @@ Linux清理硬盘空间
 
 从上图可以发现，shadowsocks.log占用了24.5MiB的硬盘空间，我们可以用下面的命令来清空这个日志文件的内容．
 
-    sudo dd if=/dev/null of=/var/log/shadowsocks.log
+```sh
+sudo dd if=/dev/null of=/var/log/shadowsocks.log
+```
 
 6.  baobab硬盘空间用量分析工具
 
@@ -296,11 +341,13 @@ baobab是一个图形界面工具，可以帮助我们查找系统中哪个目�
 
 Linux清理硬盘空间
 
-从上图中可以发现，thunerbird里的邮件就有14.3GB的大小！还有chromuim浏览器，Spotify音乐播放器，谷歌浏览器，缩略图，这些缓存（cache）也占用了不少空间．
+从上图中可以发现，thunderbird 里的邮件就有14.3GB的大小！还有 chromium 浏览器，Spottily 音乐播放器，谷歌浏览器，缩略图，这些缓存（cache）也占用了不少空间．
 
-其实我们也可以用上面所提到了ncdu工具来查看大容量目录和文件．比如查看/home/<username>/
+其实我们也可以用上面所提到了 ncdu 工具来查看大容量目录和文件．比如查看/home/<username>/
 
-    sudo ncdu /home/<username>
+```sh
+sudo ncdu /home/<username>
+```
 
 不过用ncdu的话，每查看一个目录就要输入一次命令，建议在服务器上用ncdu，在桌面版本用图形化的baobab工具．
 
@@ -308,36 +355,46 @@ Linux清理硬盘空间
 
 首先安装debian-goodies
 
-    sudo apt-get install debian-goodies
+```sh
+sudo apt-get install debian-goodies
+```
 
 然后输入下面的命令
 
-    dpigs -H
+```sh
+dpigs -H
+```
 
 我的输出结果
 
-    441.0M texlive-latex-extra-doc
-    230.1M valgrind-dbg
-    200.6M chromium-browser
-    171.4M google-chrome-stable
-    153.4M linux-image-extra-3.19.0-39-generic
-    153.4M linux-image-extra-3.19.0-37-generic
-    151.5M maltego
-    144.8M wine1.7-amd64
-    140.6M metasploit-framework
-    137.4M wine1.7-i386
+```
+441.0M texlive-latex-extra-doc
+230.1M valgrind-dbg
+200.6M chromium-browser
+171.4M google-chrome-stable
+153.4M linux-image-extra-3.19.0-39-generic
+153.4M linux-image-extra-3.19.0-37-generic
+151.5M maltego
+144.8M wine1.7-amd64
+140.6M metasploit-framework
+137.4M wine1.7-i386
+```
 
 接下来你就可以删除你不用的软件包了．上面的命令默认只会显示前10个结果，你可指定结果的个数，比如20个
 
-    dpigs -H --lines=20
+```sh
+# dpigs -H --lines=20
+```
 
 8.  使用ubuntu-tweak来清理
 
-前往ubuntu-tweak官网下载deb安装包，然后输入下面的命令安装．
+前往 `ubuntu-tweak` 官网下载 deb 安装包，然后输入下面的命令安装．
 
-    sudo apt-get install gdebi
+```sh
+sudo apt-get install gdebi
 
-    sudo gdebi ubuntu-tweak*.deb
+sudo gdebi ubuntu-tweak*.deb
+```
 
 打开ubuntu tweak后，选择Janitor标签．在这里你可以清理应用程序的缓存，缩略图缓存，apt缓存，旧内核，没有用的软件包配置文件，以及孤儿软件包．
 
