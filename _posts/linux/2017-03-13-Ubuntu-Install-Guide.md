@@ -7,7 +7,7 @@ description: 我大概记的 linux 安装的那些小套路, 主要是这些源�
 
 -   **_ForUbuntu_**
 
-## Increate swap file for low memory mechine
+## Increase swap file for low memory machine
 
 ```bash
 sudo fallocate -l 1G /swapfile
@@ -34,7 +34,7 @@ sudo apt-get update
 sudo apt-get install ultra-flat-icons
 ```
 
-## digitalocean
+## digital ocean
 
 ```bash
 curl -sSL https://agent.digitalocean.com/install.sh | sh
