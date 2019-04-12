@@ -101,4 +101,4 @@ plugins: [
 },
 ```
 
-这样其实 style-loader 会将 css 代码插入 react 的 className 中, 以实现只有 js 文件的效果, 我们用上述插件的同时显然应该去掉 style-loader.
+这样其实 style-loader 会将 css 代码插入 react 的 className 中, 以实现只有 js 文件的效果, 我们用上述插件的同时显然应该去掉 style-loader。

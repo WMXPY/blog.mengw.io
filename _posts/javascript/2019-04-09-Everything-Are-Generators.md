@@ -77,4 +77,3 @@ const spawn = (genF) {
 ## Async Await 的实现
 
 在用字哦发那个执行器实现了 `async` 之后， `await` 就比较简单了，等待 Promise 结束就可以了，这也就是 await 只能在 async 中使用的原因。
-

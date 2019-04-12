@@ -14,18 +14,18 @@ description: 内心让他真实地了解自己，一旦了解了自己也就了�
 
 ## Python
 
-### 什么是 Monkey Patching （猴子布丁）？
+### 什么是 Monkey Patching （猴子补丁）？
 
 指在函数声明之后更改其 Behavior 的行为。一般用在 Mock 的情况下，生产环境应该避免
 
-深入：什么是 Mock，为什么要避免猴子布丁？
+深入：什么是 Mock，为什么要避免猴子补丁？
 
 ### 什么是 *args **kwargs？
 
 *的代表是额外的传入参数，**代表是所有的命名传入参数。比如在：
 
 ```py
-def hello(a, b, *args, **kwargs): 
+def hello(a, b, *args, **kwargs):
 ```
 
 中，ab 之后的直接传入都是 args，kwargs 是 `xxx=xxx` 的参数。

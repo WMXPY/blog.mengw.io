@@ -14,4 +14,4 @@ npm install --global --production windows-build-tools
 npm config set msvs_version 2015 --global
 ```
 
-当然，在安装之前请确保 Python 已经安装好了
+当然，在安装之前请确保 Python 已经安装好了。
