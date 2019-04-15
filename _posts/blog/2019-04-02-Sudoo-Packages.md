@@ -20,7 +20,7 @@ NodeJS 自带的库还可以吧。。但是贼难用，乏善可陈。比如说 
 [![npm version](https://badge.fury.io/js/%40sudoo%2Fbark.svg)](https://www.npmjs.com/package/@sudoo/bark)
 [![downloads](https://img.shields.io/npm/dm/@sudoo/bark.svg)](https://www.npmjs.com/package/@sudoo/bark)
 
-```
+```sh
 yarn add @sudoo/bark
 ```
 
@@ -32,7 +32,7 @@ Bark 是一个基础包，支持按需加载，包括基于 Dijkstra 算法的�
 
 [![Build Status](https://travis-ci.com/SudoDotDog/Brontosaurus.svg?branch=master)](https://travis-ci.com/SudoDotDog/Brontosaurus)
 
-```
+```sh
 open https://github.com/SudoDotDog/Brontosaurus
 ```
 
@@ -47,7 +47,7 @@ Brontosaurus 是一个整体，包含数个子项目，用于第三方登陆，�
 [![npm version](https://badge.fury.io/js/%40sudoo%2Fpack.svg)](https://badge.fury.io/js/%40sudoo%2Fpack)
 [![downloads](https://img.shields.io/npm/dm/@sudoo/pack.svg)](https://www.npmjs.com/package/@sudoo/pack)
 
-```
+```sh
 yarn add @sudoo/pack --dev
 ```
 
@@ -62,7 +62,7 @@ Pack 用于将源码打包发布，解决打包项目结构过于复杂的问题
 [![npm version](https://badge.fury.io/js/%40sudoo%2Fneon.svg)](https://badge.fury.io/js/%40sudoo%2Fneon)
 [![downloads](https://img.shields.io/npm/dm/@sudoo/neon.svg)](https://www.npmjs.com/package/@sudoo/neon)
 
-```
+```sh
 yarn add @sudoo/neon
 ```
 
@@ -77,7 +77,7 @@ Neon 是一个看起来很朴素的 UI 库，支持自定义主题，包含 Smar
 [![npm version](https://badge.fury.io/js/%40sudoo%2Fexpress.svg)](https://www.npmjs.com/package/@sudoo/express)
 [![downloads](https://img.shields.io/npm/dm/@sudoo/express.svg)](https://www.npmjs.com/package/@sudoo/express)
 
-```
+```sh
 yarn add @sudoo/express
 ```
 
@@ -92,7 +92,7 @@ Express 是一个 Express 类化的 Wrap 库，很好用，让你的代码更容
 [![npm version](https://badge.fury.io/js/%40sudoo%2Fredux.svg)](https://www.npmjs.com/package/@sudoo/redux)
 [![downloads](https://img.shields.io/npm/dm/@sudoo/redux.svg)](https://www.npmjs.com/package/@sudoo/redux)
 
-```
+```sh
 yarn add @sudoo/redux
 ```
 
@@ -107,7 +107,7 @@ Redux 是 Redux 和 TypeScript 的最佳实践（我觉得是）。
 [![npm version](https://badge.fury.io/js/%40sudoo%2Ffetch.svg)](https://www.npmjs.com/package/@sudoo/fetch)
 [![downloads](https://img.shields.io/npm/dm/@sudoo/fetch.svg)](https://www.npmjs.com/package/@sudoo/fetch)
 
-```
+```sh
 yarn add @sudoo/fetch
 ```
 
@@ -122,7 +122,7 @@ Fetch 是支持链调用，信息复用，语意化的前端 Fetch 库，解决�
 [![npm version](https://badge.fury.io/js/%40sudoo%2Fio.svg)](https://www.npmjs.com/package/@sudoo/io)
 [![downloads](https://img.shields.io/npm/dm/@sudoo/io.svg)](https://www.npmjs.com/package/@sudoo/io)
 
-```
+```sh
 yarn add @sudoo/io
 ```
 
@@ -137,7 +137,7 @@ IO 是 NodeJS 的文件系统交互库，简直解决了顽疾。
 [![npm version](https://badge.fury.io/js/%40sudoo%2Fzip.svg)](https://www.npmjs.com/package/@sudoo/zip)
 [![downloads](https://img.shields.io/npm/dm/@sudoo/zip.svg)](https://www.npmjs.com/package/@sudoo/zip)
 
-```
+```sh
 yarn add @sudoo/zip
 ```
 
@@ -152,7 +152,7 @@ zip 是 NodeJS 的 zip 格式压缩包处理库。只支持 Node 10 及以上版
 [![npm version](https://badge.fury.io/js/%40sudoo%2Fcoco.svg)](https://www.npmjs.com/package/@sudoo/coco)
 [![downloads](https://img.shields.io/npm/dm/@sudoo/coco.svg)](https://www.npmjs.com/package/@sudoo/coco)
 
-```
+```sh
 yarn add @sudoo/coco
 ```
 
@@ -167,7 +167,7 @@ Coco 是一个控制台信息读取库，我觉得比市面上任何其他的同
 [![npm version](https://badge.fury.io/js/connor.svg)](https://badge.fury.io/js/connor)
 [![downloads](https://img.shields.io/npm/dm/connor.svg)](https://www.npmjs.com/package/connor)
 
-```
+```sh
 yarn add connor
 ```
 
@@ -182,7 +182,7 @@ Connor 是一个错误信息处理库，包含错误码注册等功能，前后�
 [![npm version](https://badge.fury.io/js/%40sudoo%2Fmock.svg)](https://www.npmjs.com/package/@sudoo/mock)
 [![downloads](https://img.shields.io/npm/dm/@sudoo/mock.svg)](https://www.npmjs.com/package/@sudoo/mock)
 
-```
+```sh
 yarn add @sudoo/mock --dev
 ```
 
@@ -195,7 +195,7 @@ Mock 是一个测试库，可以覆盖恢复任何函数，还支持函数模拟
 [![npm version](https://badge.fury.io/js/%40sudoo%2Ftriforce.svg)](https://www.npmjs.com/package/@sudoo/triforce)
 [![downloads](https://img.shields.io/npm/dm/@sudoo/triforce.svg)](https://www.npmjs.com/package/@sudoo/triforce)
 
-```
+```sh
 yarn add @sudoo/triforce --dev
 ```
 
@@ -210,7 +210,7 @@ Triforce 包含了一切 TS 开发需要的 devDependency，帮助你保证使�
 [![npm version](https://badge.fury.io/js/%40sudoo%2Fmarked.svg)](https://badge.fury.io/js/%40sudoo%2Fmarked)
 [![downloads](https://img.shields.io/npm/dm/@sudoo/marked.svg)](https://www.npmjs.com/package/@sudoo/marked)
 
-```
+```sh
 yarn add @sudoo/marked
 ```
 
@@ -225,7 +225,7 @@ Marked 是一个可以运行 JS 代码的沙盒，支持 Node 和浏览器，你
 [![npm version](https://badge.fury.io/js/%40sudoo%2Finternationalization.svg)](https://badge.fury.io/js/%40sudoo%2Finternationalization)
 [![downloads](https://img.shields.io/npm/dm/@sudoo/internationalization.svg)](https://www.npmjs.com/package/@sudoo/internationalization)
 
-```
+```sh
 yarn add @sudoo/internationalization
 ```
 
@@ -240,7 +240,7 @@ Internationalization 是一个 I18n 库，可以在字符串的含义上处理�
 [![npm version](https://badge.fury.io/js/%40sudoo%2Flog.svg)](https://www.npmjs.com/package/@sudoo/log)
 [![downloads](https://img.shields.io/npm/dm/@sudoo/log.svg)](https://www.npmjs.com/package/@sudoo/log)
 
-```
+```sh
 yarn add @sudoo/log
 ```
 
@@ -255,7 +255,7 @@ Log 是一个控制台打印库，你可以管理日志的级别，方便测试�
 [![npm version](https://badge.fury.io/js/%40sudoo%2Fextract.svg)](https://www.npmjs.com/package/@sudoo/extract)
 [![downloads](https://img.shields.io/npm/dm/@sudoo/extract.svg)](https://www.npmjs.com/package/@sudoo/extract)
 
-```
+```sh
 yarn add @sudoo/extract
 ```
 
@@ -268,7 +268,7 @@ Extract 是克服运行时类型错误的好帮手，你可以安全的使用运
 [![npm version](https://badge.fury.io/js/%40sudoo%2Ftslint-config.svg)](https://www.npmjs.com/package/@sudoo/tslint-config)
 [![downloads](https://img.shields.io/npm/dm/@sudoo/tslint-config.svg)](https://www.npmjs.com/package/@sudoo/tslint-config)
 
-```
+```sh
 yarn add @sudoo/tslint-config --dev
 ```
 
