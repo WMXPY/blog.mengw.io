@@ -40,6 +40,16 @@ Brontosaurus 是一个整体，包含数个子项目，用于第三方登陆，�
 
 ---
 
+### [Bark](https://github.com/Barksh/Bark)
+
+```sh
+open https://github.com/Barksh/Bark
+```
+
+Bark 和上面的基础包同名，包含一系列工具，可以解决工程脚手架和配置文件复制粘贴的问题。
+
+---
+
 ### [Pack](https://github.com/SudoDotDog/Pack)
 
 [![Build Status](https://travis-ci.com/SudoDotDog/Pack.svg?branch=master)](https://travis-ci.com/SudoDotDog/Pack)
