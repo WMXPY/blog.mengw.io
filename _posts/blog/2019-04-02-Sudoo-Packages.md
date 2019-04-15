@@ -130,18 +130,18 @@ IO 是 NodeJS 的文件系统交互库，简直解决了顽疾。
 
 ---
 
-### [IO](https://github.com/SudoDotDog/IO)
+### [zip](https://github.com/SudoDotDog/zip)
 
-[![Build Status](https://travis-ci.com/SudoDotDog/IO.svg?branch=master)](https://travis-ci.com/SudoDotDog/IO)
-[![codecov](https://codecov.io/gh/SudoDotDog/IO/branch/master/graph/badge.svg)](https://codecov.io/gh/SudoDotDog/IO)
-[![npm version](https://badge.fury.io/js/%40sudoo%2Fio.svg)](https://www.npmjs.com/package/@sudoo/io)
-[![downloads](https://img.shields.io/npm/dm/@sudoo/io.svg)](https://www.npmjs.com/package/@sudoo/io)
+[![Build Status](https://travis-ci.com/SudoDotDog/zip.svg?branch=master)](https://travis-ci.com/SudoDotDog/zip)
+[![codecov](https://codecov.io/gh/SudoDotDog/zip/branch/master/graph/badge.svg)](https://codecov.io/gh/SudoDotDog/zip)
+[![npm version](https://badge.fury.io/js/%40sudoo%2Fzip.svg)](https://www.npmjs.com/package/@sudoo/zip)
+[![downloads](https://img.shields.io/npm/dm/@sudoo/zip.svg)](https://www.npmjs.com/package/@sudoo/zip)
 
 ```
-yarn add @sudoo/io
+yarn add @sudoo/zip
 ```
 
-IO 是 NodeJS 的文件系统交互库，简直解决了顽疾。
+zip 是 NodeJS 的 zip 格式压缩包处理库。只支持 Node 10 及以上版本。
 
 ---
 
