@@ -65,6 +65,21 @@ Pack 用于将源码打包发布，解决打包项目结构过于复杂的问题
 
 ---
 
+### [DI](https://github.com/SudoDotDog/DI)
+
+[![Build Status](https://travis-ci.com/SudoDotDog/DI.svg?branch=master)](https://travis-ci.com/SudoDotDog/DI)
+[![codecov](https://codecov.io/gh/SudoDotDog/DI/branch/master/graph/badge.svg)](https://codecov.io/gh/SudoDotDog/DI)
+[![npm version](https://badge.fury.io/js/%40sudoo%2Fdi.svg)](https://badge.fury.io/js/%40sudoo%2Fdi)
+[![downloads](https://img.shields.io/npm/dm/@sudoo/di.svg)](https://www.npmjs.com/package/@sudoo/di)
+
+```sh
+yarn add @sudoo/di
+```
+
+DI 提供一个符合大部分类型应用的依赖注入解决方案。控制反转！方便测试！太棒了。
+
+---
+
 ### [Neon](https://github.com/SudoDotDog/Neon)
 
 [![Build Status](https://travis-ci.com/SudoDotDog/Neon.svg?branch=master)](https://travis-ci.com/SudoDotDog/Neon)
