@@ -213,6 +213,8 @@ yarn add @sudoo/mock --dev
 
 Mock 是一个测试库，可以覆盖恢复任何函数，还支持函数模拟，测试起来非常方便。
 
+需要注意的是，静态的函数想覆盖起来是有难度的。
+
 ---
 
 ### [Sudoo-Triforce](https://github.com/SudoDotDog/Sudoo-Triforce)
