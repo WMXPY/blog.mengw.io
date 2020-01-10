@@ -9,3 +9,6 @@ _site
 # Cache
 *.scssc
 .sass-cache
+
+# Platform
+.DS_Store
