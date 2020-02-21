@@ -36,7 +36,7 @@ Bark 是一个基础包，支持按需加载，包括基于 Dijkstra 算法的�
 open https://github.com/SudoDotDog/Brontosaurus
 ```
 
-Brontosaurus 是一个整体，包含数个子项目，用于第三方登陆，接入 JWT 标准。
+Brontosaurus 包含数个子项目，用于第三方登陆，使用 JWT。
 
 ---
 
