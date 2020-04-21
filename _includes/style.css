@@ -193,8 +193,8 @@ a.external:hover {
   width: 35%;
   height: 100%;
   max-width: 500px;
-  background-image: url(https://cdn.pixabay.com/photo/2020/04/16/22/24/duomo-di-milano-5052524_960_720.jpg);
-  background-size: 100% 100%;
+  background-image: url(https://images.unsplash.com/photo-1567017469553-d1b219af5831?ixlib=rb-1.2.1);
+  background-size: cover;
 }
 
 @media screen and (max-width: 767px) {
