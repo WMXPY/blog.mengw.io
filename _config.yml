@@ -16,6 +16,7 @@ exclude:
   - LICENSE
   - _notes
   - _storage
+  - _progess
   - .github
   - .vscode
   - docs
