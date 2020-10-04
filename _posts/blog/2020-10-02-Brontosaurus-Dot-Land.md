@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "brontosaurs.land"
+title: "Brontosaurus Document Site"
 categories: blog
 description: 好消息，好消息，Brontosaurus 的文档网站上线了
 ---
