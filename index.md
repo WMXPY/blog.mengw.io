@@ -8,6 +8,17 @@ layout: default
       <div class="info-card">
         <h1>WMXPY's</h1>
         <h2>Automated Bug Factory</h2>
+        <div class="info-space"/>
+        <div class="redirect-combo">
+            <a class="redirect-link" href="/blog/Sudo-Dot-Dog">
+                <i class="fa fa-github fa-fw" aria-hidden="true"></i> Github
+            </a>
+        </div>
+        <div class="redirect-combo">
+            <a class="redirect-link" href="/blog/Sudo-Dot-Dog">
+                <i class="fa fa-linkedin fa-fw" aria-hidden="true"></i> LinkedIn
+            </a>
+        </div>
       </div>
     </div>
     <div class="index-content">
