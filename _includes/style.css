@@ -666,3 +666,16 @@ li.L9 {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+.info-space{
+    margin-top: 15px;
+}
+
+.redirect-combo {
+    color: #D7D7D7;
+}
+
+.redirect-link {
+    margin: 0px !important;
+    color: #D7D7D7;
+}
