@@ -11,4 +11,4 @@ description: 好消息，好消息，SudoDotDog 的文档网站上线了
 
 <https://sudo.dog/>
 
-查看所有关于 SudoDotDog 开发的包的任何资源和文档。这个文档网站托管在 Github Pages 中，如果发现问题欢迎提交 PR。
+查看所有关于 `SudoDotDog` 开发的包的任何资源和文档。这个文档网站托管在 Github Pages 中，如果发现问题欢迎提交 PR。
