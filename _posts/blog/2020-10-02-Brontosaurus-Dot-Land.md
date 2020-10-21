@@ -2,7 +2,7 @@
 layout: post
 title: "Brontosaurus Document Site"
 categories: blog
-description: 好消息，好消息，Brontosaurus 的文档网站上线了
+description: 好消息，好消息， Brontosaurus 的文档网站上线了
 ---
 
 ## 太好了

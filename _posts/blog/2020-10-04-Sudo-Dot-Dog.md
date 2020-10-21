@@ -2,7 +2,7 @@
 layout: post
 title: "SudoDotDog Document Site"
 categories: blog
-description: 好消息，好消息，SudoDotDog 的文档网站上线了
+description: 好消息，好消息， SudoDotDog 的文档网站上线了
 ---
 
 ## 太好了
