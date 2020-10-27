@@ -1,10 +1,9 @@
-* * *
-
+---
 layout: post
 title: "Rethink document writing"
 categories: blog
-
-## description: Brontosaurus 的文档还有提升空间
+description: Brontosaurus 的文档还有提升空间
+---
 
 ## 太多的自动生成文档
 
@@ -31,3 +30,11 @@ JavaDoc 被广泛使用，甚至对于很多的包，在编写代码时 IDE 就�
 -   互动展示
 -   Q & A
 -   实际情况的解决方案
+
+总之，应该从用户的角度思考，如果我在使用这个库的时候，我需要的信息是什么。
+
+对于想尝试这个解决方案的用户，我需要什么?  
+对于想找到一个使用方式的用户，我需要什么？  
+对于已经长时间使用的用户，我会遇到什么问题？
+
+我正在 Brontosaurus 的文档是实践这样的思想，访问 <https://brontosaurus.land> 来看看吧！
