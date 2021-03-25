@@ -19,6 +19,11 @@ layout: default
                 <i class="fa fa-linkedin fa-fw" aria-hidden="true"></i> LinkedIn
             </a>
         </div>
+        <div class="redirect-combo">
+            <a class="redirect-link" href="https://resume.mengw.io/">
+                <i class="fa fa-paperclip fa-fw" aria-hidden="true"></i> Resume
+            </a>
+        </div>
       </div>
     </div>
     <div class="index-content">
